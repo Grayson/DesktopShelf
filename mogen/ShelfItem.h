@@ -5,5 +5,6 @@
 + (id)item;
 + (NSArray *)everyItem;
 - (void)updateDateModified;
+- (void)fetchFavicon;
 
 @end

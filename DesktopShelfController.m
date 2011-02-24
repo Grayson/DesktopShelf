@@ -10,6 +10,7 @@
 
 
 @implementation DesktopShelfController
+@synthesize tableWindowController = _tableWindowController;
 
 - (id)init
 {
@@ -29,41 +30,54 @@
 		[self folderUpdatedAtPath:path userInfo:nil];
 	}
 	
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationBecameActive:) name:NSApplicationDidBecomeActiveNotification object:NSApp];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationBecameActive:) name:NSApplicationDidBecomeActiveNotification object:NSApp];	
 	
 	return self;
 }
 
+- (void)dealloc
+{
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	[_tableWindowController release];
+	
+	[super dealloc];
+}
+
 - (void)applicationBecameActive:(NSNotification *)aNotification
 {
-	NSLog(@"%s", _cmd);
+	if (!self.tableWindowController) {
+		TableWindowController *twc = [[TableWindowController new] autorelease];
+		self.tableWindowController = twc;
+	}
+	[self.tableWindowController showWindow];
 }
 
 - (void)folderUpdatedAtPath:(NSString *)updatedPath userInfo:(NSDictionary *)userInfo
 {
-	NSLog(@"%s Changes at %@", _cmd, updatedPath);
+	if (SHOULDLOG) NSLog(@"[DesktopShelfController %s] Changes at %@", _cmd, updatedPath);
 	
 	NSEnumerator *e = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:updatedPath error:nil] objectEnumerator];
 	NSString *filePath = nil;
-	NSMutableArray *newItems = [NSMutableArray array];
 	// NSFileManager *fm = [NSFileManager defaultManager];
 	while (filePath = [e nextObject])
 	{
 		NSString *path = [updatedPath stringByAppendingPathComponent:filePath];
 		id f = nil;
-		if ([[filePath pathExtension] isEqualToString:@"webloc"])
+		if ([[filePath pathExtension] isEqualToString:@"webloc"]) 
 			f = [WeblocFile weblocFileWithFile:path];
 		else if ([[filePath pathExtension] isEqualToString:@"url"])
 			f = [URLFile URLFileWithContentsOfFile:path];
 		
 		if (f)
 		{
-			[newItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:[f name], @"title", [f url], @"URL", nil]];
+			ShelfItem *item = [ShelfItem item];
+			item.desc = [f name];
+			item.url = [[f url] absoluteString];
+			if (SHOULDLOG) NSLog(@"[DesktopShelfController %s] Adding item: %@", _cmd, item);
 			// [fm removeFileAtPath:path handler:nil];
 		}		
 	}
-	NSLog(@"%s %@", _cmd, newItems);
-	// [newItems addObjectsFromArray:[self URLArray]];
+	[[NSNotificationCenter defaultCenter] postNotificationName:NC_REFRESH_SHELF_KEY object:nil];
 	
 }
 

@@ -7,13 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DesktopShelfController.h"
 
 @interface DesktopShelf_AppDelegate : NSObject 
 {
+	DesktopShelfController *_shelfController;
+	
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;
 }
+@property (retain) DesktopShelfController *shelfController;
 
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;

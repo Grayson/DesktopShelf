@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D8B3DB91316A82500CCE51A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8B3DB81316A82500CCE51A /* MainWindow.xib */; };
+		1D72842C1316D8510054939F /* _ShelfItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7284291316D8510054939F /* _ShelfItem.m */; };
+		1D72842D1316D8510054939F /* ShelfItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D72842B1316D8510054939F /* ShelfItem.m */; };
+		1D8B3DB91316A82500CCE51A /* TableWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8B3DB81316A82500CCE51A /* TableWindow.xib */; };
 		1D8B3E5F1316C20500CCE51A /* URLFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B3E5C1316C20500CCE51A /* URLFile.m */; };
 		1D8B3E601316C20500CCE51A /* WeblocFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B3E5E1316C20500CCE51A /* WeblocFile.m */; };
 		1D8B3ED71316C2F800CCE51A /* FileWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B3ED61316C2F800CCE51A /* FileWatcher.m */; };
@@ -55,7 +57,12 @@
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		1D8B3DB81316A82500CCE51A /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		1D7284281316D8510054939F /* _ShelfItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ShelfItem.h; sourceTree = "<group>"; };
+		1D7284291316D8510054939F /* _ShelfItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ShelfItem.m; sourceTree = "<group>"; };
+		1D72842A1316D8510054939F /* ShelfItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShelfItem.h; sourceTree = "<group>"; };
+		1D72842B1316D8510054939F /* ShelfItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShelfItem.m; sourceTree = "<group>"; };
+		1D7284961316DADE0054939F /* includes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = includes.h; sourceTree = "<group>"; };
+		1D8B3DB81316A82500CCE51A /* TableWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableWindow.xib; sourceTree = "<group>"; };
 		1D8B3E5B1316C20500CCE51A /* URLFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLFile.h; sourceTree = "<group>"; };
 		1D8B3E5C1316C20500CCE51A /* URLFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLFile.m; sourceTree = "<group>"; };
 		1D8B3E5D1316C20500CCE51A /* WeblocFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeblocFile.h; sourceTree = "<group>"; };
@@ -71,7 +78,7 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		2F7446980DB6B7EA00F9684A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* DesktopShelf_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopShelf_Prefix.pch; sourceTree = "<group>"; };
-		770B37EC0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = DesktopShelf_DataModel.xcdatamodel; sourceTree = "<group>"; };
+		770B37EC0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel */ = {isa = PBXFileReference; comments = "\nxmod\n"; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = DesktopShelf_DataModel.xcdatamodel; sourceTree = "<group>"; };
 		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		77C8280B06725ACE000B614F /* DesktopShelf_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopShelf_AppDelegate.h; sourceTree = "<group>"; };
 		77C8280C06725ACE000B614F /* DesktopShelf_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopShelf_AppDelegate.m; sourceTree = "<group>"; };
@@ -120,6 +127,7 @@
 				77C8280C06725ACE000B614F /* DesktopShelf_AppDelegate.m */,
 				797A783E0DDCFB3E0050D0C2 /* Importer */,
 				1D8B3EE91316C3CF00CCE51A /* Controllers */,
+				1D7284961316DADE0054939F /* includes.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -151,6 +159,17 @@
 				797A78390DDCFADE0050D0C2 /* DesktopShelf.mdimporter */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1D7284271316D8510054939F /* mogen */ = {
+			isa = PBXGroup;
+			children = (
+				1D7284281316D8510054939F /* _ShelfItem.h */,
+				1D7284291316D8510054939F /* _ShelfItem.m */,
+				1D72842A1316D8510054939F /* ShelfItem.h */,
+				1D72842B1316D8510054939F /* ShelfItem.m */,
+			);
+			path = mogen;
 			sourceTree = "<group>";
 		};
 		1D8B3E621316C21800CCE51A /* Scrapers */ = {
@@ -210,7 +229,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1D8B3DB81316A82500CCE51A /* MainWindow.xib */,
+				1D8B3DB81316A82500CCE51A /* TableWindow.xib */,
 				8D1107310486CEB800E47090 /* DesktopShelf-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
@@ -231,6 +250,7 @@
 		7756732906782D8800D1FEB8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1D7284271316D8510054939F /* mogen */,
 				770B37EC0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel */,
 			);
 			name = Models;
@@ -326,7 +346,7 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */,
-				1D8B3DB91316A82500CCE51A /* MainWindow.xib in Resources */,
+				1D8B3DB91316A82500CCE51A /* TableWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +375,8 @@
 				1D8B3ED71316C2F800CCE51A /* FileWatcher.m in Sources */,
 				1D8B3EE51316C3AC00CCE51A /* DesktopShelfController.m in Sources */,
 				1D8B3EE81316C3C800CCE51A /* TableWindowController.m in Sources */,
+				1D72842C1316D8510054939F /* _ShelfItem.m in Sources */,
+				1D72842D1316D8510054939F /* ShelfItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

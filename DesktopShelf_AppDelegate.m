@@ -12,6 +12,12 @@
 #define YOUR_STORE_TYPE NSSQLiteStoreType
 
 @implementation DesktopShelf_AppDelegate
+@synthesize shelfController = _shelfController;
+
+- (void)awakeFromNib
+{
+	self.shelfController = [DesktopShelfController new];
+}
 
 /**
     Returns the support directory for the application, used to store the Core Data
@@ -253,6 +259,7 @@
  */
  
 - (void)dealloc {
+	[_shelfController release];
 
     [managedObjectContext release];
     [persistentStoreCoordinator release];

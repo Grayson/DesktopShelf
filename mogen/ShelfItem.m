@@ -5,8 +5,10 @@
 + (id)item
 {
 	NSManagedObjectContext *context = [[NSApp delegate] managedObjectContext];
+	NSLog(@"%s %@", _cmd, [NSApp delegate]);
 	NSEntityDescription *desc = [NSEntityDescription entityForName:[[self class] entityName] inManagedObjectContext:context];
 	id obj = [[[self class] alloc] initWithEntity:desc insertIntoManagedObjectContext:context];
+	[obj setValue:[NSDate date] forKey:@"dateCreated"];
 	return [obj autorelease];	
 }
 
@@ -20,6 +22,9 @@
 
 - (void)updateDateModified {
 	self.dateModified = [NSDate date];
+}
+
+- (void)fetchFavicon {
 }
 
 @end

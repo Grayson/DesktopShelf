@@ -8,9 +8,16 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "ShelfItem.h"
+
+#import "includes.h"
 
 @interface TableWindowController : NSObject {
-
+	IBOutlet NSWindow *_window;
 }
+@property (retain) NSWindow *window;
+
+- (void)showWindow;
+- (NSArray *)shelfItems;
 
 @end

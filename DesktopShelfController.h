@@ -7,16 +7,20 @@
 //
 
 #import <Cocoa/Cocoa.h>
+
+#import "includes.h"
+
 #import "FileWatcher.h"
 #import "URLFile.h"
 #import "WeblocFile.h"
+#import "ShelfItem.h"
 
-#define UD_SEARCH_PATHS_KEY @"SearchPaths"
-#define UD_SHOULD_LOG_KEY @"ShouldLog"
+#import "TableWindowController.h"
 
 @interface DesktopShelfController : NSObject {
-
+	TableWindowController *_tableWindowController;
 }
+@property (retain) TableWindowController *tableWindowController;
 
 - (void)folderUpdatedAtPath:(NSString *)updatedPath userInfo:(NSDictionary *)userInfo;
 
