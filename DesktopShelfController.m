@@ -77,7 +77,9 @@
 			[item fetchIcon];
 			if (SHOULDLOG) NSLog(@"[DesktopShelfController %s] Adding item: %@", _cmd, item);
 			[fm removeItemAtPath:path error:nil];
-		}		
+		}
+		
+		// Do something with file types...
 	}
 	[[NSNotificationCenter defaultCenter] postNotificationName:NC_REFRESH_SHELF_KEY object:nil];
 	

@@ -11,6 +11,8 @@
 
 @implementation TableWindowController
 @synthesize window = _window;
+@synthesize tableView = _tableView;
+@synthesize arrayController = _arrayController;
 
 - (id)init
 {
@@ -23,9 +25,21 @@
 	return self;
 }
 
+- (void)awakeFromNib
+{
+	// Set up open handler when table view is double-clicked
+	[self.tableView setTarget:self];
+	[self.tableView setDoubleAction:@selector(tableViewWasDoubleClicked:)];
+}
+
 - (void)dealloc
 {
+	self.window = nil;
+	self.tableView = nil;
+	
 	[_window release];
+	[_tableView release];
+	
 	[super dealloc];
 }
 
@@ -35,12 +49,19 @@
 
 - (void)refreshShelf:(NSNotification *)aNotification
 {
-	NSLog(@"%s", _cmd);
-	NSLog(@"%s %@", _cmd, [ShelfItem everyItem]);
+	[self setShelfItems:nil];
 }
+
+-(void)setShelfItems:(NSArray *)items { } // Shell method to update the array controller
 
 - (NSArray *)shelfItems {
 	return [ShelfItem everyItem];
+}
+
+- (IBAction)tableViewWasDoubleClicked:(id)sender {
+	[[self.tableView selectedRowIndexes] enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop){
+		[[self.arrayController.arrangedObjects objectAtIndex:idx] open];
+	}];
 }
 
 @end

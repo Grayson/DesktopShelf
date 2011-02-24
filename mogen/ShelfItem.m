@@ -55,4 +55,9 @@
 	dispatch_async(queue, block);
 }
 
+-(void)open {
+	NSURL *url = [NSURL URLWithString:self.url];
+	[[NSWorkspace sharedWorkspace] openURL:url];
+}
+
 @end

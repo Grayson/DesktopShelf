@@ -248,8 +248,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -295,9 +293,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
-									<integer>2</integer>
-									<integer>1</integer>
+									<integer>14</integer>
+									<integer>8</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -337,7 +334,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ShelfItem.m</string>
+								<string>TableWindowController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -345,11 +342,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ShelfItem.m</string>
+										<string>TableWindowController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1D7285F21316EC520054939F</string>
+										<string>1D72863A1316F1B10054939F</string>
 										<key>history</key>
 										<array>
 											<string>1D8B3E631316C22B00CCE51A</string>
@@ -365,10 +362,12 @@
 											<string>1D7285B01316E9A40054939F</string>
 											<string>1D7285B11316E9A40054939F</string>
 											<string>1D7285C21316E9FE0054939F</string>
-											<string>1D7285D81316EAA10054939F</string>
 											<string>1D7285DD1316EBDD0054939F</string>
 											<string>1D7285E61316EC3A0054939F</string>
-											<string>1D7285E71316EC3A0054939F</string>
+											<string>1D7285F41316EDC70054939F</string>
+											<string>1D7285F91316EE070054939F</string>
+											<string>1D72862D1316F1380054939F</string>
+											<string>1D72862E1316F1380054939F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -390,6 +389,8 @@
 							<string>260pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -549,7 +550,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>320269394.39421302</real>
+	<real>320270769.64014202</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -566,6 +567,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1D72863B1316F1B10054939F</string>
 		<string>1D7284BC1316DF120054939F</string>
 		<string>1D7284BD1316DF120054939F</string>
 		<string>1C78EAAD065D492600B07095</string>
@@ -595,7 +597,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ShelfItem.m</string>
+								<string>TableWindowController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -922,7 +924,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {720, 378}}</string>
 								<key>RubberWindowFrame</key>
-								<string>368 334 720 419 0 0 1440 878 </string>
+								<string>445 388 720 419 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -951,7 +953,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>368 334 720 419 0 0 1440 878 </string>
+			<string>445 388 720 419 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>

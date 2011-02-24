@@ -9,4 +9,6 @@
 - (void)updateDateModified;
 - (void)fetchIcon;
 
+-(void)open;
+
 @end
