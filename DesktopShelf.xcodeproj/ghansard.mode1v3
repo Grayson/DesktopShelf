@@ -235,10 +235,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>1D8B3F141316C58800CCE51A</string>
+						<string>1D8B3F431316C92000CCE51A</string>
 						<key>history</key>
 						<array>
-							<string>1D8B3DBA1316B76700CCE51A</string>
+							<string>1D8B3F141316C58800CCE51A</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -372,7 +372,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DesktopShelf_DataModel.xcdatamodel</string>
+								<string>DesktopShelfController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -380,11 +380,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DesktopShelf_DataModel.xcdatamodel</string>
+										<string>DesktopShelfController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1D8B3F131316C58800CCE51A</string>
+										<string>1D8B3F421316C92000CCE51A</string>
 										<key>history</key>
 										<array>
 											<string>1D8B3E631316C22B00CCE51A</string>
@@ -397,7 +397,8 @@
 											<string>1D8B3EF11316C3DB00CCE51A</string>
 											<string>1D8B3F0B1316C57600CCE51A</string>
 											<string>1D8B3F0C1316C57600CCE51A</string>
-											<string>1D8B3F0D1316C57600CCE51A</string>
+											<string>1D8B3F351316C6B000CCE51A</string>
+											<string>1D8B3F361316C6B000CCE51A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -409,14 +410,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {580, 277}}</string>
+								<string>{{0, 0}, {580, 269}}</string>
 								<key>RubberWindowFrame</key>
 								<string>197 173 788 504 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>277pt</string>
+							<string>269pt</string>
 						</dict>
 						<dict>
 							<key>BecomeActive</key>
@@ -431,14 +432,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 282}, {580, 181}}</string>
+								<string>{{0, 274}, {580, 189}}</string>
 								<key>RubberWindowFrame</key>
 								<string>197 173 788 504 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>181pt</string>
+							<string>189pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -457,9 +458,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>1D8B3E6A1316C22B00CCE51A</string>
+				<string>1D8B3F1F1316C61E00CCE51A</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>1D8B3E6B1316C22B00CCE51A</string>
+				<string>1D8B3F201316C61E00CCE51A</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -580,7 +581,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>320259464.29829299</real>
+	<real>320260384.07068801</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -597,13 +598,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1D8B3F111316C57600CCE51A</string>
-		<string>1D8B3F121316C57600CCE51A</string>
+		<string>1D8B3F3A1316C6B000CCE51A</string>
+		<string>1D8B3F3B1316C6B000CCE51A</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1D8B3E701316C22B00CCE51A</string>
 		<string>1D8B3E6D1316C22B00CCE51A</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/ghansard/Projects/DesktopShelf/DesktopShelf.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>197 173 788 504 0 0 1440 878 </string>
@@ -627,7 +628,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DesktopShelf_DataModel.xcdatamodel</string>
+								<string>DesktopShelfController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -685,7 +686,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1D8B3E701316C22B00CCE51A</string>
-				<string>1D8B3E711316C22B00CCE51A</string>
+				<string>1D8B3F221316C61E00CCE51A</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -729,8 +730,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {316, 185}}</string>
-											<string>{{316, 0}, {378, 185}}</string>
+											<string>{{0, 0}, {316, 194}}</string>
+											<string>{{316, 0}, {378, 194}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -745,8 +746,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {694, 185}}</string>
-											<string>{{0, 185}, {694, 196}}</string>
+											<string>{{0, 0}, {694, 194}}</string>
+											<string>{{0, 194}, {694, 187}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -779,7 +780,7 @@
 										<real>148</real>
 									</array>
 									<key>Frame</key>
-									<string>{{316, 0}, {378, 185}}</string>
+									<string>{{316, 0}, {378, 194}}</string>
 									<key>RubberWindowFrame</key>
 									<string>389 308 694 422 0 0 1440 878 </string>
 								</dict>
@@ -807,13 +808,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>1D8B3F051316C57500CCE51A</string>
+				<string>1D8B3F2E1316C6AC00CCE51A</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>1D8B3F061316C57500CCE51A</string>
-				<string>1D8B3F071316C57500CCE51A</string>
-				<string>1D8B3F081316C57500CCE51A</string>
-				<string>1D8B3F091316C57500CCE51A</string>
-				<string>1D8B3F0A1316C57500CCE51A</string>
+				<string>1D8B3F2F1316C6AC00CCE51A</string>
+				<string>1D8B3F301316C6AC00CCE51A</string>
+				<string>1D8B3F311316C6AC00CCE51A</string>
+				<string>1D8B3F321316C6AC00CCE51A</string>
+				<string>1D8B3F331316C6AC00CCE51A</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -977,7 +978,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>1D8B3F001316C55C00CCE51A</string>
+				<string>1D8B3F341316C6AC00CCE51A</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

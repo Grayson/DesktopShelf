@@ -11,8 +11,13 @@
 #import "URLFile.h"
 #import "WeblocFile.h"
 
+#define UD_SEARCH_PATHS_KEY @"SearchPaths"
+#define UD_SHOULD_LOG_KEY @"ShouldLog"
+
 @interface DesktopShelfController : NSObject {
 
 }
+
+- (void)folderUpdatedAtPath:(NSString *)updatedPath userInfo:(NSDictionary *)userInfo;
 
 @end
