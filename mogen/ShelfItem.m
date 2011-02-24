@@ -46,7 +46,8 @@
 	}
 	else if ([self.type isEqualToString:@"file"]) {
 		block = ^{
-			NSImage *img = [[NSWorkspace sharedWorkspace] iconForFile:[self.url path]];
+			NSURL *url = [NSURL URLWithString:self.url];
+			NSImage *img = [[NSWorkspace sharedWorkspace] iconForFile:[url path]];
 			self.icon = [img TIFFRepresentation];
 		};
 	}

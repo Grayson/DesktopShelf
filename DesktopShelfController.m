@@ -58,7 +58,7 @@
 	
 	NSEnumerator *e = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:updatedPath error:nil] objectEnumerator];
 	NSString *filePath = nil;
-	// NSFileManager *fm = [NSFileManager defaultManager];
+	NSFileManager *fm = [NSFileManager defaultManager];
 	while (filePath = [e nextObject])
 	{
 		NSString *path = [updatedPath stringByAppendingPathComponent:filePath];
@@ -76,7 +76,7 @@
 			item.type = @"bookmark";
 			[item fetchIcon];
 			if (SHOULDLOG) NSLog(@"[DesktopShelfController %s] Adding item: %@", _cmd, item);
-			// [fm removeFileAtPath:path handler:nil];
+			[fm removeItemAtPath:path error:nil];
 		}		
 	}
 	[[NSNotificationCenter defaultCenter] postNotificationName:NC_REFRESH_SHELF_KEY object:nil];
