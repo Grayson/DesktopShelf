@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1D8B3DB91316A82500CCE51A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8B3DB81316A82500CCE51A /* MainWindow.xib */; };
+		1D8B3E5F1316C20500CCE51A /* URLFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B3E5C1316C20500CCE51A /* URLFile.m */; };
+		1D8B3E601316C20500CCE51A /* WeblocFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B3E5E1316C20500CCE51A /* WeblocFile.m */; };
+		1D8B3ED71316C2F800CCE51A /* FileWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B3ED61316C2F800CCE51A /* FileWatcher.m */; };
+		1D8B3EE51316C3AC00CCE51A /* DesktopShelfController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B3EE41316C3AC00CCE51A /* DesktopShelfController.m */; };
+		1D8B3EE81316C3C800CCE51A /* TableWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B3EE71316C3C800CCE51A /* TableWindowController.m */; };
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		770B37ED0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel */; };
 		77C8280E06725ACE000B614F /* DesktopShelf_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* DesktopShelf_AppDelegate.m */; };
@@ -51,6 +56,16 @@
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		1D8B3DB81316A82500CCE51A /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		1D8B3E5B1316C20500CCE51A /* URLFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLFile.h; sourceTree = "<group>"; };
+		1D8B3E5C1316C20500CCE51A /* URLFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLFile.m; sourceTree = "<group>"; };
+		1D8B3E5D1316C20500CCE51A /* WeblocFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeblocFile.h; sourceTree = "<group>"; };
+		1D8B3E5E1316C20500CCE51A /* WeblocFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeblocFile.m; sourceTree = "<group>"; };
+		1D8B3ED51316C2F800CCE51A /* FileWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileWatcher.h; path = ../Paperclip/FileWatcher.h; sourceTree = SOURCE_ROOT; };
+		1D8B3ED61316C2F800CCE51A /* FileWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileWatcher.m; path = ../Paperclip/FileWatcher.m; sourceTree = SOURCE_ROOT; };
+		1D8B3EE31316C3AC00CCE51A /* DesktopShelfController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopShelfController.h; sourceTree = "<group>"; };
+		1D8B3EE41316C3AC00CCE51A /* DesktopShelfController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopShelfController.m; sourceTree = "<group>"; };
+		1D8B3EE61316C3C800CCE51A /* TableWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableWindowController.h; sourceTree = "<group>"; };
+		1D8B3EE71316C3C800CCE51A /* TableWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableWindowController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -99,9 +114,12 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1D8B3ED81316C2FC00CCE51A /* FileWatcher */,
+				1D8B3E621316C21800CCE51A /* Scrapers */,
 				77C8280B06725ACE000B614F /* DesktopShelf_AppDelegate.h */,
 				77C8280C06725ACE000B614F /* DesktopShelf_AppDelegate.m */,
 				797A783E0DDCFB3E0050D0C2 /* Importer */,
+				1D8B3EE91316C3CF00CCE51A /* Controllers */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -135,6 +153,37 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1D8B3E621316C21800CCE51A /* Scrapers */ = {
+			isa = PBXGroup;
+			children = (
+				1D8B3E5B1316C20500CCE51A /* URLFile.h */,
+				1D8B3E5C1316C20500CCE51A /* URLFile.m */,
+				1D8B3E5D1316C20500CCE51A /* WeblocFile.h */,
+				1D8B3E5E1316C20500CCE51A /* WeblocFile.m */,
+			);
+			name = Scrapers;
+			sourceTree = "<group>";
+		};
+		1D8B3ED81316C2FC00CCE51A /* FileWatcher */ = {
+			isa = PBXGroup;
+			children = (
+				1D8B3ED51316C2F800CCE51A /* FileWatcher.h */,
+				1D8B3ED61316C2F800CCE51A /* FileWatcher.m */,
+			);
+			name = FileWatcher;
+			sourceTree = "<group>";
+		};
+		1D8B3EE91316C3CF00CCE51A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D8B3EE31316C3AC00CCE51A /* DesktopShelfController.h */,
+				1D8B3EE41316C3AC00CCE51A /* DesktopShelfController.m */,
+				1D8B3EE61316C3C800CCE51A /* TableWindowController.h */,
+				1D8B3EE71316C3C800CCE51A /* TableWindowController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		29B97314FDCFA39411CA2CEA /* DesktopShelf */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +194,6 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				797A7AE70DDCFD2A0050D0C2 /* Importer Read Me.txt */,
-				1D8B3DB81316A82500CCE51A /* MainWindow.xib */,
 			);
 			name = DesktopShelf;
 			sourceTree = "<group>";
@@ -162,6 +210,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1D8B3DB81316A82500CCE51A /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* DesktopShelf-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
@@ -301,6 +350,11 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				77C8280E06725ACE000B614F /* DesktopShelf_AppDelegate.m in Sources */,
 				770B37ED0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel in Sources */,
+				1D8B3E5F1316C20500CCE51A /* URLFile.m in Sources */,
+				1D8B3E601316C20500CCE51A /* WeblocFile.m in Sources */,
+				1D8B3ED71316C2F800CCE51A /* FileWatcher.m in Sources */,
+				1D8B3EE51316C3AC00CCE51A /* DesktopShelfController.m in Sources */,
+				1D8B3EE81316C3C800CCE51A /* TableWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
