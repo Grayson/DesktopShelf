@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="9"/>
+			<integer value="8"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -229,10 +229,11 @@
 				<string key="NSScreenRect">{{0, 0}, {1680, 1028}}</string>
 				<string key="NSMaxSize">{3.40282e+38, 3.40282e+38}</string>
 			</object>
-			<object class="NSArrayController" id="278612622">
+			<object class="NSArrayController" id="338307279">
 				<object class="NSMutableArray" key="NSDeclaredKeys">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>desc</string>
+					<string>icon</string>
 				</object>
 				<bool key="NSEditable">YES</bool>
 				<object class="_NSManagedProxy" key="_NSManagedProxy">
@@ -261,10 +262,10 @@
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: arrangedObjects.desc</string>
 						<reference key="source" ref="61810307"/>
-						<reference key="destination" ref="278612622"/>
+						<reference key="destination" ref="338307279"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="61810307"/>
-							<reference key="NSDestination" ref="278612622"/>
+							<reference key="NSDestination" ref="338307279"/>
 							<string key="NSLabel">value: arrangedObjects.desc</string>
 							<string key="NSBinding">value</string>
 							<string key="NSKeyPath">arrangedObjects.desc</string>
@@ -280,10 +281,10 @@
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">contentArray: shelfItems</string>
-						<reference key="source" ref="278612622"/>
+						<reference key="source" ref="338307279"/>
 						<reference key="destination" ref="1001"/>
 						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="278612622"/>
+							<reference key="NSSource" ref="338307279"/>
 							<reference key="NSDestination" ref="1001"/>
 							<string key="NSLabel">contentArray: shelfItems</string>
 							<string key="NSBinding">contentArray</string>
@@ -292,6 +293,26 @@
 						</object>
 					</object>
 					<int key="connectionID">20</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: arrangedObjects.icon</string>
+						<reference key="source" ref="139937573"/>
+						<reference key="destination" ref="338307279"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="139937573"/>
+							<reference key="NSDestination" ref="338307279"/>
+							<string key="NSLabel">value: arrangedObjects.icon</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">arrangedObjects.icon</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSValueTransformerName</string>
+								<string key="NS.object.0">DataToImageTransformer</string>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">22</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -400,7 +421,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">16</int>
-						<reference key="object" ref="278612622"/>
+						<reference key="object" ref="338307279"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</object>
@@ -472,7 +493,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">20</int>
+			<int key="maxID">22</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

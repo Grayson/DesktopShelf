@@ -73,6 +73,8 @@
 			ShelfItem *item = [ShelfItem item];
 			item.desc = [f name];
 			item.url = [[f url] absoluteString];
+			item.type = @"bookmark";
+			[item fetchIcon];
 			if (SHOULDLOG) NSLog(@"[DesktopShelfController %s] Adding item: %@", _cmd, item);
 			// [fm removeFileAtPath:path handler:nil];
 		}		
