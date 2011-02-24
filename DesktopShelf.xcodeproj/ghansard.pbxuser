@@ -1,0 +1,83 @@
+// !$*UTF8*$!
+{
+	1D8B3DA01316A43B00CCE51A /* DesktopShelf */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = DesktopShelf;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	1D8B3DB21316A45F00CCE51A /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	1D8B3DB31316A45F00CCE51A /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 1D8B3DA01316A43B00CCE51A /* DesktopShelf */;
+		activeTarget = 8D1107260486CEB800E47090 /* DesktopShelf */;
+		codeSenseManager = 1D8B3DB31316A45F00CCE51A /* Code sense */;
+		executables = (
+			1D8B3DA01316A43B00CCE51A /* DesktopShelf */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 320250939;
+			PBXWorkspaceStateSaveDate = 320250939;
+		};
+		sourceControlManager = 1D8B3DB21316A45F00CCE51A /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	797A78380DDCFADE0050D0C2 /* DesktopShelf Spotlight Importer */ = {
+		activeExec = 0;
+	};
+	797A78440DDCFB3E0050D0C2 /* MySpotlightImporter.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 2492}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 408}";
+		};
+	};
+	797A7AE70DDCFD2A0050D0C2 /* Importer Read Me.txt */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 840}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1045}";
+		};
+	};
+	8D1107260486CEB800E47090 /* DesktopShelf */ = {
+		activeExec = 0;
+		executables = (
+			1D8B3DA01316A43B00CCE51A /* DesktopShelf */,
+		);
+	};
+}
