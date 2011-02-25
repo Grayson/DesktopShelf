@@ -130,7 +130,6 @@
 				77C8280C06725ACE000B614F /* DesktopShelf_AppDelegate.m */,
 				797A783E0DDCFB3E0050D0C2 /* Importer */,
 				1D8B3EE91316C3CF00CCE51A /* Controllers */,
-				1D7284961316DADE0054939F /* includes.h */,
 				1D7285A81316E8E00054939F /* DataToImageTransformer.h */,
 				1D7285A91316E8E00054939F /* DataToImageTransformer.m */,
 			);
@@ -211,6 +210,7 @@
 		29B97314FDCFA39411CA2CEA /* DesktopShelf */ = {
 			isa = PBXGroup;
 			children = (
+				1D7284961316DADE0054939F /* includes.h */,
 				7756732906782D8800D1FEB8 /* Models */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,

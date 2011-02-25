@@ -26,4 +26,6 @@
 -(void)setShelfItems:(NSArray *)items;
 - (NSArray *)shelfItems;
 
+- (IBAction)delete:(id)sender;
+
 @end

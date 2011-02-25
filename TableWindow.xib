@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="6"/>
+			<integer value="1"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -41,9 +41,9 @@
 			<object class="NSWindowTemplate" id="1005">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{196, 173}, {333, 337}}</string>
+				<string key="NSWindowRect">{{196, 173}, {200, 337}}</string>
 				<int key="NSWTFlags">544735232</int>
-				<string key="NSWindowTitle">Window</string>
+				<string key="NSWindowTitle">Shelf</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<string key="NSWindowContentMaxSize">{3.40282e+38, 3.40282e+38}</string>
@@ -65,7 +65,7 @@
 										<object class="NSTableView" id="98595423">
 											<reference key="NSNextResponder" ref="188641049"/>
 											<int key="NSvFlags">256</int>
-											<string key="NSFrameSize">{333, 338}</string>
+											<string key="NSFrameSize">{200, 338}</string>
 											<reference key="NSSuperview" ref="188641049"/>
 											<bool key="NSEnabled">YES</bool>
 											<object class="_NSCornerView" key="NSCornerView">
@@ -120,7 +120,7 @@
 													<reference key="NSTableView" ref="98595423"/>
 												</object>
 												<object class="NSTableColumn" id="61810307">
-													<double key="NSWidth">287</double>
+													<double key="NSWidth">154</double>
 													<double key="NSMinWidth">40</double>
 													<double key="NSMaxWidth">1000</double>
 													<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -184,7 +184,7 @@
 											<int key="NSTableViewDraggingDestinationStyle">0</int>
 										</object>
 									</object>
-									<string key="NSFrame">{{1, 1}, {333, 338}}</string>
+									<string key="NSFrame">{{1, 1}, {200, 338}}</string>
 									<reference key="NSSuperview" ref="991474203"/>
 									<reference key="NSNextKeyView" ref="98595423"/>
 									<reference key="NSDocView" ref="98595423"/>
@@ -211,7 +211,7 @@
 									<double key="NSPercent">0.99769055843353271</double>
 								</object>
 							</object>
-							<string key="NSFrame">{{-1, -2}, {335, 340}}</string>
+							<string key="NSFrame">{{-1, -2}, {202, 340}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<reference key="NSNextKeyView" ref="188641049"/>
 							<int key="NSsFlags">562</int>
@@ -221,13 +221,14 @@
 							<bytes key="NSScrollAmts">QSAAAEEgAABB0AAAQdAAAA</bytes>
 						</object>
 					</object>
-					<string key="NSFrameSize">{333, 337}</string>
+					<string key="NSFrameSize">{200, 337}</string>
 					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1680, 1028}}</string>
 				<string key="NSMaxSize">{3.40282e+38, 3.40282e+38}</string>
+				<string key="NSFrameAutosaveName">com.fcs.desktopshelf.shelfwin</string>
 			</object>
-			<object class="NSArrayController" id="568048714">
+			<object class="NSArrayController" id="29322690">
 				<object class="NSMutableArray" key="NSDeclaredKeys">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>desc</string>
@@ -260,10 +261,10 @@
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: arrangedObjects.desc</string>
 						<reference key="source" ref="61810307"/>
-						<reference key="destination" ref="568048714"/>
+						<reference key="destination" ref="29322690"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="61810307"/>
-							<reference key="NSDestination" ref="568048714"/>
+							<reference key="NSDestination" ref="29322690"/>
 							<string key="NSLabel">value: arrangedObjects.desc</string>
 							<string key="NSBinding">value</string>
 							<string key="NSKeyPath">arrangedObjects.desc</string>
@@ -279,10 +280,10 @@
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">contentArray: shelfItems</string>
-						<reference key="source" ref="568048714"/>
+						<reference key="source" ref="29322690"/>
 						<reference key="destination" ref="1001"/>
 						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="568048714"/>
+							<reference key="NSSource" ref="29322690"/>
 							<reference key="NSDestination" ref="1001"/>
 							<string key="NSLabel">contentArray: shelfItems</string>
 							<string key="NSBinding">contentArray</string>
@@ -296,10 +297,10 @@
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: arrangedObjects.icon</string>
 						<reference key="source" ref="139937573"/>
-						<reference key="destination" ref="568048714"/>
+						<reference key="destination" ref="29322690"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="139937573"/>
-							<reference key="NSDestination" ref="568048714"/>
+							<reference key="NSDestination" ref="29322690"/>
 							<string key="NSLabel">value: arrangedObjects.icon</string>
 							<string key="NSBinding">value</string>
 							<string key="NSKeyPath">arrangedObjects.icon</string>
@@ -324,9 +325,17 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">_arrayController</string>
 						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="568048714"/>
+						<reference key="destination" ref="29322690"/>
 					</object>
 					<int key="connectionID">24</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="1005"/>
+						<reference key="destination" ref="1001"/>
+					</object>
+					<int key="connectionID">25</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -435,7 +444,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">16</int>
-						<reference key="object" ref="568048714"/>
+						<reference key="object" ref="29322690"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</object>
@@ -470,10 +479,10 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{338, 410}, {333, 337}}</string>
+					<string>{{280, 107}, {200, 337}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{338, 410}, {333, 337}}</string>
-					<integer value="1"/>
+					<string>{{280, 107}, {200, 337}}</string>
+					<boolean value="NO"/>
 					<string>{196, 240}</string>
 					<string>{{357, 418}, {480, 270}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -482,7 +491,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAAC/gAAAw9qAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAAC/gAAAw7aAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -507,7 +516,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">24</int>
+			<int key="maxID">25</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -515,6 +524,17 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">TableWindowController</string>
 					<string key="superclassName">NSObject</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">delete:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">delete:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">delete:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
