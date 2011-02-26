@@ -1,6 +1,7 @@
 #define UD_SEARCH_PATHS_KEY @"SearchPaths"
 #define UD_SHOULD_LOG_KEY @"ShouldLog"
-#define UD_ASK_SHELF_DELETE_KEY @"ShouldAskBeforeDeletingFromShelf"
+#define UD_WARN_SHELF_DELETE_KEY @"ShouldAskBeforeDeletingFromShelf"
+#define UD_SHOW_MENU_BAR_ITEM_KEY @"ShowMenuBarItem"
 
 #define NC_REFRESH_SHELF_KEY @"com.fromconcentratesoftware.desktopshelf.refreshshelf"
 

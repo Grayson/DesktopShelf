@@ -37,9 +37,6 @@
 	self.window = nil;
 	self.tableView = nil;
 	
-	[_window release];
-	[_tableView release];
-	
 	[super dealloc];
 }
 
@@ -66,7 +63,7 @@
 
 - (IBAction)delete:(id)sender {	
 	// Ask before we delete something.  If we can't delete, then return.
-	if (![[NSUserDefaults standardUserDefaults] boolForKey:UD_ASK_SHELF_DELETE_KEY]) {
+	if (![[NSUserDefaults standardUserDefaults] boolForKey:UD_WARN_SHELF_DELETE_KEY]) {
 		NSString *title = NSLocalizedString(@"Delete this item?", @"alert title");
 		NSString *deleteButton = NSLocalizedString(@"Delete", @"button title");
 		NSString *cancelButton = NSLocalizedString(@"Cancel", @"button title");
@@ -78,7 +75,7 @@
 		alert.suppressionButton.title = NSLocalizedString(@"Do not show this message again", @"alert suppression message");
 
 		NSInteger result = [alert runModal];
-		[[NSUserDefaults standardUserDefaults] setBool:alert.suppressionButton.state forKey:UD_ASK_SHELF_DELETE_KEY];
+		[[NSUserDefaults standardUserDefaults] setBool:alert.suppressionButton.state forKey:UD_WARN_SHELF_DELETE_KEY];
 
 		if (result != NSAlertDefaultReturn) return;
 	}	

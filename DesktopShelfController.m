@@ -11,6 +11,7 @@
 
 @implementation DesktopShelfController
 @synthesize tableWindowController = _tableWindowController;
+@synthesize preferencesController = _preferencesController;
 
 - (id)init
 {
@@ -30,7 +31,7 @@
 		[self folderUpdatedAtPath:path userInfo:nil];
 	}
 	
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationBecameActive:) name:NSApplicationDidBecomeActiveNotification object:NSApp];	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationBecameActive:) name:NSApplicationDidBecomeActiveNotification object:NSApp];
 	
 	return self;
 }
@@ -38,7 +39,9 @@
 - (void)dealloc
 {
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
+
 	[_tableWindowController release];
+	[_preferencesController release];
 	
 	[super dealloc];
 }
@@ -82,7 +85,11 @@
 		// Do something with file types...
 	}
 	[[NSNotificationCenter defaultCenter] postNotificationName:NC_REFRESH_SHELF_KEY object:nil];
-	
+}
+
+- (IBAction)showPreferences:(id)sender {
+	if (!self.preferencesController) self.preferencesController = [[PreferencesController new] autorelease];
+	[self.preferencesController showWindow];
 }
 
 @end

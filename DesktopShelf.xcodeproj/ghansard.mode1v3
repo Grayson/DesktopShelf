@@ -288,6 +288,7 @@
 								<string>7756732906782D8800D1FEB8</string>
 								<string>1D7284271316D8510054939F</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>1D8B3EE91316C3CF00CCE51A</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
@@ -295,8 +296,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>20</integer>
-									<integer>19</integer>
+									<integer>17</integer>
+									<integer>15</integer>
+									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -336,7 +338,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>includes.h</string>
+								<string>DesktopShelfController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -344,18 +346,17 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>includes.h</string>
+										<string>DesktopShelfController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1D728670131807D20054939F</string>
+										<string>1D7286FE13187E670054939F</string>
 										<key>history</key>
 										<array>
 											<string>1D8B3E631316C22B00CCE51A</string>
 											<string>1D8B3E641316C22B00CCE51A</string>
 											<string>1D8B3E661316C22B00CCE51A</string>
 											<string>1D8B3E671316C22B00CCE51A</string>
-											<string>1D8B3EF11316C3DB00CCE51A</string>
 											<string>1D8B3F0C1316C57600CCE51A</string>
 											<string>1D72848A1316DA880054939F</string>
 											<string>1D72848B1316DA880054939F</string>
@@ -363,13 +364,21 @@
 											<string>1D7285291316E0530054939F</string>
 											<string>1D7285B01316E9A40054939F</string>
 											<string>1D7285C21316E9FE0054939F</string>
-											<string>1D7285DD1316EBDD0054939F</string>
-											<string>1D7285E61316EC3A0054939F</string>
 											<string>1D7285F41316EDC70054939F</string>
 											<string>1D7285F91316EE070054939F</string>
-											<string>1D72862D1316F1380054939F</string>
-											<string>1D72864F131805ED0054939F</string>
-											<string>1D7285B11316E9A40054939F</string>
+											<string>1D72867B131809790054939F</string>
+											<string>1D72868613180A4E0054939F</string>
+											<string>1D7286AF13180C620054939F</string>
+											<string>1D7286B913180CBC0054939F</string>
+											<string>1D7286D313187C8D0054939F</string>
+											<string>1D7286D513187C8D0054939F</string>
+											<string>1D7286D613187C8D0054939F</string>
+											<string>1D7286D713187C8D0054939F</string>
+											<string>1D7286D813187C8D0054939F</string>
+											<string>1D7286DE13187D5A0054939F</string>
+											<string>1D7286E213187D740054939F</string>
+											<string>1D7286E313187D740054939F</string>
+											<string>1D7286D413187C8D0054939F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -550,7 +559,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>320341970.14617902</real>
+	<real>320372327.89223701</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -567,12 +576,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1D7286FF13187E670054939F</string>
 		<string>1D7284BC1316DF120054939F</string>
 		<string>1D7284BD1316DF120054939F</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1D8B3E701316C22B00CCE51A</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>/Users/ghansard/Projects/DesktopShelf/DesktopShelf.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>197 173 788 504 0 0 1440 878 </string>
@@ -596,7 +606,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TableWindowController.m</string>
+								<string>ShelfRule.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -956,7 +966,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

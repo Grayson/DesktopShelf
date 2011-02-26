@@ -16,12 +16,16 @@
 #import "ShelfItem.h"
 
 #import "TableWindowController.h"
+#import "PreferencesController.h"
 
 @interface DesktopShelfController : NSObject {
 	TableWindowController *_tableWindowController;
+	PreferencesController *_preferencesController;
 }
 @property (retain) TableWindowController *tableWindowController;
+@property (retain) PreferencesController *preferencesController;
 
 - (void)folderUpdatedAtPath:(NSString *)updatedPath userInfo:(NSDictionary *)userInfo;
+- (IBAction)showPreferences:(id)sender;
 
 @end

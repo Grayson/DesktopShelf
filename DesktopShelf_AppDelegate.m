@@ -16,7 +16,7 @@
 
 - (void)awakeFromNib
 {
-	self.shelfController = [DesktopShelfController new];
+	self.shelfController = [[DesktopShelfController new] autorelease];
 }
 
 /**
@@ -268,5 +268,8 @@
     [super dealloc];
 }
 
+- (IBAction)showPreferences:(id)sender {
+	[self.shelfController showPreferences:sender];
+}
 
 @end
