@@ -82,12 +82,32 @@
 		nil];
 }
 
+- (NSArray *)matchedFiles {
+	NSMutableArray *matchedFiles = [NSMutableArray array];
+	for (NSString *fileName in [[NSFileManager defaultManager] contentsOfDirectoryAtPath:self.folder error:nil])
+	{
+		NSString *path = [self.folder stringByAppendingPathComponent:fileName];
+		if ([self matchesFile:path]) [matchedFiles addObject:path];
+	}
+	return matchedFiles;
+	// [[NSNotificationCenter defaultCenter] postNotificationName:NC_REFRESH_SHELF_KEY object:nil];
+}
+
 - (BOOL)matchesFile:(NSString *)filePath {
-	return NO;
+	NSString *fileName = [filePath lastPathComponent];
+	return 	(self.verb == kEndsWithVerb && [fileName hasSuffix:self.value]) 	||
+			(self.verb == kBeginsWithVerb && [fileName hasPrefix:self.value]) 	||
+			(self.verb == kContainsVerb && [fileName rangeOfString:self.value].location != NSNotFound);
 }
 
 - (void)performActionOnFile:(NSString *)filePath {
-	NSLog(@"%s %@", _cmd, filePath);
+	if (self.action == kAddToShelfAction) {
+	}
+	else if (self.action == kMoveToAction) {
+	}
+	else if (self.action == kRunShellScriptAction) {
+		
+	}
 }
 
 - (NSDictionary *)dictionaryRepresentation {

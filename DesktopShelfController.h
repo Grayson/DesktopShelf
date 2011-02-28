@@ -14,6 +14,7 @@
 #import "URLFile.h"
 #import "WeblocFile.h"
 #import "ShelfItem.h"
+#import "ShelfRule.h"
 
 #import "TableWindowController.h"
 #import "PreferencesController.h"

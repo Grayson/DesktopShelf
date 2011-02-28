@@ -17,6 +17,19 @@
 		if file in ~ ends with .txt then move to ~/Documents
 		if file in Desktop/blah contains "dosomething" then run shell script ~/bin/script.sh
 */
+
+enum rule_verbs {
+	kEndsWithVerb = 0,
+	kBeginsWithVerb,
+	kContainsVerb,
+};
+
+enum rule_actions {
+	kAddToShelfAction = 0,
+	kMoveToAction,
+	kRunShellScriptAction,
+};
+
 @interface ShelfRule : NSObject {
 	NSUInteger _verb;
 	NSString *_value;
@@ -37,6 +50,7 @@
 - (NSArray *)verbs;
 - (NSArray *)actions;
 
+- (NSArray *)matchedFiles;
 - (BOOL)matchesFile:(NSString *)filePath;
 - (void)performActionOnFile:(NSString *)filePath;
 

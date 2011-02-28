@@ -32,6 +32,7 @@
 	}
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationBecameActive:) name:NSApplicationDidBecomeActiveNotification object:NSApp];
+	NSLog(@"%s %@", _cmd, [ShelfRule defaultRules]);
 	
 	return self;
 }
