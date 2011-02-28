@@ -31,7 +31,9 @@ enum rule_actions {
 };
 
 #import "ShellScriptLauncher.h"
+#import "DesktopShelf_AppDelegate+Additions.h"
 #import "includes.h"
+#import "ShelfItem.h"
 
 @interface ShelfRule : NSObject {
 	NSUInteger _verb;

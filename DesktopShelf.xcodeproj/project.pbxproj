@@ -141,22 +141,13 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1D8FEAB8131C2E93000E150F /* AppDelegate */,
 				1D8B3ED81316C2FC00CCE51A /* FileWatcher */,
 				1D8B3E621316C21800CCE51A /* Scrapers */,
-				77C8280B06725ACE000B614F /* DesktopShelf_AppDelegate.h */,
-				77C8280C06725ACE000B614F /* DesktopShelf_AppDelegate.m */,
 				797A783E0DDCFB3E0050D0C2 /* Importer */,
 				1D8B3EE91316C3CF00CCE51A /* Controllers */,
-				1D7285A81316E8E00054939F /* DataToImageTransformer.h */,
-				1D7285A91316E8E00054939F /* DataToImageTransformer.m */,
-				1D7286C8131847E00054939F /* ShelfRulesTransformer.h */,
-				1D7286C9131847E00054939F /* ShelfRulesTransformer.m */,
-				1D7286CD131848C80054939F /* ShelfRule.h */,
-				1D7286CE131848C80054939F /* ShelfRule.m */,
-				1D8FEA5E131C22ED000E150F /* ShellScriptLauncher.h */,
-				1D8FEA5F131C22ED000E150F /* ShellScriptLauncher.m */,
-				1D8FEA6B131C2648000E150F /* DesktopShelf_AppDelegate+Additions.h */,
-				1D8FEA6C131C2648000E150F /* DesktopShelf_AppDelegate+Additions.m */,
+				1D8FEAB9131C2E9C000E150F /* Transformers */,
+				1D8FEABA131C2EBD000E150F /* Other */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -232,6 +223,39 @@
 				1D728674131808410054939F /* PreferencesController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1D8FEAB8131C2E93000E150F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				77C8280B06725ACE000B614F /* DesktopShelf_AppDelegate.h */,
+				77C8280C06725ACE000B614F /* DesktopShelf_AppDelegate.m */,
+				1D8FEA6B131C2648000E150F /* DesktopShelf_AppDelegate+Additions.h */,
+				1D8FEA6C131C2648000E150F /* DesktopShelf_AppDelegate+Additions.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1D8FEAB9131C2E9C000E150F /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				1D7285A81316E8E00054939F /* DataToImageTransformer.h */,
+				1D7285A91316E8E00054939F /* DataToImageTransformer.m */,
+				1D7286C8131847E00054939F /* ShelfRulesTransformer.h */,
+				1D7286C9131847E00054939F /* ShelfRulesTransformer.m */,
+			);
+			name = Transformers;
+			sourceTree = "<group>";
+		};
+		1D8FEABA131C2EBD000E150F /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1D7286CD131848C80054939F /* ShelfRule.h */,
+				1D7286CE131848C80054939F /* ShelfRule.m */,
+				1D8FEA5E131C22ED000E150F /* ShellScriptLauncher.h */,
+				1D8FEA5F131C22ED000E150F /* ShellScriptLauncher.m */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* DesktopShelf */ = {

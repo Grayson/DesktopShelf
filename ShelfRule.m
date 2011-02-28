@@ -90,7 +90,6 @@
 		if ([self matchesFile:path]) [matchedFiles addObject:path];
 	}
 	return matchedFiles;
-	// [[NSNotificationCenter defaultCenter] postNotificationName:NC_REFRESH_SHELF_KEY object:nil];
 }
 
 - (BOOL)matchesFile:(NSString *)filePath {
@@ -102,6 +101,22 @@
 
 - (void)performActionOnFile:(NSString *)filePath {
 	if (self.action == kAddToShelfAction) {
+		NSFileManager *fm = [NSFileManager defaultManager];
+		NSError *err = nil;
+		NSString *uuid = [NSProcessInfo processInfo] globallyUniqueString];
+		NSString *movePath = [[[[NSApp delegate] guaranteedShelfItemsFolder] stringByAppendingPathComponent:uuid] stringByAppendingPathExtension:[filePath pathExtension]];
+		BOOL moved = [fm moveItemAtPath:filePath toPath:movePath error:&err];
+		if ((!moved || err) && SHOULDLOG) {
+			NSLog(@"%s Error moving item %@ to shelf.  Error message: %@", _cmd, filePath, err);
+			return;
+		}
+		ShelfItem *item = [ShelfItem item];
+		item.path = movePath;
+		item.desc = [[filePath lastPathComponent] stringByDeletingPathExtension];
+		[item fetchIcon];
+		if (SHOULDLOG) NSLog(@"[ShelfRule %s] Adding item: %@", _cmd, item);
+		[fm removeItemAtPath:filePath error:nil];
+		[[NSNotificationCenter defaultCenter] postNotificationName:NC_REFRESH_SHELF_KEY object:nil];
 	}
 	else if (self.action == kMoveToAction) {
 		NSFileManager *fm = [NSFileManager defaultManager];
