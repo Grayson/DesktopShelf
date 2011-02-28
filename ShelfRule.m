@@ -106,7 +106,7 @@
 	else if (self.action == kMoveToAction) {
 		NSFileManager *fm = [NSFileManager defaultManager];
 		NSError *err = nil;
-		if ((![fm moveItemAtPath:filePath toPath:self.actionData error:err] || err) && SHOULDLOG)
+		if ((![fm moveItemAtPath:filePath toPath:self.actionData error:&err] || err) && SHOULDLOG)
 			NSLog(@"%s Error moving file %@ to folder %@: %@", _cmd, filePath, self.actionData, err);		
 	}
 	else if (self.action == kRunShellScriptAction) {
@@ -114,7 +114,7 @@
 			if (SHOULDLOG) NSLog(@"%s Cannot run shell script at path: %@", _cmd, self.actionData);
 			return;
 		}
-		[ShellScriptLauncher launchScriptAtPath:self.actionData arguments:[NSArray arrayWithObject:filePath]];
+		[ShellScriptLauncher launchScriptAtPath:self.actionData withArguments:[NSArray arrayWithObject:filePath]];
 	}
 }
 

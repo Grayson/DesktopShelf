@@ -23,6 +23,7 @@
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 
+- (NSString *)applicationSupportDirectory;
 - (IBAction)saveAction:sender;
 
 @end

@@ -294,12 +294,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>30</integer>
-									<integer>9</integer>
-									<integer>0</integer>
-								</array>
-								<array>
-									<integer>31</integer>
+									<integer>12</integer>
 									<integer>9</integer>
 									<integer>0</integer>
 								</array>
@@ -340,7 +335,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>URLFile.m</string>
+								<string>DesktopShelf_AppDelegate.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -348,16 +343,15 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>URLFile.m</string>
+										<string>DesktopShelf_AppDelegate.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1D8FEA83131C27CC000E150F</string>
+										<string>1D8FEAB6131C2E44000E150F</string>
 										<key>history</key>
 										<array>
 											<string>1D8B3E631316C22B00CCE51A</string>
 											<string>1D8B3E641316C22B00CCE51A</string>
-											<string>1D8B3E671316C22B00CCE51A</string>
 											<string>1D8B3F0C1316C57600CCE51A</string>
 											<string>1D72848A1316DA880054939F</string>
 											<string>1D72848B1316DA880054939F</string>
@@ -379,12 +373,14 @@
 											<string>1D7287051318B7150054939F</string>
 											<string>1D8FEA46131B4D6C000E150F</string>
 											<string>1D8FEA62131C249B000E150F</string>
-											<string>1D8FEA78131C2788000E150F</string>
 											<string>1D8FEA79131C2788000E150F</string>
 											<string>1D8FEA7A131C2788000E150F</string>
-											<string>1D8FEA7B131C2788000E150F</string>
 											<string>1D8FEA7C131C2788000E150F</string>
-											<string>1D8FEA7D131C2788000E150F</string>
+											<string>1D8FEA8B131C2D26000E150F</string>
+											<string>1D8FEA97131C2D4A000E150F</string>
+											<string>1D8FEA98131C2D4A000E150F</string>
+											<string>1D8FEAB1131C2E01000E150F</string>
+											<string>1D8FEA7B131C2788000E150F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -567,7 +563,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>320612300.00379997</real>
+	<real>320613956.15963799</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -584,13 +580,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1D8FEA7F131C2788000E150F</string>
 		<string>1D8FEA3E131B4B1C000E150F</string>
 		<string>1D8FEA3F131B4B1C000E150F</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>1D8B3E701316C22B00CCE51A</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/ghansard/Projects/DesktopShelf/DesktopShelf.xcodeproj</string>
-		<string>1D8B3E701316C22B00CCE51A</string>
 	</array>
 	<key>WindowString</key>
 	<string>321 242 788 504 0 0 1440 878 </string>
@@ -614,7 +609,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>WeblocFile.m</string>
+								<string>DesktopShelf_AppDelegate+Additions.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -685,7 +680,7 @@
 			<key>WindowToolGUID</key>
 			<string>1D8B3E701316C22B00CCE51A</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

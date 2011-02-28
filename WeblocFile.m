@@ -104,7 +104,7 @@
 -(BOOL)writeToFile:(NSString *)path
 {
 	NSDictionary *d = [NSDictionary dictionaryWithObject:[self uri] forKey:@"URL"];
-	[d writeToFile:path atomically:YES];
+	return [d writeToFile:path atomically:YES];
 	// 	FSRef fref;
 	// 	FSSpec spec;
 	// 	OSErr err;
