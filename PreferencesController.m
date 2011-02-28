@@ -49,6 +49,7 @@
 }
 
 - (void)setDockItemIsDisabled:(BOOL)newDockItemIsDisabled {
+	NSLog(@"%s", _cmd);
 	NSString *infoPlistPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"Contents/Info.plist"];
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:infoPlistPath];
 	[dict setObject:[NSString stringWithFormat:@"%d", newDockItemIsDisabled] forKey:@"LSUIElement"];

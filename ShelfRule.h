@@ -31,9 +31,15 @@
 @property (retain) NSString *actionData;
 
 + (id)rule;
++ (id)ruleWithDictionaryRepresentation:(NSDictionary *)representation;
 + (NSArray *)defaultRules;
 
 - (NSArray *)verbs;
 - (NSArray *)actions;
+
+- (BOOL)matchesFile:(NSString *)filePath;
+- (void)performActionOnFile:(NSString *)filePath;
+
+- (NSDictionary *)dictionaryRepresentation;
 
 @end

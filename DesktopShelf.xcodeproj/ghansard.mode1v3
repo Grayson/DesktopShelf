@@ -296,14 +296,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>17</integer>
-									<integer>15</integer>
+									<integer>26</integer>
 									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {186, 445}}</string>
+							<string>{{0, 14}, {186, 445}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -322,7 +321,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>197 173 788 504 0 0 1440 878 </string>
+						<string>321 242 788 504 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -338,7 +337,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DesktopShelfController.m</string>
+								<string>ShelfRule.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -346,11 +345,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DesktopShelfController.m</string>
+										<string>ShelfRule.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1D7286FE13187E670054939F</string>
+										<string>1D8FEA31131B4AFC000E150F</string>
 										<key>history</key>
 										<array>
 											<string>1D8B3E631316C22B00CCE51A</string>
@@ -374,11 +373,13 @@
 											<string>1D7286D513187C8D0054939F</string>
 											<string>1D7286D613187C8D0054939F</string>
 											<string>1D7286D713187C8D0054939F</string>
-											<string>1D7286D813187C8D0054939F</string>
 											<string>1D7286DE13187D5A0054939F</string>
 											<string>1D7286E213187D740054939F</string>
 											<string>1D7286E313187D740054939F</string>
-											<string>1D7286D413187C8D0054939F</string>
+											<string>1D7287031318B7150054939F</string>
+											<string>1D7287041318B7150054939F</string>
+											<string>1D7287051318B7150054939F</string>
+											<string>1D8FEA1D131B4A95000E150F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -390,14 +391,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {580, 260}}</string>
+								<string>{{0, 0}, {580, 251}}</string>
 								<key>RubberWindowFrame</key>
-								<string>197 173 788 504 0 0 1440 878 </string>
+								<string>321 242 788 504 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>260pt</string>
+							<string>251pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -410,14 +411,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 265}, {580, 198}}</string>
+								<string>{{0, 256}, {580, 207}}</string>
 								<key>RubberWindowFrame</key>
-								<string>197 173 788 504 0 0 1440 878 </string>
+								<string>321 242 788 504 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>198pt</string>
+							<string>207pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -436,9 +437,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>1D7282B41316D7870054939F</string>
+				<string>1D8FEA1F131B4A95000E150F</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>1D7282B51316D7870054939F</string>
+				<string>1D8FEA20131B4A95000E150F</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -559,7 +560,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>320372327.89223701</real>
+	<real>320555772.09059203</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -576,16 +577,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1D7286FF13187E670054939F</string>
-		<string>1D7284BC1316DF120054939F</string>
-		<string>1D7284BD1316DF120054939F</string>
 		<string>1D8B3E701316C22B00CCE51A</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>/Users/ghansard/Projects/DesktopShelf/DesktopShelf.xcodeproj</string>
-		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
-	<string>197 173 788 504 0 0 1440 878 </string>
+	<string>321 242 788 504 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -664,7 +660,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1D8B3E701316C22B00CCE51A</string>
-				<string>1D7282B61316D7870054939F</string>
+				<string>1D8FEA21131B4A95000E150F</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

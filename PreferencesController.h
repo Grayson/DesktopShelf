@@ -19,6 +19,6 @@
 - (IBAction)resetAllWarnings:(id)sender;
 
 - (BOOL)dockItemIsDisabled;
-- (void)setDockItemIsDisnabled:(BOOL)newDockItemIsDisabled;
+- (void)setDockItemIsDisabled:(BOOL)newDockItemIsDisabled;
 
 @end
