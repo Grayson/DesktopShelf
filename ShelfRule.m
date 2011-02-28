@@ -24,7 +24,7 @@
 	if (!representation) return nil;
 	NSNumber *verb = [representation objectForKey:@"verb"];
 	NSString *value = [representation objectForKey:@"value"];
-	NSString *folder = [representation objectForKey:@"representation"];
+	NSString *folder = [representation objectForKey:@"folder"];
 	NSNumber *action = [representation objectForKey:@"action"];
 	NSString *actionData = [representation objectForKey:@"actionData"];
 	
