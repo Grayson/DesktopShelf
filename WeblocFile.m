@@ -30,6 +30,15 @@
 	self = [super init];
 	if (!self) return nil;
 	
+	// If one of the newer plist formats, grab it and bail.  So easy.
+	NSDictionary *d = [NSDictionary dictionaryWithContentsOfFile:path];
+	if (d && [d objectForKey:@"URL"]) {
+		[self setURI:[d objectForKey:@"URL"]];
+		[self setName:[[path lastPathComponent] stringByDeletingPathExtension]];
+		return self;
+	}
+	
+	// Otherwise, we'll need to delve into the evil, evil RSRC fork
 	FSRef ref;
 	Handle handle = nil;
 	SInt16 file;
@@ -94,58 +103,60 @@
 
 -(BOOL)writeToFile:(NSString *)path
 {
-		FSRef fref;
-		FSSpec spec;
-		OSErr err;
-		BOOL success = YES;
-		short file = -1;
-
-		NSString *url = [self uri];
-		NSString *title = [self name];
-		[url writeToFile:path atomically:YES];
-		err = FSPathMakeRef((const UInt8 *)[path fileSystemRepresentation], &fref, NO);
-		if (err != noErr) { NSLog(@"FSPathMakeRef failed: %d", err); goto failed; }
-
-		err = FSGetCatalogInfo(&fref, kFSCatInfoNone, NULL, NULL, &spec, NULL);
-		if (err != noErr) { NSLog(@"FSGetCatalogInfo failed: %d", err); goto failed; }
-
-		OSType type = kInternetLocationGeneric;
-		if ([url hasPrefix:@"http://"]) type = kInternetLocationHTTP;
-		else if ([url hasPrefix:@"ftp://"]) type = kInternetLocationFTP;
-		FSpCreateResFile(&spec, kInternetLocationCreator, type, smUnicodeScript);
-		err = ResError();
-		if (err != noErr) { NSLog(@"FSpCreateResFile failed: %d", err); goto failed;}
-
-		file = FSOpenResFile(&fref, fsRdWrPerm);
-		if (file == -1) { NSLog(@"FSOpenResFile failed."); goto failed; }
-		UseResFile(file);
-
-		if (ResError() != noErr) { NSLog(@"UseResFile failed: %d", ResError()); goto failed; }
-
-		Handle urlHandle;
-		Handle titleHandle;
-		Handle textHandle;
-
-		PtrToHand([url UTF8String], &urlHandle, [url lengthOfBytesUsingEncoding:NSUTF8StringEncoding]);
-		PtrToHand([title UTF8String], &titleHandle, [title lengthOfBytesUsingEncoding:NSUTF8StringEncoding]);
-		PtrToHand([url UTF8String], &textHandle, [url lengthOfBytesUsingEncoding:NSUTF8StringEncoding]);
-
-		AddResource(textHandle, 'TEXT', 256, "\p");
-		AddResource(urlHandle, 'url ', 256, "\p");
-		AddResource(titleHandle, 'urln', 256, "\p");
-
-		goto cleanup;
-
-	failed:;
-		success = NO;
-
-	cleanup:;
-		if (file > -1)
-		{
-			CloseResFile(file);
-			FSCloseFork(file);
-		}
-		return success;
+	NSDictionary *d = [NSDictionary dictionaryWithObject:[self uri] forKey:@"URL"];
+	[d writeToFile:path atomically:YES];
+	// 	FSRef fref;
+	// 	FSSpec spec;
+	// 	OSErr err;
+	// 	BOOL success = YES;
+	// 	short file = -1;
+	// 
+	// 	NSString *url = [self uri];
+	// 	NSString *title = [self name];
+	// 	[url writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
+	// 	err = FSPathMakeRef((const UInt8 *)[path fileSystemRepresentation], &fref, NO);
+	// 	if (err != noErr) { NSLog(@"FSPathMakeRef failed: %d", err); goto failed; }
+	// 
+	// 	err = FSGetCatalogInfo(&fref, kFSCatInfoNone, NULL, NULL, &spec, NULL);
+	// 	if (err != noErr) { NSLog(@"FSGetCatalogInfo failed: %d", err); goto failed; }
+	// 
+	// 	OSType type = kInternetLocationGeneric;
+	// 	if ([url hasPrefix:@"http://"]) type = kInternetLocationHTTP;
+	// 	else if ([url hasPrefix:@"ftp://"]) type = kInternetLocationFTP;
+	// 	FSpCreateResFile(&spec, kInternetLocationCreator, type, smUnicodeScript);
+	// 	err = ResError();
+	// 	if (err != noErr) { NSLog(@"FSpCreateResFile failed: %d", err); goto failed;}
+	// 
+	// 	file = FSOpenResFile(&fref, fsRdWrPerm);
+	// 	if (file == -1) { NSLog(@"FSOpenResFile failed."); goto failed; }
+	// 	UseResFile(file);
+	// 
+	// 	if (ResError() != noErr) { NSLog(@"UseResFile failed: %d", ResError()); goto failed; }
+	// 
+	// 	Handle urlHandle;
+	// 	Handle titleHandle;
+	// 	Handle textHandle;
+	// 
+	// 	PtrToHand([url UTF8String], &urlHandle, [url lengthOfBytesUsingEncoding:NSUTF8StringEncoding]);
+	// 	PtrToHand([title UTF8String], &titleHandle, [title lengthOfBytesUsingEncoding:NSUTF8StringEncoding]);
+	// 	PtrToHand([url UTF8String], &textHandle, [url lengthOfBytesUsingEncoding:NSUTF8StringEncoding]);
+	// 
+	// 	AddResource(textHandle, 'TEXT', 256, "\p");
+	// 	AddResource(urlHandle, 'url ', 256, "\p");
+	// 	AddResource(titleHandle, 'urln', 256, "\p");
+	// 
+	// 	goto cleanup;
+	// 
+	// failed:;
+	// 	success = NO;
+	// 
+	// cleanup:;
+	// 	if (file > -1)
+	// 	{
+	// 		CloseResFile(file);
+	// 		FSCloseFork(file);
+	// 	}
+	// 	return success;
 }
 
 - (NSURL *)url

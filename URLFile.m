@@ -22,7 +22,7 @@
 	self = [super init];
 	if (!self) return nil;
 	
-	NSString *s = [NSString stringWithContentsOfFile:path];
+	NSString *s = [NSString stringWithContentsOfFile:path usedEncoding:nil error:nil];
 	NSArray *lines = [s componentsSeparatedByString:@"\n"];
 	NSEnumerator *lineEnumerator = [lines objectEnumerator];
 	NSString *line;

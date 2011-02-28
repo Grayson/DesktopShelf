@@ -30,6 +30,9 @@ enum rule_actions {
 	kRunShellScriptAction,
 };
 
+#import "ShellScriptLauncher.h"
+#import "includes.h"
+
 @interface ShelfRule : NSObject {
 	NSUInteger _verb;
 	NSString *_value;
