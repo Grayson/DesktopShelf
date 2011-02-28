@@ -335,7 +335,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ShelfRule.h</string>
+								<string>ShelfRulesTransformer.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -343,11 +343,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ShelfRule.h</string>
+										<string>ShelfRulesTransformer.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1D8FEB43131C427D000E150F</string>
+										<string>1D8FEB64131C4333000E150F</string>
 										<key>history</key>
 										<array>
 											<string>1D8B3E631316C22B00CCE51A</string>
@@ -361,12 +361,10 @@
 											<string>1D7286D313187C8D0054939F</string>
 											<string>1D7286D513187C8D0054939F</string>
 											<string>1D7286D613187C8D0054939F</string>
-											<string>1D7286D713187C8D0054939F</string>
 											<string>1D7286E213187D740054939F</string>
 											<string>1D7287041318B7150054939F</string>
 											<string>1D7287051318B7150054939F</string>
 											<string>1D8FEA8B131C2D26000E150F</string>
-											<string>1D8FEA97131C2D4A000E150F</string>
 											<string>1D8FEABC131C2EC5000E150F</string>
 											<string>1D8FEABD131C2EC5000E150F</string>
 											<string>1D8FEABE131C2EC5000E150F</string>
@@ -380,7 +378,9 @@
 											<string>1D8FEB36131C36D9000E150F</string>
 											<string>1D8FEB39131C36FE000E150F</string>
 											<string>1D8FEB3C131C38D6000E150F</string>
-											<string>1D8FEB3F131C38EF000E150F</string>
+											<string>1D8FEB4A131C42E3000E150F</string>
+											<string>1D8FEB58131C431E000E150F</string>
+											<string>1D8FEB59131C431E000E150F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -563,7 +563,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>320619133.80954599</real>
+	<real>320619315.296628</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -609,7 +609,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DesktopShelfController.m</string>
+								<string>WeblocFile.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

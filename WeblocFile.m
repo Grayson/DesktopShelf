@@ -77,7 +77,7 @@
 				HUnlock(handle);
 			}
 		}
-		else err = -1;
+		// else err = -1;
 		ReleaseResource(handle);
 		CloseResFile(file);
 		FSCloseFork(file);

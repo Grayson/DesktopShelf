@@ -20,7 +20,7 @@
 + (Class)transformedValueClass { return [NSString class]; }
 + (BOOL)allowsReverseTransformation { return NO; }
 - (id)transformedValue:(id)value {
-	return (value == nil) ? nil : [[NSImage alloc] initWithData:value];
+	return (value == nil) ? nil : nil;
 }
 
 @end
