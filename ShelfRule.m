@@ -32,9 +32,9 @@
 	ShelfRule *rule = [ShelfRule rule];
 	rule.verb = [verb unsignedIntValue];
 	rule.value = value;
-	rule.folder = folder;
+	rule.folder = [folder isEqualToString:@"<null>"] ? nil : folder;
 	rule.action = [action unsignedIntValue];
-	rule.actionData = actionData;
+	rule.actionData = [actionData isEqualToString:@"<null>"] ? nil : actionData;
 	
 	return rule;
 }
@@ -100,10 +100,12 @@
 }
 
 - (void)performActionOnFile:(NSString *)filePath {
+	// Adding something to the shelf involves moving it to the Shelf Items folder, adding a record
+	// to the CoreData store (ShelfItem), and then deleting the original file, if necessary.
 	if (self.action == kAddToShelfAction) {
 		NSFileManager *fm = [NSFileManager defaultManager];
 		NSError *err = nil;
-		NSString *uuid = [NSProcessInfo processInfo] globallyUniqueString];
+		NSString *uuid = [[NSProcessInfo processInfo] globallyUniqueString];
 		NSString *movePath = [[[[NSApp delegate] guaranteedShelfItemsFolder] stringByAppendingPathComponent:uuid] stringByAppendingPathExtension:[filePath pathExtension]];
 		BOOL moved = [fm moveItemAtPath:filePath toPath:movePath error:&err];
 		if ((!moved || err) && SHOULDLOG) {
@@ -137,9 +139,10 @@
 	return [NSDictionary dictionaryWithObjectsAndKeys:
 		[NSNumber numberWithUnsignedInt:self.verb], @"verb",
 		self.value, @"value",
-		self.folder ? self.folder : (NSString *)[NSNull null], @"folder",
+		self.folder ? self.folder : @"<null>", @"folder",
 		[NSNumber numberWithUnsignedInt:self.action], @"action",
-		self.actionData ? self.actionData : (NSString *)[NSNull null], @"actionData",
+		self.actionData ? self.actionData : @"<null>", @"actionData",
+		@"1", @"version",
 		nil];
 }
 

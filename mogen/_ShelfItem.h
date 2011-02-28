@@ -31,15 +31,15 @@
 
 
 
-@property (nonatomic, retain) NSDate *dateAdded;
-
-//- (BOOL)validateDateAdded:(id*)value_ error:(NSError**)error_;
-
-
-
 @property (nonatomic, retain) NSString *type;
 
 //- (BOOL)validateType:(id*)value_ error:(NSError**)error_;
+
+
+
+@property (nonatomic, retain) NSString *path;
+
+//- (BOOL)validatePath:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -67,9 +67,9 @@
 
 
 
-@property (nonatomic, retain) NSString *url;
+@property (nonatomic, retain) NSDate *dateCreated;
 
-//- (BOOL)validateUrl:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateDateCreated:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -87,12 +87,12 @@
 - (void)setPrimitiveDesc:(NSString*)value;
 
 
-- (NSDate*)primitiveDateAdded;
-- (void)setPrimitiveDateAdded:(NSDate*)value;
-
-
 - (NSString*)primitiveType;
 - (void)setPrimitiveType:(NSString*)value;
+
+
+- (NSString*)primitivePath;
+- (void)setPrimitivePath:(NSString*)value;
 
 
 - (NSData*)primitiveIcon;
@@ -111,8 +111,8 @@
 - (void)setPrimitiveDateModified:(NSDate*)value;
 
 
-- (NSString*)primitiveUrl;
-- (void)setPrimitiveUrl:(NSString*)value;
+- (NSDate*)primitiveDateCreated;
+- (void)setPrimitiveDateCreated:(NSDate*)value;
 
 
 

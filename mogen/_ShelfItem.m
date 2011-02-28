@@ -36,14 +36,14 @@
 
 
 
-@dynamic dateAdded;
-
-
-
-
-
-
 @dynamic type;
+
+
+
+
+
+
+@dynamic path;
 
 
 
@@ -78,7 +78,7 @@
 
 
 
-@dynamic url;
+@dynamic dateCreated;
 
 
 

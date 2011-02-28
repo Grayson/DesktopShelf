@@ -2,6 +2,7 @@
 #define UD_SHOULD_LOG_KEY @"ShouldLog"
 #define UD_WARN_SHELF_DELETE_KEY @"ShouldAskBeforeDeletingFromShelf"
 #define UD_SHOW_MENU_BAR_ITEM_KEY @"ShowMenuBarItem"
+#define UD_SHELF_RULES_KEY @"ShelfRulesDictionaryRepresentations"
 
 #define NC_REFRESH_SHELF_KEY @"com.fromconcentratesoftware.desktopshelf.refreshshelf"
 

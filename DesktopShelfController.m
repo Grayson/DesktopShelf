@@ -8,10 +8,13 @@
 
 #import "DesktopShelfController.h"
 
+#import "ShelfRule.h"
+
 
 @implementation DesktopShelfController
 @synthesize tableWindowController = _tableWindowController;
 @synthesize preferencesController = _preferencesController;
+@synthesize periodicTimer = _periodicTimer;
 
 - (id)init
 {
@@ -22,17 +25,11 @@
 	[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:
 		[NSArray arrayWithObject:[NSSearchPathForDirectoriesInDomains (NSDesktopDirectory, NSUserDomainMask, YES) objectAtIndex:0]], UD_SEARCH_PATHS_KEY,
 		[NSNumber numberWithBool:NO], UD_SHOULD_LOG_KEY,
+		[[ShelfRule defaultRules] valueForKeyPath:@"dictionaryRepresentation"], UD_SHELF_RULES_KEY,
 		nil]];
 	
-	// Loop over out search paths, adding a filewatcher and checking if there are already items
-	NSArray *searchPaths = [[NSUserDefaults standardUserDefaults] objectForKey:UD_SEARCH_PATHS_KEY];
-	for (NSString *path in searchPaths) {
-		[[FileWatcher sharedWatcher] watchFileAtPath:path delegate:self action:@selector(folderUpdatedAtPath:userInfo:) userInfo:nil];
-		[self folderUpdatedAtPath:path userInfo:nil];
-	}
-	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationBecameActive:) name:NSApplicationDidBecomeActiveNotification object:NSApp];
-	NSLog(@"%s %@", _cmd, [ShelfRule defaultRules]);
+	self.periodicTimer = [NSTimer scheduledTimerWithTimeInterval:(60. * 60. * 5.) target:self selector:@selector(runRules) userInfo:nil repeats:YES];
 	
 	return self;
 }
@@ -40,9 +37,11 @@
 - (void)dealloc
 {
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
-
-	[_tableWindowController release];
-	[_preferencesController release];
+	[self.periodicTimer invalidate];
+	
+	self.tableWindowController = nil;
+	self.preferencesController = nil;
+	self.periodicTimer = nil;
 	
 	[super dealloc];
 }
@@ -54,6 +53,16 @@
 		self.tableWindowController = twc;
 	}
 	[self.tableWindowController showWindow];
+	[self runRules];
+}
+
+- (void)runRules {
+	NSArray *rulesPlistArray = [[NSUserDefaults standardUserDefaults] objectForKey:UD_SHELF_RULES_KEY];
+	for (NSDictionary *rulesPlist in rulesPlistArray) {
+		ShelfRule *rule = [ShelfRule ruleWithDictionaryRepresentation:rulesPlist];
+		NSArray *matchedFiles = [rule matchedFiles];
+		for (NSString *path in matchedFiles) [rule performActionOnFile:path];
+	}
 }
 
 - (void)folderUpdatedAtPath:(NSString *)updatedPath userInfo:(NSDictionary *)userInfo

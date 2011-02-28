@@ -10,23 +10,20 @@
 
 #import "includes.h"
 
-#import "FileWatcher.h"
-#import "URLFile.h"
-#import "WeblocFile.h"
-#import "ShelfItem.h"
-#import "ShelfRule.h"
-
 #import "TableWindowController.h"
 #import "PreferencesController.h"
 
 @interface DesktopShelfController : NSObject {
 	TableWindowController *_tableWindowController;
 	PreferencesController *_preferencesController;
+	NSTimer *_periodicTimer;
 }
 @property (retain) TableWindowController *tableWindowController;
 @property (retain) PreferencesController *preferencesController;
+@property (retain) NSTimer *periodicTimer;
 
 - (void)folderUpdatedAtPath:(NSString *)updatedPath userInfo:(NSDictionary *)userInfo;
 - (IBAction)showPreferences:(id)sender;
+- (void)runRules;
 
 @end
