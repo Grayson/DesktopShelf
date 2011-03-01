@@ -22,7 +22,6 @@
 @property (retain) PreferencesController *preferencesController;
 @property (retain) NSTimer *periodicTimer;
 
-- (void)folderUpdatedAtPath:(NSString *)updatedPath userInfo:(NSDictionary *)userInfo;
 - (IBAction)showPreferences:(id)sender;
 - (void)runRules;
 

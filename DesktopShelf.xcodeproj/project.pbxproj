@@ -22,6 +22,7 @@
 		1D8B3EE81316C3C800CCE51A /* TableWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B3EE71316C3C800CCE51A /* TableWindowController.m */; };
 		1D8FEA60131C22ED000E150F /* ShellScriptLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FEA5F131C22ED000E150F /* ShellScriptLauncher.m */; };
 		1D8FEA6D131C2648000E150F /* DesktopShelf_AppDelegate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FEA6C131C2648000E150F /* DesktopShelf_AppDelegate+Additions.m */; };
+		1D8FEB88131C456C000E150F /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8FEB87131C456C000E150F /* QuickLook.framework */; };
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		770B37ED0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel */; };
 		77C8280E06725ACE000B614F /* DesktopShelf_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* DesktopShelf_AppDelegate.m */; };
@@ -93,6 +94,7 @@
 		1D8FEA5F131C22ED000E150F /* ShellScriptLauncher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellScriptLauncher.m; sourceTree = "<group>"; };
 		1D8FEA6B131C2648000E150F /* DesktopShelf_AppDelegate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DesktopShelf_AppDelegate+Additions.h"; sourceTree = "<group>"; };
 		1D8FEA6C131C2648000E150F /* DesktopShelf_AppDelegate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DesktopShelf_AppDelegate+Additions.m"; sourceTree = "<group>"; };
+		1D8FEB87131C456C000E150F /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -132,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				1D8FEB88131C456C000E150F /* QuickLook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +272,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				797A7AE70DDCFD2A0050D0C2 /* Importer Read Me.txt */,
+				1D8FEB87131C456C000E150F /* QuickLook.framework */,
 			);
 			name = DesktopShelf;
 			sourceTree = "<group>";

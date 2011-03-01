@@ -287,6 +287,8 @@
 								<string>1D7284271316D8510054939F</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>1D8B3EE91316C3CF00CCE51A</string>
+								<string>29B97315FDCFA39411CA2CEA</string>
+								<string>1D8FEB7A131C4545000E150F</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
@@ -300,7 +302,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {186, 445}}</string>
+							<string>{{0, 82}, {186, 445}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -335,7 +337,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ShelfRule.m</string>
+								<string>ShelfRulesTransformer.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -343,23 +345,21 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ShelfRule.m</string>
+										<string>ShelfRulesTransformer.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1D8FEB78131C4398000E150F</string>
+										<string>1D8FEBD8131C8F50000E150F</string>
 										<key>history</key>
 										<array>
 											<string>1D8B3E631316C22B00CCE51A</string>
 											<string>1D8B3E641316C22B00CCE51A</string>
 											<string>1D8B3F0C1316C57600CCE51A</string>
 											<string>1D72848A1316DA880054939F</string>
-											<string>1D7284AE1316DEE90054939F</string>
 											<string>1D72867B131809790054939F</string>
 											<string>1D7286AF13180C620054939F</string>
 											<string>1D7286B913180CBC0054939F</string>
 											<string>1D7286D313187C8D0054939F</string>
-											<string>1D7286D513187C8D0054939F</string>
 											<string>1D7286D613187C8D0054939F</string>
 											<string>1D7286E213187D740054939F</string>
 											<string>1D7287041318B7150054939F</string>
@@ -369,18 +369,22 @@
 											<string>1D8FEABD131C2EC5000E150F</string>
 											<string>1D8FEABE131C2EC5000E150F</string>
 											<string>1D8FEACE131C318A000E150F</string>
-											<string>1D8FEAD0131C318A000E150F</string>
 											<string>1D8FEAD9131C32DF000E150F</string>
 											<string>1D8FEAE7131C3374000E150F</string>
 											<string>1D8FEAE8131C3374000E150F</string>
-											<string>1D8FEB05131C342B000E150F</string>
 											<string>1D8FEB36131C36D9000E150F</string>
-											<string>1D8FEB39131C36FE000E150F</string>
 											<string>1D8FEB3C131C38D6000E150F</string>
-											<string>1D8FEB4A131C42E3000E150F</string>
 											<string>1D8FEB58131C431E000E150F</string>
-											<string>1D8FEB76131C4398000E150F</string>
-											<string>1D8FEB77131C4398000E150F</string>
+											<string>1D8FEB8B131C459F000E150F</string>
+											<string>1D8FEB8C131C459F000E150F</string>
+											<string>1D8FEB8D131C459F000E150F</string>
+											<string>1D8FEB97131C4784000E150F</string>
+											<string>1D8FEB98131C4784000E150F</string>
+											<string>1D8FEB9C131C478E000E150F</string>
+											<string>1D8FEBC2131C5236000E150F</string>
+											<string>1D8FEBC3131C5236000E150F</string>
+											<string>1D8FEBC4131C5236000E150F</string>
+											<string>1D8FEBC5131C5236000E150F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -563,7 +567,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>320619416.14582098</real>
+	<real>320638800.59628397</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -580,13 +584,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1D8FEB79131C4398000E150F</string>
 		<string>1D8FEA3E131B4B1C000E150F</string>
 		<string>1D8FEA3F131B4B1C000E150F</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1D8B3E701316C22B00CCE51A</string>
-		<string>/Users/ghansard/Projects/DesktopShelf/DesktopShelf.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/ghansard/Projects/DesktopShelf/DesktopShelf.xcodeproj</string>
+		<string>1D8B3E701316C22B00CCE51A</string>
 	</array>
 	<key>WindowString</key>
 	<string>321 242 788 504 0 0 1440 878 </string>
@@ -610,7 +613,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>WeblocFile.m</string>
+								<string>ShelfRulesTransformer.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -681,7 +684,7 @@
 			<key>WindowToolGUID</key>
 			<string>1D8B3E701316C22B00CCE51A</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
