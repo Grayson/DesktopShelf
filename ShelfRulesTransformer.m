@@ -18,6 +18,7 @@ NSAttributedString *toas (NSString *str) {
 NSAttributedString *aswithimage (NSImage *img) {
 	NSFileWrapper *fw = [[[NSFileWrapper alloc] initWithSerializedRepresentation:[img TIFFRepresentation]] autorelease];
 	NSTextAttachment *ta = [[[NSTextAttachment alloc] initWithFileWrapper:fw] autorelease];
+	NSLog(@"%@", ta);
 	return [NSAttributedString attributedStringWithAttachment:ta];
 }
 
@@ -41,20 +42,24 @@ NSAttributedString *aswithimage (NSImage *img) {
 	NSString *actionData = rule.actionData;
 	
 	NSMutableAttributedString *as = [[NSMutableAttributedString new] autorelease];
-	NSString *protasis = [NSString stringWithFormat:NSLocalizedString(@"For every file that %@ %@", @"rules transformer message format"), verb, match];
-	NSString *folderMessage = [NSString stringWithFormat:NSLocalizedString(@"in %@", @"rules transformer message format"), folder];
+	NSString *protasis = [NSString stringWithFormat:NSLocalizedString(@"For every file that %@ %@ ", @"rules transformer message format"), verb, match];
+	NSString *folderMessage = NSLocalizedString(@"in ", @"rules transformer message format");
 	
 	[as appendAttributedString:toas(protasis)];
 	[as appendAttributedString:toas(folderMessage)];
+	// [as appendAttributedString:aswithimage([[NSWorkspace sharedWorkspace] iconForFile:folder])];
+	[as appendAttributedString:toas([folder lastPathComponent])];
+	[as appendAttributedString:toas(@", ")];
 	
 	if (rule.action == kAddToShelfAction) [as appendAttributedString:toas(action)];
 	else {
 		NSImage *img = [[NSWorkspace sharedWorkspace] iconForFile:actionData];
 		[as appendAttributedString:toas([NSString stringWithFormat:@"%@", action])];
-		[as appendAttributedString:aswithimage(img)];
+		// [as appendAttributedString:aswithimage(img)];
 		[as appendAttributedString:toas(action)];
 		[as appendAttributedString:toas(actionData)];
 	}
+	[as appendAttributedString:toas(@".")];
 	
 	return as;
 }

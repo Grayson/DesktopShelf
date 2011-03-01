@@ -3,7 +3,6 @@
 #import "includes.h"
 #import "URLFile.h"
 #import "WeblocFile.h"
-#import "NSImage+QuickLook.h"
 
 @interface ShelfItem : _ShelfItem {}
 

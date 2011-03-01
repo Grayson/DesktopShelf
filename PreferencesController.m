@@ -7,6 +7,7 @@
 //
 
 #import "PreferencesController.h"
+#import "ShelfRule.h"
 
 
 @implementation PreferencesController
@@ -57,5 +58,19 @@
 	[NSTask launchedTaskWithLaunchPath:@"/usr/bin/touch" arguments:[NSArray arrayWithObject:infoPlistPath]];
 }
 
+- (NSArray *)shelfRules
+{
+	NSArray *rulesPlist = [[NSUserDefaults standardUserDefaults] objectForKey:UD_SHELF_RULES_KEY];
+	NSMutableArray *rules = [NSMutableArray array];
+	for (NSDictionary *rulePlist in rulesPlist) {
+		ShelfRule *rule = [ShelfRule ruleWithDictionaryRepresentation:rulePlist];
+		[rules addObject:rule];
+	}
+	return rules;
+}
 
+- (void)setShelfRules:(NSArray *)newShelfRules
+{
+	NSLog(@"%s", _cmd);
+}
 @end

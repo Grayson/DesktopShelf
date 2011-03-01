@@ -21,4 +21,7 @@
 - (BOOL)dockItemIsDisabled;
 - (void)setDockItemIsDisabled:(BOOL)newDockItemIsDisabled;
 
+- (NSArray *)shelfRules;
+- (void)setShelfRules:(NSArray *)newShelfRules;
+
 @end
