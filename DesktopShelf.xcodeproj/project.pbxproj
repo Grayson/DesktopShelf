@@ -23,6 +23,9 @@
 		1D8FEA60131C22ED000E150F /* ShellScriptLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FEA5F131C22ED000E150F /* ShellScriptLauncher.m */; };
 		1D8FEA6D131C2648000E150F /* DesktopShelf_AppDelegate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FEA6C131C2648000E150F /* DesktopShelf_AppDelegate+Additions.m */; };
 		1D8FEB88131C456C000E150F /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8FEB87131C456C000E150F /* QuickLook.framework */; };
+		1DD4CBEC131DBBD2008BC62E /* MIT-License.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1DD4CBE9131DBBD2008BC62E /* MIT-License.rtf */; };
+		1DD4CBED131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4CBEB131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m */; };
+		1DD4CBF0131DBC17008BC62E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1DD4CBEF131DBC17008BC62E /* Credits.rtf */; };
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		770B37ED0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel */; };
 		77C8280E06725ACE000B614F /* DesktopShelf_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* DesktopShelf_AppDelegate.m */; };
@@ -95,6 +98,10 @@
 		1D8FEA6B131C2648000E150F /* DesktopShelf_AppDelegate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DesktopShelf_AppDelegate+Additions.h"; sourceTree = "<group>"; };
 		1D8FEA6C131C2648000E150F /* DesktopShelf_AppDelegate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DesktopShelf_AppDelegate+Additions.m"; sourceTree = "<group>"; };
 		1D8FEB87131C456C000E150F /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		1DD4CBE9131DBBD2008BC62E /* MIT-License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "MIT-License.rtf"; sourceTree = "<group>"; };
+		1DD4CBEA131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSVerticallyCenteredTextFieldCell.h; sourceTree = "<group>"; };
+		1DD4CBEB131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSVerticallyCenteredTextFieldCell.m; sourceTree = "<group>"; };
+		1DD4CBEF131DBC17008BC62E /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -261,6 +268,17 @@
 			name = Other;
 			sourceTree = "<group>";
 		};
+		1DD4CBE8131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				1DD4CBE9131DBBD2008BC62E /* MIT-License.rtf */,
+				1DD4CBEA131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.h */,
+				1DD4CBEB131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m */,
+			);
+			name = RSVerticallyCenteredTextFieldCell;
+			path = ../Programming_examples/RSVerticallyCenteredTextFieldCell;
+			sourceTree = SOURCE_ROOT;
+		};
 		29B97314FDCFA39411CA2CEA /* DesktopShelf */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +298,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1DD4CBE8131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell */,
 				32CA4F630368D1EE00C91783 /* DesktopShelf_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -295,6 +314,7 @@
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
 				797A78410DDCFB3E0050D0C2 /* Importer-Info.plist */,
+				1DD4CBEF131DBC17008BC62E /* Credits.rtf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -409,6 +429,8 @@
 				2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */,
 				1D8B3DB91316A82500CCE51A /* TableWindow.xib in Resources */,
 				1D728672131807FC0054939F /* Prefs.xib in Resources */,
+				1DD4CBEC131DBBD2008BC62E /* MIT-License.rtf in Resources */,
+				1DD4CBF0131DBC17008BC62E /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +467,7 @@
 				1D7286CF131848C80054939F /* ShelfRule.m in Sources */,
 				1D8FEA60131C22ED000E150F /* ShellScriptLauncher.m in Sources */,
 				1D8FEA6D131C2648000E150F /* DesktopShelf_AppDelegate+Additions.m in Sources */,
+				1DD4CBED131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
