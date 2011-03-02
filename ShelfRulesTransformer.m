@@ -16,9 +16,10 @@ NSAttributedString *toas (NSString *str) {
 }
 
 NSAttributedString *aswithimage (NSImage *img) {
-	NSFileWrapper *fw = [[[NSFileWrapper alloc] initWithSerializedRepresentation:[img TIFFRepresentation]] autorelease];
-	NSTextAttachment *ta = [[[NSTextAttachment alloc] initWithFileWrapper:fw] autorelease];
-	NSLog(@"%@", ta);
+	[img setScalesWhenResized:YES];
+	[img setSize:NSMakeSize(12., 12.)];
+	NSTextAttachment *ta = [[NSTextAttachment new] autorelease];
+	[(NSImageCell *)[ta attachmentCell] setImage:img];
 	return [NSAttributedString attributedStringWithAttachment:ta];
 }
 
@@ -47,7 +48,8 @@ NSAttributedString *aswithimage (NSImage *img) {
 	
 	[as appendAttributedString:toas(protasis)];
 	[as appendAttributedString:toas(folderMessage)];
-	// [as appendAttributedString:aswithimage([[NSWorkspace sharedWorkspace] iconForFile:folder])];
+	[as appendAttributedString:aswithimage([[NSWorkspace sharedWorkspace] iconForFile:folder])];
+	[as appendAttributedString:toas(@" ")];
 	[as appendAttributedString:toas([folder lastPathComponent])];
 	[as appendAttributedString:toas(@", ")];
 	
@@ -55,7 +57,7 @@ NSAttributedString *aswithimage (NSImage *img) {
 	else {
 		NSImage *img = [[NSWorkspace sharedWorkspace] iconForFile:actionData];
 		[as appendAttributedString:toas([NSString stringWithFormat:@"%@", action])];
-		// [as appendAttributedString:aswithimage(img)];
+		[as appendAttributedString:aswithimage(img)];
 		[as appendAttributedString:toas(action)];
 		[as appendAttributedString:toas(actionData)];
 	}
