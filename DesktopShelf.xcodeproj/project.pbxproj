@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D134B3D132DA2E6006FAE3E /* NewShelfRuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134B3C132DA2E6006FAE3E /* NewShelfRuleController.m */; };
 		1D72842C1316D8510054939F /* _ShelfItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7284291316D8510054939F /* _ShelfItem.m */; };
 		1D72842D1316D8510054939F /* ShelfItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D72842B1316D8510054939F /* ShelfItem.m */; };
 		1D7285AA1316E8E00054939F /* DataToImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7285A91316E8E00054939F /* DataToImageTransformer.m */; };
@@ -26,6 +27,7 @@
 		1DD4CBEC131DBBD2008BC62E /* MIT-License.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1DD4CBE9131DBBD2008BC62E /* MIT-License.rtf */; };
 		1DD4CBED131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4CBEB131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m */; };
 		1DD4CBF0131DBC17008BC62E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1DD4CBEF131DBC17008BC62E /* Credits.rtf */; };
+		1DD4CC7D131DC4AA008BC62E /* NewShelfRuleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD4CC7C131DC4AA008BC62E /* NewShelfRuleWindow.xib */; };
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		770B37ED0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel */; };
 		77C8280E06725ACE000B614F /* DesktopShelf_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* DesktopShelf_AppDelegate.m */; };
@@ -68,6 +70,8 @@
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1D134B3B132DA2E6006FAE3E /* NewShelfRuleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewShelfRuleController.h; sourceTree = "<group>"; };
+		1D134B3C132DA2E6006FAE3E /* NewShelfRuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewShelfRuleController.m; sourceTree = "<group>"; };
 		1D7284281316D8510054939F /* _ShelfItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ShelfItem.h; sourceTree = "<group>"; };
 		1D7284291316D8510054939F /* _ShelfItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ShelfItem.m; sourceTree = "<group>"; };
 		1D72842A1316D8510054939F /* ShelfItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShelfItem.h; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 		1DD4CBEA131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSVerticallyCenteredTextFieldCell.h; sourceTree = "<group>"; };
 		1DD4CBEB131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSVerticallyCenteredTextFieldCell.m; sourceTree = "<group>"; };
 		1DD4CBEF131DBC17008BC62E /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		1DD4CC7C131DC4AA008BC62E /* NewShelfRuleWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewShelfRuleWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -225,6 +230,8 @@
 		1D8B3EE91316C3CF00CCE51A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1D134B3B132DA2E6006FAE3E /* NewShelfRuleController.h */,
+				1D134B3C132DA2E6006FAE3E /* NewShelfRuleController.m */,
 				1D8B3EE31316C3AC00CCE51A /* DesktopShelfController.h */,
 				1D8B3EE41316C3AC00CCE51A /* DesktopShelfController.m */,
 				1D8B3EE61316C3C800CCE51A /* TableWindowController.h */,
@@ -294,6 +301,7 @@
 			);
 			name = DesktopShelf;
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
@@ -308,6 +316,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1DD4CC7C131DC4AA008BC62E /* NewShelfRuleWindow.xib */,
 				1D8B3DB81316A82500CCE51A /* TableWindow.xib */,
 				1D728671131807FC0054939F /* Prefs.xib */,
 				8D1107310486CEB800E47090 /* DesktopShelf-Info.plist */,
@@ -431,6 +440,7 @@
 				1D728672131807FC0054939F /* Prefs.xib in Resources */,
 				1DD4CBEC131DBBD2008BC62E /* MIT-License.rtf in Resources */,
 				1DD4CBF0131DBC17008BC62E /* Credits.rtf in Resources */,
+				1DD4CC7D131DC4AA008BC62E /* NewShelfRuleWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +478,7 @@
 				1D8FEA60131C22ED000E150F /* ShellScriptLauncher.m in Sources */,
 				1D8FEA6D131C2648000E150F /* DesktopShelf_AppDelegate+Additions.m in Sources */,
 				1DD4CBED131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m in Sources */,
+				1D134B3D132DA2E6006FAE3E /* NewShelfRuleController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
