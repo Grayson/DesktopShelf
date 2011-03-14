@@ -296,13 +296,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>21</integer>
+									<integer>22</integer>
 									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 109}, {186, 445}}</string>
+							<string>{{0, 76}, {186, 445}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -337,7 +337,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ShelfRulesTransformer.m</string>
+								<string>ShelfRule.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -345,11 +345,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ShelfRulesTransformer.m</string>
+										<string>ShelfRule.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1DD4CC72131DC21F008BC62E</string>
+										<string>1DD4CD1F131ECC81008BC62E</string>
 										<key>history</key>
 										<array>
 											<string>1D8B3E631316C22B00CCE51A</string>
@@ -372,19 +372,19 @@
 											<string>1D8FEAE8131C3374000E150F</string>
 											<string>1D8FEB58131C431E000E150F</string>
 											<string>1D8FEB8B131C459F000E150F</string>
-											<string>1D8FEB97131C4784000E150F</string>
 											<string>1D8FEB98131C4784000E150F</string>
 											<string>1D8FEB9C131C478E000E150F</string>
 											<string>1D8FEBC2131C5236000E150F</string>
 											<string>1D8FEBC3131C5236000E150F</string>
 											<string>1D8FEBE6131C90B6000E150F</string>
 											<string>1D8FEBE7131C90B6000E150F</string>
-											<string>1D8FEBE8131C90B6000E150F</string>
-											<string>1D8FEC08131C9198000E150F</string>
 											<string>1DD4CBF8131DBD44008BC62E</string>
 											<string>1DD4CBF9131DBD44008BC62E</string>
 											<string>1DD4CC1E131DBF26008BC62E</string>
-											<string>1DD4CC5D131DC1BA008BC62E</string>
+											<string>1DD4CD1B131ECC81008BC62E</string>
+											<string>1DD4CD1C131ECC81008BC62E</string>
+											<string>1DD4CD1D131ECC81008BC62E</string>
+											<string>1DD4CD1E131ECC81008BC62E</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -567,7 +567,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>320717343.110695</real>
+	<real>320785537.55074602</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -584,13 +584,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1DD4CC73131DC21F008BC62E</string>
 		<string>1DD4CC04131DBD44008BC62E</string>
 		<string>1DD4CC05131DBD44008BC62E</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1D8B3E701316C22B00CCE51A</string>
 		<string>/Users/ghansard/Projects/DesktopShelf/DesktopShelf.xcodeproj</string>
-		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>321 242 788 504 0 0 1440 878 </string>
