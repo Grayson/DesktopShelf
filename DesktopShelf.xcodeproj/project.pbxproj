@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D134B3D132DA2E6006FAE3E /* NewShelfRuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134B3C132DA2E6006FAE3E /* NewShelfRuleController.m */; };
+		1D26A6F81339432D00EE0A31 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D26A6F71339432D00EE0A31 /* ApplicationServices.framework */; };
 		1D72842C1316D8510054939F /* _ShelfItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7284291316D8510054939F /* _ShelfItem.m */; };
 		1D72842D1316D8510054939F /* ShelfItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D72842B1316D8510054939F /* ShelfItem.m */; };
 		1D7285AA1316E8E00054939F /* DataToImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7285A91316E8E00054939F /* DataToImageTransformer.m */; };
@@ -72,6 +73,7 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		1D134B3B132DA2E6006FAE3E /* NewShelfRuleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewShelfRuleController.h; sourceTree = "<group>"; };
 		1D134B3C132DA2E6006FAE3E /* NewShelfRuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewShelfRuleController.m; sourceTree = "<group>"; };
+		1D26A6F71339432D00EE0A31 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		1D7284281316D8510054939F /* _ShelfItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ShelfItem.h; sourceTree = "<group>"; };
 		1D7284291316D8510054939F /* _ShelfItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ShelfItem.m; sourceTree = "<group>"; };
 		1D72842A1316D8510054939F /* ShelfItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShelfItem.h; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D26A6F81339432D00EE0A31 /* ApplicationServices.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				1D8FEB88131C456C000E150F /* QuickLook.framework in Frameworks */,
 			);
@@ -331,6 +334,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D26A6F71339432D00EE0A31 /* ApplicationServices.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);

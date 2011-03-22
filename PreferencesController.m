@@ -8,7 +8,7 @@
 
 #import "PreferencesController.h"
 #import "ShelfRule.h"
-
+#import <ApplicationServices/ApplicationServices.h>
 
 @implementation PreferencesController
 @synthesize window = _window;
@@ -48,19 +48,38 @@
 }
 
 - (BOOL)dockItemIsDisabled {
-	// NSBundle *b = [NSBundle mainBundle];
-	// NSDictionary *infoPlist = [b infoDictionary];
-	// NSLog(@"%s %@", _cmd, infoPlist);
-	return NO;
+	NSBundle *b = [NSBundle mainBundle];
+	NSDictionary *infoPlist = [b infoDictionary];
+	NSString *LSUIElement = [infoPlist objectForKey:@"LSUIElement"];
+	if (!LSUIElement) return NO;
+	
+	return [LSUIElement integerValue] == 1;
 }
 
 - (void)setDockItemIsDisabled:(BOOL)newDockItemIsDisabled {
-	// NSLog(@"%s", _cmd);
 	NSString *infoPlistPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"Contents/Info.plist"];
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:infoPlistPath];
+	
 	[dict setObject:[NSString stringWithFormat:@"%d", newDockItemIsDisabled] forKey:@"LSUIElement"];
-	// [dict writeToFile:infoPlistPath atomically:YES];
+
+	if (![dict writeToFile:infoPlistPath atomically:YES]) {
+		NSAlert *err = [NSAlert alertWithMessageText: NSLocalizedString(@"Error changing application", @"error title")
+                                       defaultButton: nil
+                                     alternateButton: nil
+                                         otherButton: nil
+                           informativeTextWithFormat: NSLocalizedString(@"DesktopShelf could not alter its own Info.plist file.  This is likely a problem with ownership permissions.  See that you are the owner of DesktopShelf and that you have write permissions.", @"error text")];
+		[err beginSheetModalForWindow:[NSApp keyWindow] modalDelegate:nil didEndSelector:nil contextInfo:nil];
+		return;
+	}
 	[NSTask launchedTaskWithLaunchPath:@"/usr/bin/touch" arguments:[NSArray arrayWithObject:infoPlistPath]];
+	
+	NSAlert *alert = [NSAlert alertWithMessageText: NSLocalizedString(@"DesktopShelf needs to be relaunched", @"alert title")
+                                     defaultButton: NSLocalizedString(@"Relaunch", @"alert button title")
+                                   alternateButton: NSLocalizedString(@"Cancel", @"alert button title")
+                                       otherButton: nil
+                         informativeTextWithFormat: NSLocalizedString(@"DesktopShelf needs to be relaunched in order to hide the Dock icon.  Would you like to relaunch DesktopShelf now?", @"alert message")];
+	[alert setAlertStyle:NSInformationalAlertStyle];
+	[alert beginSheetModalForWindow:[NSApp keyWindow] modalDelegate:self didEndSelector:@selector(relaunchAlertDidEnd:returnCode:contextInfo:) contextInfo:nil];
 }
 
 - (NSArray *)shelfRules
@@ -108,6 +127,30 @@
 	[rulesPlist addObject:[rule dictionaryRepresentation]];
 	[[NSUserDefaults standardUserDefaults] setObject:rulesPlist forKey:UD_SHELF_RULES_KEY];
 	[self setShelfRules:nil];
+}
+
+- (void)relaunchAlertDidEnd:(NSAlert *)anAlert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
+	if (returnCode != NSAlertDefaultReturn) return;
+	
+	NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]];
+	LSLaunchURLSpec launchSpec;
+	launchSpec.appURL = (CFURLRef)url;
+	launchSpec.itemURLs = NULL;
+	launchSpec.passThruParams = NULL;
+	launchSpec.launchFlags = kLSLaunchDefaults | kLSLaunchNewInstance;
+	launchSpec.asyncRefCon = NULL;
+	
+	OSErr err = LSOpenFromURLSpec(&launchSpec, NULL);
+	if (err == noErr) [NSApp terminate:nil];
+	else {
+		// Handle relaunch failure
+		NSAlert *err = [NSAlert alertWithMessageText: NSLocalizedString(@"Error relaunching DesktopShelf", @"error title")
+                                       defaultButton: nil
+                                     alternateButton: nil
+                                         otherButton: nil
+                           informativeTextWithFormat: NSLocalizedString(@"There was a problem relaunching DesktopShelf.  Please quit it and relaunch it yourself.", @"error message")];
+		[err beginSheetModalForWindow:[NSApp keyWindow] modalDelegate:nil didEndSelector:nil contextInfo:nil];
+	}
 }
 
 @end
