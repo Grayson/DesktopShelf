@@ -7,6 +7,7 @@
 //
 
 #import "NewShelfRuleController.h"
+#import "ShelfRule.h"
 
 #define kSheetMinSize 167
 #define kSheetMaxSize 189
@@ -22,6 +23,7 @@
 @synthesize folderImageView = _folderImageView;
 @synthesize actionImageView = _actionImageView;
 @synthesize actionButton = _actionButton;
+@synthesize delegate = _delegate;
 
 - (id)init
 {
@@ -39,6 +41,7 @@
 	self.actionPopUpButton = nil;
 	self.folderImageView = nil;
 	self.actionImageView = nil;
+	self.delegate = nil;
 
 	[super dealloc];
 }
@@ -64,8 +67,8 @@
 	[op setCanChooseFiles:!isMoveAction];
 	if ([op runModal] != NSOKButton) return;
 	
-	[self.filePathTextField setStringValue:[NSString stringWithString:[op filename]]];
-	self.folderImageView.image = [[NSWorkspace sharedWorkspace] iconForFile:[op filename]];
+	[self.actionPathTextField setStringValue:[NSString stringWithString:[op filename]]];
+	self.actionImageView.image = [[NSWorkspace sharedWorkspace] iconForFile:[op filename]];
 }
 
 - (IBAction)actionChanged:(id)sender {
@@ -87,8 +90,15 @@
 }
 
 - (IBAction)addRule:(id)sender {
-	NSLog(@"%s", _cmd);
-	[self cancel:sender];
+	ShelfRule *rule = [ShelfRule rule];
+	rule.verb = [self.fileMatchPopUpButton indexOfSelectedItem];
+	rule.value = [NSString stringWithString:[self.fileEndingTextField stringValue]];
+	rule.folder = [NSString stringWithString:[self.filePathTextField stringValue]];
+	rule.action = [self.actionPopUpButton indexOfSelectedItem];
+	rule.actionData = [NSString stringWithString:[self.actionPathTextField stringValue]];
+	if (self.delegate && [self.delegate respondsToSelector:@selector(newRuleWasCreated:)]) [self.delegate newRuleWasCreated:rule];
+	
+	[self cancel:sender]; // To close the window.
 }
 
 - (IBAction)showWindow:(id)sender {	

@@ -48,12 +48,12 @@
 - (BOOL)dockItemIsDisabled {
 	NSBundle *b = [NSBundle mainBundle];
 	NSDictionary *infoPlist = [b infoDictionary];
-	NSLog(@"%s %@", _cmd, infoPlist);
+	// NSLog(@"%s %@", _cmd, infoPlist);
 	return NO;
 }
 
 - (void)setDockItemIsDisabled:(BOOL)newDockItemIsDisabled {
-	NSLog(@"%s", _cmd);
+	// NSLog(@"%s", _cmd);
 	NSString *infoPlistPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"Contents/Info.plist"];
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:infoPlistPath];
 	[dict setObject:[NSString stringWithFormat:@"%d", newDockItemIsDisabled] forKey:@"LSUIElement"];
@@ -78,8 +78,15 @@
 }
 
 - (IBAction)addShelfRule:(id)sender {
-	if (!self.newShelfRuleController) self.newShelfRuleController = [[NewShelfRuleController new] autorelease];
+	if (!self.newShelfRuleController) {
+		self.newShelfRuleController = [[NewShelfRuleController new] autorelease];
+		self.newShelfRuleController.delegate = self;
+	}
 	[self.newShelfRuleController showWindow:self];
+}
+
+- (void)newRuleWasCreated:(ShelfRule *)rule {
+	NSLog(@"%s %@", _cmd, rule);
 }
 
 @end

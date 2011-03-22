@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class ShelfRule;
 
 @interface NewShelfRuleController : NSWindowController {
 	IBOutlet NSTextField *_fileEndingTextField;
@@ -18,6 +19,8 @@
 	IBOutlet NSImageView *_folderImageView;
 	IBOutlet NSImageView *_actionImageView;
 	IBOutlet NSButton *_actionButton;
+	
+	id _delegate;
 }
 
 @property (retain) NSTextField *fileEndingTextField;
@@ -28,6 +31,7 @@
 @property (retain) NSImageView *folderImageView;
 @property (retain) NSImageView *actionImageView;
 @property (retain) NSButton *actionButton;
+@property (retain) id delegate;
 
 - (IBAction)chooseFolder:(id)sender;
 - (IBAction)chooseAction:(id)sender;
@@ -37,4 +41,8 @@
 
 - (IBAction)showWindow:(id)sender;
 
+@end
+
+@interface NSObject (NewShelfRuleControllerInformalDelegate)
+- (void)newRuleWasCreated:(ShelfRule *)rule;
 @end
