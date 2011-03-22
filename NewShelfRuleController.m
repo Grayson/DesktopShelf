@@ -92,17 +92,26 @@
 }
 
 - (IBAction)showWindow:(id)sender {	
-	NSRect f = self.window.frame;
-	float adjust = f.size.height - kSheetMinSize;
-	f.size.height = kSheetMinSize;
-	f.origin.y += adjust;
-
-	[self.actionImageView setHidden: YES];
-	[self.actionPathTextField setHidden: YES];
-	[self.actionButton setHidden: YES];
-
-	[self.window setFrame:f display:YES animate:NO];
+	[self window]; // Stub used to force the window controller to load items in the nib.
 	
+	// Set up defaults
+	NSArray *desktops = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES);
+	NSString *folder = [desktops lastObject];
+	if (!folder) folder = NSHomeDirectory();
+
+	NSImage *icon = [[NSWorkspace sharedWorkspace] iconForFile:folder];
+	self.folderImageView.image = icon;
+	self.actionImageView.image = icon;
+
+	[self.filePathTextField setStringValue:folder];
+	[self.actionPathTextField setStringValue: folder];
+	
+	[self.actionPopUpButton selectItemAtIndex:0];
+	
+	// Resize after a delay so that it doesn't mess up the window orientation.
+	[self performSelector:@selector(actionChanged:) withObject:sender afterDelay:0.01];
+	
+	// Finally, I can show the damn window.
 	[NSApp beginSheet:[self window] modalForWindow:[NSApp keyWindow] modalDelegate:self didEndSelector:@selector(sheetWillClose:) contextInfo:nil];
 }
 
