@@ -13,10 +13,12 @@
 
 @interface PreferencesController : NSObject {
 	IBOutlet NSWindow *_window;
+	IBOutlet NSArrayController *_shelfRulesArrayController;
 	NewShelfRuleController *_newShelfRuleController;
 }
 @property (retain) NSWindow *window;
 @property (retain) NewShelfRuleController *newShelfRuleController;
+@property (retain) NSArrayController *shelfRulesArrayController;
 
 - (void)showWindow;
 - (IBAction)resetAllWarnings:(id)sender;
@@ -28,5 +30,6 @@
 - (void)setShelfRules:(NSArray *)newShelfRules;
 
 - (IBAction)addShelfRule:(id)sender;
+- (IBAction)removeShelfRule:(id)sender;
 
 @end

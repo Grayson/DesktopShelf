@@ -13,6 +13,7 @@
 @implementation PreferencesController
 @synthesize window = _window;
 @synthesize newShelfRuleController = _newShelfRuleController;
+@synthesize shelfRulesArrayController = _shelfRulesArrayController;
 
 - (id)init
 {
@@ -28,6 +29,7 @@
 {
 	self.window = nil;
 	self.newShelfRuleController = nil;
+	self.shelfRulesArrayController = nil;
 	
 	[_window release];
 	[_newShelfRuleController release];
@@ -46,8 +48,8 @@
 }
 
 - (BOOL)dockItemIsDisabled {
-	NSBundle *b = [NSBundle mainBundle];
-	NSDictionary *infoPlist = [b infoDictionary];
+	// NSBundle *b = [NSBundle mainBundle];
+	// NSDictionary *infoPlist = [b infoDictionary];
 	// NSLog(@"%s %@", _cmd, infoPlist);
 	return NO;
 }
@@ -74,7 +76,7 @@
 
 - (void)setShelfRules:(NSArray *)newShelfRules
 {
-	NSLog(@"%s", _cmd);
+	// NSLog(@"%s", _cmd);
 }
 
 - (IBAction)addShelfRule:(id)sender {
@@ -83,6 +85,21 @@
 		self.newShelfRuleController.delegate = self;
 	}
 	[self.newShelfRuleController showWindow:self];
+}
+
+- (IBAction)removeShelfRule:(id)sender {
+	NSDictionary *ruleToRemove = [[self.shelfRulesArrayController.selectedObjects lastObject] dictionaryRepresentation];
+	NSMutableArray *rulesPlist = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:UD_SHELF_RULES_KEY]];
+	NSDictionary *deleteThisOne = nil;
+	for (NSDictionary *ruleDict in rulesPlist) {
+		if ([ruleDict isEqualToDictionary:ruleToRemove]) {
+			deleteThisOne = ruleDict;
+			break;
+		}
+	}
+	if (deleteThisOne) [rulesPlist removeObject:deleteThisOne];
+	[[NSUserDefaults standardUserDefaults] setObject:rulesPlist forKey:UD_SHELF_RULES_KEY];
+	[self setShelfRules:nil];
 }
 
 - (void)newRuleWasCreated:(ShelfRule *)rule {
