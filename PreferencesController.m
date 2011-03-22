@@ -86,7 +86,11 @@
 }
 
 - (void)newRuleWasCreated:(ShelfRule *)rule {
-	NSLog(@"%s %@", _cmd, rule);
+	if (!rule) return;
+	NSMutableArray *rulesPlist = [NSMutableArray arrayWithArray: [[NSUserDefaults standardUserDefaults] objectForKey:UD_SHELF_RULES_KEY]];
+	[rulesPlist addObject:[rule dictionaryRepresentation]];
+	[[NSUserDefaults standardUserDefaults] setObject:rulesPlist forKey:UD_SHELF_RULES_KEY];
+	[self setShelfRules:nil];
 }
 
 @end

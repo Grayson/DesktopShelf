@@ -56,9 +56,11 @@ NSAttributedString *aswithimage (NSImage *img) {
 	if (rule.action == kAddToShelfAction) [as appendAttributedString:toas(action)];
 	else {
 		NSImage *img = [[NSWorkspace sharedWorkspace] iconForFile:actionData];
-		[as appendAttributedString:toas([NSString stringWithFormat:@"%@", action])];
+		[as appendAttributedString:toas(@" ")];
 		[as appendAttributedString:aswithimage(img)];
+		[as appendAttributedString:toas(@" ")];
 		[as appendAttributedString:toas(action)];
+		[as appendAttributedString:toas(@" ")];
 		[as appendAttributedString:toas(actionData)];
 	}
 	[as appendAttributedString:toas(@".")];
