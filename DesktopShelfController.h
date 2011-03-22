@@ -12,14 +12,17 @@
 
 #import "TableWindowController.h"
 #import "PreferencesController.h"
+#import "MenuItemController.h"
 
 @interface DesktopShelfController : NSObject {
 	TableWindowController *_tableWindowController;
 	PreferencesController *_preferencesController;
+	MenuItemController *_menuItemController;
 	NSTimer *_periodicTimer;
 }
 @property (retain) TableWindowController *tableWindowController;
 @property (retain) PreferencesController *preferencesController;
+@property (retain) MenuItemController *menuItemController;
 @property (retain) NSTimer *periodicTimer;
 
 - (IBAction)showPreferences:(id)sender;

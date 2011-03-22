@@ -14,6 +14,7 @@
 @implementation DesktopShelfController
 @synthesize tableWindowController = _tableWindowController;
 @synthesize preferencesController = _preferencesController;
+@synthesize menuItemController = _menuItemController;
 @synthesize periodicTimer = _periodicTimer;
 
 - (id)init
@@ -31,6 +32,13 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationBecameActive:) name:NSApplicationDidBecomeActiveNotification object:NSApp];
 	self.periodicTimer = [NSTimer scheduledTimerWithTimeInterval:(60. * 60. * 5.) target:self selector:@selector(runRules) userInfo:nil repeats:YES];
 	
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:UD_SHOW_MENU_BAR_ITEM_KEY]) {
+		if (!self.menuItemController) self.menuItemController = [[MenuItemController new] autorelease];
+		[self.menuItemController showMenuItem];
+	}
+	
+	[[NSUserDefaults standardUserDefaults] addObserver:self forKeyPath:UD_SHOW_MENU_BAR_ITEM_KEY options:0 context:nil];
+	
 	return self;
 }
 
@@ -42,9 +50,21 @@
 	self.tableWindowController = nil;
 	self.preferencesController = nil;
 	self.periodicTimer = nil;
+	self.menuItemController = nil;
 	
 	[super dealloc];
 }
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+	if ([keyPath isEqualToString:UD_SHOW_MENU_BAR_ITEM_KEY]) {
+		BOOL shouldShowMenu = [object boolForKey:keyPath];
+		if (!self.menuItemController) self.menuItemController = [[MenuItemController new] autorelease];
+		if (shouldShowMenu) [self.menuItemController showMenuItem];
+		else [self.menuItemController hideMenuItem];
+	}
+}
+
 
 - (void)applicationBecameActive:(NSNotification *)aNotification
 {

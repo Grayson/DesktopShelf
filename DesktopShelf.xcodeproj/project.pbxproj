@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D134B3D132DA2E6006FAE3E /* NewShelfRuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134B3C132DA2E6006FAE3E /* NewShelfRuleController.m */; };
 		1D26A6F81339432D00EE0A31 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D26A6F71339432D00EE0A31 /* ApplicationServices.framework */; };
+		1D26A6FB13394A0B00EE0A31 /* MenuItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D26A6FA13394A0A00EE0A31 /* MenuItemController.m */; };
 		1D72842C1316D8510054939F /* _ShelfItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7284291316D8510054939F /* _ShelfItem.m */; };
 		1D72842D1316D8510054939F /* ShelfItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D72842B1316D8510054939F /* ShelfItem.m */; };
 		1D7285AA1316E8E00054939F /* DataToImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7285A91316E8E00054939F /* DataToImageTransformer.m */; };
@@ -74,6 +75,8 @@
 		1D134B3B132DA2E6006FAE3E /* NewShelfRuleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewShelfRuleController.h; sourceTree = "<group>"; };
 		1D134B3C132DA2E6006FAE3E /* NewShelfRuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewShelfRuleController.m; sourceTree = "<group>"; };
 		1D26A6F71339432D00EE0A31 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		1D26A6F913394A0A00EE0A31 /* MenuItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemController.h; sourceTree = "<group>"; };
+		1D26A6FA13394A0A00EE0A31 /* MenuItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemController.m; sourceTree = "<group>"; };
 		1D7284281316D8510054939F /* _ShelfItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ShelfItem.h; sourceTree = "<group>"; };
 		1D7284291316D8510054939F /* _ShelfItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ShelfItem.m; sourceTree = "<group>"; };
 		1D72842A1316D8510054939F /* ShelfItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShelfItem.h; sourceTree = "<group>"; };
@@ -241,6 +244,8 @@
 				1D8B3EE71316C3C800CCE51A /* TableWindowController.m */,
 				1D728673131808410054939F /* PreferencesController.h */,
 				1D728674131808410054939F /* PreferencesController.m */,
+				1D26A6F913394A0A00EE0A31 /* MenuItemController.h */,
+				1D26A6FA13394A0A00EE0A31 /* MenuItemController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -483,6 +488,7 @@
 				1D8FEA6D131C2648000E150F /* DesktopShelf_AppDelegate+Additions.m in Sources */,
 				1DD4CBED131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m in Sources */,
 				1D134B3D132DA2E6006FAE3E /* NewShelfRuleController.m in Sources */,
+				1D26A6FB13394A0B00EE0A31 /* MenuItemController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
