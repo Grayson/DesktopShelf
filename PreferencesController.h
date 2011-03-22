@@ -9,11 +9,14 @@
 #import <Cocoa/Cocoa.h>
 
 #import "includes.h"
+#import "NewShelfRuleController.h"
 
 @interface PreferencesController : NSObject {
 	IBOutlet NSWindow *_window;
+	NewShelfRuleController *_newShelfRuleController;
 }
 @property (retain) NSWindow *window;
+@property (retain) NewShelfRuleController *newShelfRuleController;
 
 - (void)showWindow;
 - (IBAction)resetAllWarnings:(id)sender;
@@ -23,5 +26,7 @@
 
 - (NSArray *)shelfRules;
 - (void)setShelfRules:(NSArray *)newShelfRules;
+
+- (IBAction)addShelfRule:(id)sender;
 
 @end

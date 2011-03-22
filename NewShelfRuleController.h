@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NewShelfRuleController : NSObject {
+@interface NewShelfRuleController : NSWindowController {
 	IBOutlet NSTextField *_fileEndingTextField;
 	IBOutlet NSTextField *_filePathTextField;
 	IBOutlet NSTextField *_actionPathTextField;
@@ -17,6 +17,7 @@
 	IBOutlet NSPopUpButton *_actionPopUpButton;
 	IBOutlet NSImageView *_folderImageView;
 	IBOutlet NSImageView *_actionImageView;
+	IBOutlet NSButton *_actionButton;
 }
 
 @property (retain) NSTextField *fileEndingTextField;
@@ -26,11 +27,14 @@
 @property (retain) NSPopUpButton *actionPopUpButton;
 @property (retain) NSImageView *folderImageView;
 @property (retain) NSImageView *actionImageView;
+@property (retain) NSButton *actionButton;
 
 - (IBAction)chooseFolder:(id)sender;
 - (IBAction)chooseAction:(id)sender;
 - (IBAction)actionChanged:(id)sender;
 - (IBAction)cancel:(id)sender;
 - (IBAction)addRule:(id)sender;
+
+- (IBAction)showWindow:(id)sender;
 
 @end

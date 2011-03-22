@@ -12,6 +12,7 @@
 
 @implementation PreferencesController
 @synthesize window = _window;
+@synthesize newShelfRuleController = _newShelfRuleController;
 
 - (id)init
 {
@@ -26,8 +27,10 @@
 - (void)dealloc
 {
 	self.window = nil;
+	self.newShelfRuleController = nil;
 	
 	[_window release];
+	[_newShelfRuleController release];
 	
 	[super dealloc];
 }
@@ -73,4 +76,10 @@
 {
 	NSLog(@"%s", _cmd);
 }
+
+- (IBAction)addShelfRule:(id)sender {
+	if (!self.newShelfRuleController) self.newShelfRuleController = [[NewShelfRuleController new] autorelease];
+	[self.newShelfRuleController showWindow:self];
+}
+
 @end
