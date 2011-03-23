@@ -20,11 +20,14 @@
 }
 
 - (void)showMenuItem {
-	self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-	NSImage *img = [[[NSImage imageNamed:@"NSApplicationIcon"] copy] autorelease];
-	[img setScalesWhenResized:YES];
-	[img setSize:NSMakeSize(16., 16.)];
-	self.statusItem.image = img;
+	if (!self.statusItem) {
+		self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+		NSImage *img = [[[NSImage imageNamed:@"NSApplicationIcon"] copy] autorelease];
+		[img setScalesWhenResized:YES];
+		[img setSize:NSMakeSize(16., 16.)];
+		self.statusItem.image = img;
+		self.statusItem.highlightMode = YES;
+	}
 	[self update];
 }
 

@@ -10,6 +10,7 @@
 		1D134B3D132DA2E6006FAE3E /* NewShelfRuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134B3C132DA2E6006FAE3E /* NewShelfRuleController.m */; };
 		1D26A6F81339432D00EE0A31 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D26A6F71339432D00EE0A31 /* ApplicationServices.framework */; };
 		1D26A6FB13394A0B00EE0A31 /* MenuItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D26A6FA13394A0A00EE0A31 /* MenuItemController.m */; };
+		1D26A6FE1339919E00EE0A31 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D26A7001339919E00EE0A31 /* Localizable.strings */; };
 		1D72842C1316D8510054939F /* _ShelfItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7284291316D8510054939F /* _ShelfItem.m */; };
 		1D72842D1316D8510054939F /* ShelfItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D72842B1316D8510054939F /* ShelfItem.m */; };
 		1D7285AA1316E8E00054939F /* DataToImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7285A91316E8E00054939F /* DataToImageTransformer.m */; };
@@ -77,6 +78,7 @@
 		1D26A6F71339432D00EE0A31 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		1D26A6F913394A0A00EE0A31 /* MenuItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemController.h; sourceTree = "<group>"; };
 		1D26A6FA13394A0A00EE0A31 /* MenuItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemController.m; sourceTree = "<group>"; };
+		1D26A6FF1339919E00EE0A31 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1D7284281316D8510054939F /* _ShelfItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ShelfItem.h; sourceTree = "<group>"; };
 		1D7284291316D8510054939F /* _ShelfItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ShelfItem.m; sourceTree = "<group>"; };
 		1D72842A1316D8510054939F /* ShelfItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShelfItem.h; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1D26A7001339919E00EE0A31 /* Localizable.strings */,
 				1DD4CC7C131DC4AA008BC62E /* NewShelfRuleWindow.xib */,
 				1D8B3DB81316A82500CCE51A /* TableWindow.xib */,
 				1D728671131807FC0054939F /* Prefs.xib */,
@@ -450,6 +453,7 @@
 				1DD4CBEC131DBBD2008BC62E /* MIT-License.rtf in Resources */,
 				1DD4CBF0131DBC17008BC62E /* Credits.rtf in Resources */,
 				1DD4CC7D131DC4AA008BC62E /* NewShelfRuleWindow.xib in Resources */,
+				1D26A6FE1339919E00EE0A31 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +513,14 @@
 				089C165DFE840E0CC02AAC07 /* English */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1D26A7001339919E00EE0A31 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D26A6FF1339919E00EE0A31 /* English */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		2F7446970DB6B7EA00F9684A /* MainMenu.xib */ = {
