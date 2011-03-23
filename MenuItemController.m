@@ -9,6 +9,16 @@
 #import "MenuItemController.h"
 #import "ShelfItem.h"
 
+NSMenuItem *toastitleitem (NSString *str) {
+	NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:
+		[NSFont systemFontOfSize:10.], NSFontAttributeName,
+		nil];
+ 	NSAttributedString *as = [[[NSAttributedString alloc] initWithString:str attributes:attrs] autorelease];
+	NSMenuItem *mi = [[NSMenuItem alloc] initWithTitle:str action:nil keyEquivalent:@""];
+	mi.attributedTitle = as;
+	return mi;
+}
+
 @implementation MenuItemController
 @synthesize statusItem = _statusItem;
 @synthesize delegate = _delegate;
@@ -46,22 +56,30 @@
 	
 	NSMenu *menu = [[[NSMenu alloc] initWithTitle:@"com.fcs.desktopshelf.systemmenuitem"] autorelease];
 	
+	[menu addItem:toastitleitem(NSLocalizedString(@"Shelf", @"menu item"))];
+	
 	for (ShelfItem *item in [ShelfItem everyItem]) {
 		NSMenuItem *mi = [menu addItemWithTitle:item.desc action:@selector(openShelfItem:) keyEquivalent:@""];
 		mi.target = self;
 		mi.representedObject = item;
-		NSImage *img = [[[NSImage alloc] initWithData:item.icon] autorelease];
+		NSImage *img = nil;
+		if (item.icon) img = [[[NSImage alloc] initWithData:item.icon] autorelease];
+		else img = [[NSWorkspace sharedWorkspace] iconForFileType:item.path.pathExtension];
 		[img setScalesWhenResized:YES];
 		[img setSize:NSMakeSize(16., 16.)];
 		mi.image = img;
+		mi.indentationLevel = 1;
 	}
-	[menu addItem:[NSMenuItem separatorItem]];
+	[menu addItemWithTitle:@"" action:nil keyEquivalent:@""];
+	[menu addItem:toastitleitem(NSLocalizedString(@"Application", @"menu item"))];
 	
 	NSMenuItem *prefsItem = [menu addItemWithTitle:NSLocalizedString(@"Open Preferences\\U2026", @"menu item") action:@selector(showPreferences:) keyEquivalent:@""];
-	prefsItem.target = self.delegate;
+	prefsItem.target = self;
+	prefsItem.indentationLevel = 1;
 	
 	NSMenuItem *quitItem = [menu addItemWithTitle:NSLocalizedString(@"Quit DesktopShelf", @"menu item") action:@selector(terminate:) keyEquivalent:@""];
 	quitItem.target = NSApp;
+	quitItem.indentationLevel = 1;
 	
 	self.statusItem.menu = menu;
 }
@@ -69,6 +87,11 @@
 - (void)openShelfItem:(NSMenuItem *)aMenuItem
 {
 	[aMenuItem.representedObject open];
+}
+
+- (IBAction)showPreferences:(id)sender {
+	[NSApp activateIgnoringOtherApps:YES];
+	if ([self.delegate respondsToSelector:@selector(showPreferences:)]) [self.delegate showPreferences:sender];
 }
 
 @end

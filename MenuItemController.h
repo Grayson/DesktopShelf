@@ -21,4 +21,6 @@
 
 - (void)update;
 
+- (IBAction)showPreferences:(id)sender;
+
 @end
