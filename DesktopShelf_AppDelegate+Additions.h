@@ -14,5 +14,8 @@
 
 - (NSString *)guaranteedApplicationSupportDirectory;
 - (NSString *)guaranteedShelfItemsFolder;
+- (BOOL)dockItemIsDisabled;
+- (void)setDockItemIsDisabled:(BOOL)newDockItemIsDisabled;
+
 
 @end

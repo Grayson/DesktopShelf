@@ -37,6 +37,7 @@
 	[self observeValueForKeyPath:UD_SHOW_MENU_BAR_ITEM_KEY ofObject:[NSUserDefaults standardUserDefaults] change:nil context:nil];
 	
 	[[NSUserDefaults standardUserDefaults] addObserver:self forKeyPath:UD_SHOW_MENU_BAR_ITEM_KEY options:0 context:nil];
+	if (![[NSApp delegate] dockItemIsDisabled]) [self showShelfWindow:nil];
 	
 	return self;
 }
