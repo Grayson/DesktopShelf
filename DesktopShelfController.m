@@ -27,6 +27,7 @@
 		[NSArray arrayWithObject:[NSSearchPathForDirectoriesInDomains (NSDesktopDirectory, NSUserDomainMask, YES) objectAtIndex:0]], UD_SEARCH_PATHS_KEY,
 		[NSNumber numberWithBool:NO], UD_SHOULD_LOG_KEY,
 		[[ShelfRule defaultRules] valueForKeyPath:@"dictionaryRepresentation"], UD_SHELF_RULES_KEY,
+		[NSNumber numberWithInteger:30], UD_MENU_ITEM_MAX_LENGTH,
 		nil]];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationBecameActive:) name:NSApplicationDidBecomeActiveNotification object:NSApp];

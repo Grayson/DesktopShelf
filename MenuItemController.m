@@ -54,12 +54,18 @@ NSMenuItem *toastitleitem (NSString *str) {
 - (void)update {
 	if (!self.statusItem) return;
 	
+	NSInteger truncationLength = [[NSUserDefaults standardUserDefaults] integerForKey:UD_MENU_ITEM_MAX_LENGTH];
+	
 	NSMenu *menu = [[[NSMenu alloc] initWithTitle:@"com.fcs.desktopshelf.systemmenuitem"] autorelease];
 	
 	[menu addItem:toastitleitem(NSLocalizedString(@"Shelf", @"menu item"))];
 	
 	for (ShelfItem *item in [ShelfItem everyItem]) {
-		NSMenuItem *mi = [menu addItemWithTitle:item.desc action:@selector(openShelfItem:) keyEquivalent:@""];
+		NSString *title = item.desc;
+		if (truncationLength != 0 && title.length > truncationLength) {
+			title = [[title substringToIndex:truncationLength] stringByAppendingFormat:@"%C", 0x2026];
+		}
+		NSMenuItem *mi = [menu addItemWithTitle:title action:@selector(openShelfItem:) keyEquivalent:@""];
 		mi.target = self;
 		mi.representedObject = item;
 		NSImage *img = nil;
