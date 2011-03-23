@@ -11,10 +11,13 @@
 
 @implementation MenuItemController
 @synthesize statusItem = _statusItem;
+@synthesize delegate = _delegate;
 
 - (void)dealloc
 {
-	self.statusItem = nil;
+	[self hideMenuItem]; // Will kill self.statusItem.
+	
+	self.delegate = nil;
 	
 	[super dealloc];
 }
@@ -27,6 +30,7 @@
 		[img setSize:NSMakeSize(16., 16.)];
 		self.statusItem.image = img;
 		self.statusItem.highlightMode = YES;
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(update) name:NC_REFRESH_SHELF_KEY object:nil];
 	}
 	[self update];
 }
@@ -34,9 +38,12 @@
 - (void)hideMenuItem {
 	[[NSStatusBar systemStatusBar] removeStatusItem:self.statusItem];
 	self.statusItem = nil;
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)update {
+	if (!self.statusItem) return;
+	
 	NSMenu *menu = [[[NSMenu alloc] initWithTitle:@"com.fcs.desktopshelf.systemmenuitem"] autorelease];
 	
 	for (ShelfItem *item in [ShelfItem everyItem]) {
@@ -50,8 +57,8 @@
 	}
 	[menu addItem:[NSMenuItem separatorItem]];
 	
-	NSMenuItem *prefsItem = [menu addItemWithTitle:NSLocalizedString(@"Open Preferences\\U2026", @"menu item") action:@selector(openPreferences:) keyEquivalent:@""];
-	prefsItem.target = self;
+	NSMenuItem *prefsItem = [menu addItemWithTitle:NSLocalizedString(@"Open Preferences\\U2026", @"menu item") action:@selector(showPreferences:) keyEquivalent:@""];
+	prefsItem.target = self.delegate;
 	
 	NSMenuItem *quitItem = [menu addItemWithTitle:NSLocalizedString(@"Quit DesktopShelf", @"menu item") action:@selector(terminate:) keyEquivalent:@""];
 	quitItem.target = NSApp;

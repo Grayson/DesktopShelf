@@ -78,7 +78,7 @@
 		1D26A6F71339432D00EE0A31 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		1D26A6F913394A0A00EE0A31 /* MenuItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemController.h; sourceTree = "<group>"; };
 		1D26A6FA13394A0A00EE0A31 /* MenuItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemController.m; sourceTree = "<group>"; };
-		1D26A6FF1339919E00EE0A31 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1D26A6FF1339919E00EE0A31 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1D7284281316D8510054939F /* _ShelfItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ShelfItem.h; sourceTree = "<group>"; };
 		1D7284291316D8510054939F /* _ShelfItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _ShelfItem.m; sourceTree = "<group>"; };
 		1D72842A1316D8510054939F /* ShelfItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShelfItem.h; sourceTree = "<group>"; };

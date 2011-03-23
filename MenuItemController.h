@@ -11,8 +11,10 @@
 
 @interface MenuItemController : NSObject {
 	NSStatusItem *_statusItem;
+	id _delegate;
 }
 @property (retain) NSStatusItem *statusItem;
+@property (retain) id delegate;
 
 - (void)showMenuItem;
 - (void)hideMenuItem;
