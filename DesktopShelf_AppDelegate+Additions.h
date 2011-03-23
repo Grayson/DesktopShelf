@@ -17,5 +17,6 @@
 - (BOOL)dockItemIsDisabled;
 - (void)setDockItemIsDisabled:(BOOL)newDockItemIsDisabled;
 
+- (void)relaunchAlertDidEnd:(NSAlert *)anAlert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo;
 
 @end
