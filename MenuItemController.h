@@ -22,5 +22,6 @@
 - (void)update;
 
 - (IBAction)showPreferences:(id)sender;
+- (IBAction)showShelfWindow:(id)sender;
 
 @end

@@ -26,6 +26,7 @@
 @property (retain) NSTimer *periodicTimer;
 
 - (IBAction)showPreferences:(id)sender;
+- (IBAction)showShelfWindow:(id)sender;
 - (void)runRules;
 
 @end

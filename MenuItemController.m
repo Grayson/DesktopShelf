@@ -79,6 +79,10 @@ NSMenuItem *toastitleitem (NSString *str) {
 	[menu addItemWithTitle:@"" action:nil keyEquivalent:@""];
 	[menu addItem:toastitleitem(NSLocalizedString(@"Application", @"menu item"))];
 	
+	NSMenuItem *showShelfItem = [menu addItemWithTitle:NSLocalizedString(@"Show Shelf window\\U2026", @"menu item") action:@selector(showShelfWindow:) keyEquivalent:@""];
+	showShelfItem.target = self;
+	showShelfItem.indentationLevel = 1;
+	
 	NSMenuItem *prefsItem = [menu addItemWithTitle:NSLocalizedString(@"Open Preferences\\U2026", @"menu item") action:@selector(showPreferences:) keyEquivalent:@""];
 	prefsItem.target = self;
 	prefsItem.indentationLevel = 1;
@@ -98,6 +102,11 @@ NSMenuItem *toastitleitem (NSString *str) {
 - (IBAction)showPreferences:(id)sender {
 	[NSApp activateIgnoringOtherApps:YES];
 	if ([self.delegate respondsToSelector:@selector(showPreferences:)]) [self.delegate showPreferences:sender];
+}
+
+- (IBAction)showShelfWindow:(id)sender {
+	[NSApp activateIgnoringOtherApps:YES];
+	if ([self.delegate respondsToSelector:@selector(showShelfWindow:)]) [self.delegate showShelfWindow:sender];
 }
 
 @end

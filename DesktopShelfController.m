@@ -70,11 +70,6 @@
 
 - (void)applicationBecameActive:(NSNotification *)aNotification
 {
-	if (!self.tableWindowController) {
-		TableWindowController *twc = [[TableWindowController new] autorelease];
-		self.tableWindowController = twc;
-	}
-	[self.tableWindowController showWindow];
 	[self runRules];
 }
 
@@ -90,6 +85,14 @@
 - (IBAction)showPreferences:(id)sender {
 	if (!self.preferencesController) self.preferencesController = [[PreferencesController new] autorelease];
 	[self.preferencesController showWindow];
+}
+
+- (IBAction)showShelfWindow:(id)sender {
+	if (!self.tableWindowController) {
+		TableWindowController *twc = [[TableWindowController new] autorelease];
+		self.tableWindowController = twc;
+	}
+	[self.tableWindowController showWindow];
 }
 
 @end
