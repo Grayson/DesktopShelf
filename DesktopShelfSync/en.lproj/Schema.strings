@@ -1,0 +1,13 @@
+/* Localized strings for DesktopShelfSync */
+
+/* Data Class: No comment provided by developer */
+"com.mycompany.myschema.dataclass" = "My Custom Objects";
+
+/* Entity: A simple entity with just one attribute */
+"com.mycompany.myschema.firstnames" = "First Names Entity";
+
+/* Attribute: A simple attribute */
+"com.mycompany.myschema.firstnames/firstNameAttribute" = "First Name";
+
+/* Relationship: Contrived relationship from first name to first name */
+"com.mycompany.myschema.firstnames/friends" = "My Friends";

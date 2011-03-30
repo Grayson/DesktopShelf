@@ -44,6 +44,7 @@
 			
 			if (!d) return;
 			self.icon = d;
+			[self updateDateModified];
 		};
 	}
 	else if ([self.path.pathExtension isEqualToString:@"file"]) {
@@ -51,6 +52,7 @@
 			NSURL *url = [NSURL fileURLWithPath:self.path];
 			NSImage *img = [[NSWorkspace sharedWorkspace] iconForFile:[url path]];
 			self.icon = [img TIFFRepresentation];
+			[self updateDateModified];
 		};
 	}
 	

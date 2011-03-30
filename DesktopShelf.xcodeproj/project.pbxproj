@@ -31,31 +31,19 @@
 		1DD4CBED131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4CBEB131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m */; };
 		1DD4CBF0131DBC17008BC62E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1DD4CBEF131DBC17008BC62E /* Credits.rtf */; };
 		1DD4CC7D131DC4AA008BC62E /* NewShelfRuleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD4CC7C131DC4AA008BC62E /* NewShelfRuleWindow.xib */; };
+		1DF56B1F1343BA9C006B5F9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF56B1E1343BA9C006B5F9D /* Foundation.framework */; };
+		1DF56B251343BA9C006B5F9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B231343BA9C006B5F9D /* InfoPlist.strings */; };
+		1DF56B291343BA9C006B5F9D /* Schema-strings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF56B281343BA9C006B5F9D /* Schema-strings.m */; };
+		1DF56B2B1343BA9C006B5F9D /* Schema.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B2A1343BA9C006B5F9D /* Schema.plist */; };
+		1DF56B2E1343BA9C006B5F9D /* Schema.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B2C1343BA9C006B5F9D /* Schema.strings */; };
+		1DF56B301343BA9C006B5F9D /* SyncDataClass.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B2F1343BA9C006B5F9D /* SyncDataClass.tiff */; };
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		770B37ED0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel */; };
 		77C8280E06725ACE000B614F /* DesktopShelf_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* DesktopShelf_AppDelegate.m */; };
-		797A78450DDCFB3E0050D0C2 /* GetMetadataForFile.c in Sources */ = {isa = PBXBuildFile; fileRef = 797A783F0DDCFB3E0050D0C2 /* GetMetadataForFile.c */; };
-		797A78480DDCFB3E0050D0C2 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 797A78420DDCFB3E0050D0C2 /* main.c */; };
-		797A78490DDCFB3E0050D0C2 /* MySpotlightImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 797A78440DDCFB3E0050D0C2 /* MySpotlightImporter.m */; };
-		797A784A0DDCFC070050D0C2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C82804067257F0000B614F /* CoreData.framework */; };
-		797A784B0DDCFC090050D0C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
-		797A7AE20DDCFCE80050D0C2 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797A7AE10DDCFCE80050D0C2 /* CoreFoundation.framework */; };
-		797A7AE40DDCFCF40050D0C2 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797A7AE30DDCFCF40050D0C2 /* CoreServices.framework */; };
-		799CAA890DDE04C70030CB95 /* DesktopShelf.mdimporter in CopyFiles */ = {isa = PBXBuildFile; fileRef = 797A78390DDCFADE0050D0C2 /* DesktopShelf.mdimporter */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		790512FB0DDD0A100070760D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 797A78380DDCFADE0050D0C2;
-			remoteInfo = "DesktopShelf Spotlight Importer";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7905130A0DDD0A660070760D /* CopyFiles */ = {
@@ -64,7 +52,6 @@
 			dstPath = ../Library/Spotlight;
 			dstSubfolderSpec = 7;
 			files = (
-				799CAA890DDE04C70030CB95 /* DesktopShelf.mdimporter in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +101,16 @@
 		1DD4CBEB131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSVerticallyCenteredTextFieldCell.m; sourceTree = "<group>"; };
 		1DD4CBEF131DBC17008BC62E /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		1DD4CC7C131DC4AA008BC62E /* NewShelfRuleWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewShelfRuleWindow.xib; sourceTree = "<group>"; };
+		1DF56B1D1343BA9C006B5F9D /* DesktopShelfSync.syncschema */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DesktopShelfSync.syncschema; path = /Users/ghansard/Projects/DesktopShelf/build/Release/DesktopShelfSync.syncschema; sourceTree = "<absolute>"; };
+		1DF56B1E1343BA9C006B5F9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1DF56B221343BA9C006B5F9D /* DesktopShelfSync-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DesktopShelfSync-Info.plist"; sourceTree = "<group>"; };
+		1DF56B241343BA9C006B5F9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1DF56B261343BA9C006B5F9D /* DesktopShelfSync-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DesktopShelfSync-Prefix.pch"; sourceTree = "<group>"; };
+		1DF56B271343BA9C006B5F9D /* Schema-strings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Schema-strings.h"; path = "Sources/Schema-strings.h"; sourceTree = "<group>"; };
+		1DF56B281343BA9C006B5F9D /* Schema-strings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Schema-strings.m"; path = "Sources/Schema-strings.m"; sourceTree = "<group>"; };
+		1DF56B2A1343BA9C006B5F9D /* Schema.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Schema.plist; sourceTree = "<group>"; };
+		1DF56B2D1343BA9C006B5F9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Schema.strings; sourceTree = "<group>"; };
+		1DF56B2F1343BA9C006B5F9D /* SyncDataClass.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = SyncDataClass.tiff; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -123,7 +120,6 @@
 		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		77C8280B06725ACE000B614F /* DesktopShelf_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopShelf_AppDelegate.h; sourceTree = "<group>"; };
 		77C8280C06725ACE000B614F /* DesktopShelf_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopShelf_AppDelegate.m; sourceTree = "<group>"; };
-		797A78390DDCFADE0050D0C2 /* DesktopShelf.mdimporter */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesktopShelf.mdimporter; sourceTree = BUILT_PRODUCTS_DIR; };
 		797A783F0DDCFB3E0050D0C2 /* GetMetadataForFile.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = GetMetadataForFile.c; sourceTree = "<group>"; };
 		797A78410DDCFB3E0050D0C2 /* Importer-Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; fileEncoding = 4; name = "Importer-Info.plist"; path = "Importer/Importer-Info.plist"; sourceTree = "<group>"; };
 		797A78420DDCFB3E0050D0C2 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -131,20 +127,16 @@
 		797A78440DDCFB3E0050D0C2 /* MySpotlightImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySpotlightImporter.m; sourceTree = "<group>"; };
 		797A7AE10DDCFCE80050D0C2 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = ../../../../../../../../../../../../System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<group>"; };
 		797A7AE30DDCFCF40050D0C2 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = ../../../../../../../../../../../../System/Library/Frameworks/CoreServices.framework; sourceTree = "<group>"; };
-		797A7AE70DDCFD2A0050D0C2 /* Importer Read Me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Importer Read Me.txt"; path = "Importer/Importer Read Me.txt"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* DesktopShelf-Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; fileEncoding = 4; path = "DesktopShelf-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* DesktopShelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopShelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		797A78370DDCFADE0050D0C2 /* Frameworks */ = {
+		1DF56B1A1343BA9C006B5F9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				797A784A0DDCFC070050D0C2 /* CoreData.framework in Frameworks */,
-				797A784B0DDCFC090050D0C2 /* Foundation.framework in Frameworks */,
-				797A7AE20DDCFCE80050D0C2 /* CoreFoundation.framework in Frameworks */,
-				797A7AE40DDCFCF40050D0C2 /* CoreServices.framework in Frameworks */,
+				1DF56B1F1343BA9C006B5F9D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* DesktopShelf.app */,
-				797A78390DDCFADE0050D0C2 /* DesktopShelf.mdimporter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -296,6 +287,29 @@
 			path = ../Programming_examples/RSVerticallyCenteredTextFieldCell;
 			sourceTree = SOURCE_ROOT;
 		};
+		1DF56B201343BA9C006B5F9D /* DesktopShelfSync */ = {
+			isa = PBXGroup;
+			children = (
+				1DF56B271343BA9C006B5F9D /* Schema-strings.h */,
+				1DF56B281343BA9C006B5F9D /* Schema-strings.m */,
+				1DF56B2A1343BA9C006B5F9D /* Schema.plist */,
+				1DF56B2C1343BA9C006B5F9D /* Schema.strings */,
+				1DF56B2F1343BA9C006B5F9D /* SyncDataClass.tiff */,
+				1DF56B211343BA9C006B5F9D /* Supporting Files */,
+			);
+			path = DesktopShelfSync;
+			sourceTree = "<group>";
+		};
+		1DF56B211343BA9C006B5F9D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DF56B221343BA9C006B5F9D /* DesktopShelfSync-Info.plist */,
+				1DF56B231343BA9C006B5F9D /* InfoPlist.strings */,
+				1DF56B261343BA9C006B5F9D /* DesktopShelfSync-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		29B97314FDCFA39411CA2CEA /* DesktopShelf */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,8 +320,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				797A7AE70DDCFD2A0050D0C2 /* Importer Read Me.txt */,
-				1D8FEB87131C456C000E150F /* QuickLook.framework */,
+				1DF56B201343BA9C006B5F9D /* DesktopShelfSync */,
 			);
 			name = DesktopShelf;
 			sourceTree = "<group>";
@@ -342,8 +355,10 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D8FEB87131C456C000E150F /* QuickLook.framework */,
 				1D26A6F71339432D00EE0A31 /* ApplicationServices.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1DF56B1E1343BA9C006B5F9D /* Foundation.framework */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -372,21 +387,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		797A78380DDCFADE0050D0C2 /* DesktopShelf Spotlight Importer */ = {
+		1DF56B1C1343BA9C006B5F9D /* DesktopShelfSync */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 797A783D0DDCFADE0050D0C2 /* Build configuration list for PBXNativeTarget "DesktopShelf Spotlight Importer" */;
+			buildConfigurationList = 1DF56B331343BA9C006B5F9D /* Build configuration list for PBXNativeTarget "DesktopShelfSync" */;
 			buildPhases = (
-				797A78350DDCFADE0050D0C2 /* Resources */,
-				797A78360DDCFADE0050D0C2 /* Sources */,
-				797A78370DDCFADE0050D0C2 /* Frameworks */,
+				1DF56B191343BA9C006B5F9D /* Sources */,
+				1DF56B1A1343BA9C006B5F9D /* Frameworks */,
+				1DF56B1B1343BA9C006B5F9D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "DesktopShelf Spotlight Importer";
-			productName = "DesktopShelf Spotlight Importer";
-			productReference = 797A78390DDCFADE0050D0C2 /* DesktopShelf.mdimporter */;
+			name = DesktopShelfSync;
+			productName = DesktopShelfSync;
+			productReference = 1DF56B1D1343BA9C006B5F9D /* DesktopShelfSync.syncschema */;
 			productType = "com.apple.product-type.bundle";
 		};
 		8D1107260486CEB800E47090 /* DesktopShelf */ = {
@@ -401,7 +416,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				790512FC0DDD0A100070760D /* PBXTargetDependency */,
 			);
 			name = DesktopShelf;
 			productInstallPath = "$(HOME)/Applications";
@@ -423,22 +437,27 @@
 				Japanese,
 				French,
 				German,
+				en,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* DesktopShelf */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* DesktopShelf */,
-				797A78380DDCFADE0050D0C2 /* DesktopShelf Spotlight Importer */,
+				1DF56B1C1343BA9C006B5F9D /* DesktopShelfSync */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		797A78350DDCFADE0050D0C2 /* Resources */ = {
+		1DF56B1B1343BA9C006B5F9D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF56B251343BA9C006B5F9D /* InfoPlist.strings in Resources */,
+				1DF56B2B1343BA9C006B5F9D /* Schema.plist in Resources */,
+				1DF56B2E1343BA9C006B5F9D /* Schema.strings in Resources */,
+				1DF56B301343BA9C006B5F9D /* SyncDataClass.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,13 +479,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		797A78360DDCFADE0050D0C2 /* Sources */ = {
+		1DF56B191343BA9C006B5F9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				797A78450DDCFB3E0050D0C2 /* GetMetadataForFile.c in Sources */,
-				797A78480DDCFB3E0050D0C2 /* main.c in Sources */,
-				797A78490DDCFB3E0050D0C2 /* MySpotlightImporter.m in Sources */,
+				1DF56B291343BA9C006B5F9D /* Schema-strings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,14 +515,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		790512FC0DDD0A100070760D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 797A78380DDCFADE0050D0C2 /* DesktopShelf Spotlight Importer */;
-			targetProxy = 790512FB0DDD0A100070760D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -523,6 +532,22 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
+		1DF56B231343BA9C006B5F9D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DF56B241343BA9C006B5F9D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DF56B2C1343BA9C006B5F9D /* Schema.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DF56B2D1343BA9C006B5F9D /* en */,
+			);
+			name = Schema.strings;
+			sourceTree = "<group>";
+		};
 		2F7446970DB6B7EA00F9684A /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -534,6 +559,47 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1DF56B311343BA9C006B5F9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DesktopShelfSync/DesktopShelfSync-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "DesktopShelfSync/DesktopShelfSync-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = syncschema;
+			};
+			name = Debug;
+		};
+		1DF56B321343BA9C006B5F9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DesktopShelfSync/DesktopShelfSync-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "DesktopShelfSync/DesktopShelfSync-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = syncschema;
+			};
+			name = Release;
+		};
 		26FC0A850875C7B200E6366F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -594,58 +660,17 @@
 			};
 			name = Release;
 		};
-		797A783B0DDCFADE0050D0C2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
-				INFOPLIST_FILE = "Importer/Importer-Info.plist";
-				INSTALL_PATH = "@executable_path/../Contents/Library/Spotlight";
-				LIBRARY_STYLE = BUNDLE;
-				OTHER_LDFLAGS = "";
-				PREBINDING = NO;
-				PRODUCT_NAME = DesktopShelf;
-				SDKROOT = "";
-				SKIP_INSTALL = YES;
-				VALID_ARCHS = "i386 x86_64";
-				WRAPPER_EXTENSION = mdimporter;
-			};
-			name = Debug;
-		};
-		797A783C0DDCFADE0050D0C2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = "";
-				INFOPLIST_FILE = "Importer/Importer-Info.plist";
-				INSTALL_PATH = "@executable_path/../Contents/Library/Spotlight";
-				LIBRARY_STYLE = BUNDLE;
-				OTHER_LDFLAGS = "";
-				PREBINDING = NO;
-				PRODUCT_NAME = DesktopShelf;
-				SDKROOT = "";
-				SKIP_INSTALL = YES;
-				VALID_ARCHS = "i386 x86_64";
-				WRAPPER_EXTENSION = mdimporter;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1DF56B331343BA9C006B5F9D /* Build configuration list for PBXNativeTarget "DesktopShelfSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DF56B311343BA9C006B5F9D /* Debug */,
+				1DF56B321343BA9C006B5F9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		26FC0A840875C7B200E6366F /* Build configuration list for PBXNativeTarget "DesktopShelf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -660,15 +685,6 @@
 			buildConfigurations = (
 				26FC0A890875C7B200E6366F /* Debug */,
 				26FC0A8A0875C7B200E6366F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		797A783D0DDCFADE0050D0C2 /* Build configuration list for PBXNativeTarget "DesktopShelf Spotlight Importer" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				797A783B0DDCFADE0050D0C2 /* Debug */,
-				797A783C0DDCFADE0050D0C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
