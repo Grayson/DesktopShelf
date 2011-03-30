@@ -31,12 +31,15 @@
 		1DD4CBED131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4CBEB131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m */; };
 		1DD4CBF0131DBC17008BC62E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1DD4CBEF131DBC17008BC62E /* Credits.rtf */; };
 		1DD4CC7D131DC4AA008BC62E /* NewShelfRuleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD4CC7C131DC4AA008BC62E /* NewShelfRuleWindow.xib */; };
-		1DF56B1F1343BA9C006B5F9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF56B1E1343BA9C006B5F9D /* Foundation.framework */; };
-		1DF56B251343BA9C006B5F9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B231343BA9C006B5F9D /* InfoPlist.strings */; };
-		1DF56B291343BA9C006B5F9D /* Schema-strings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF56B281343BA9C006B5F9D /* Schema-strings.m */; };
-		1DF56B2B1343BA9C006B5F9D /* Schema.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B2A1343BA9C006B5F9D /* Schema.plist */; };
-		1DF56B2E1343BA9C006B5F9D /* Schema.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B2C1343BA9C006B5F9D /* Schema.strings */; };
-		1DF56B301343BA9C006B5F9D /* SyncDataClass.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B2F1343BA9C006B5F9D /* SyncDataClass.tiff */; };
+		1DF56B351343C053006B5F9D /* SyncServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF56B341343C053006B5F9D /* SyncServices.framework */; };
+		1DF56B6D1343C2E4006B5F9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF56B1E1343BA9C006B5F9D /* Foundation.framework */; };
+		1DF56B731343C2E4006B5F9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B711343C2E4006B5F9D /* InfoPlist.strings */; };
+		1DF56B771343C2E4006B5F9D /* Schema-strings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF56B761343C2E4006B5F9D /* Schema-strings.m */; };
+		1DF56B791343C2E4006B5F9D /* Schema.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B781343C2E4006B5F9D /* Schema.plist */; };
+		1DF56B7C1343C2E4006B5F9D /* Schema.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B7A1343C2E4006B5F9D /* Schema.strings */; };
+		1DF56B7E1343C2E4006B5F9D /* SyncDataClass.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B7D1343C2E4006B5F9D /* SyncDataClass.tiff */; };
+		1DF56B841343C367006B5F9D /* DesktopShelfSync.syncschema in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B6C1343C2E4006B5F9D /* DesktopShelfSync.syncschema */; };
+		1DF56B861343C6AA006B5F9D /* DesktopShelfSyncDescription.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B851343C6AA006B5F9D /* DesktopShelfSyncDescription.plist */; };
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		770B37ED0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel */; };
 		77C8280E06725ACE000B614F /* DesktopShelf_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* DesktopShelf_AppDelegate.m */; };
@@ -44,6 +47,16 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1DF56B821343C339006B5F9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DF56B6B1343C2E4006B5F9D;
+			remoteInfo = DesktopShelfSync;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7905130A0DDD0A660070760D /* CopyFiles */ = {
@@ -101,16 +114,20 @@
 		1DD4CBEB131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSVerticallyCenteredTextFieldCell.m; sourceTree = "<group>"; };
 		1DD4CBEF131DBC17008BC62E /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		1DD4CC7C131DC4AA008BC62E /* NewShelfRuleWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewShelfRuleWindow.xib; sourceTree = "<group>"; };
-		1DF56B1D1343BA9C006B5F9D /* DesktopShelfSync.syncschema */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DesktopShelfSync.syncschema; path = /Users/ghansard/Projects/DesktopShelf/build/Release/DesktopShelfSync.syncschema; sourceTree = "<absolute>"; };
 		1DF56B1E1343BA9C006B5F9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1DF56B221343BA9C006B5F9D /* DesktopShelfSync-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DesktopShelfSync-Info.plist"; sourceTree = "<group>"; };
-		1DF56B241343BA9C006B5F9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1DF56B261343BA9C006B5F9D /* DesktopShelfSync-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DesktopShelfSync-Prefix.pch"; sourceTree = "<group>"; };
-		1DF56B271343BA9C006B5F9D /* Schema-strings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Schema-strings.h"; path = "Sources/Schema-strings.h"; sourceTree = "<group>"; };
-		1DF56B281343BA9C006B5F9D /* Schema-strings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Schema-strings.m"; path = "Sources/Schema-strings.m"; sourceTree = "<group>"; };
-		1DF56B2A1343BA9C006B5F9D /* Schema.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Schema.plist; sourceTree = "<group>"; };
-		1DF56B2D1343BA9C006B5F9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Schema.strings; sourceTree = "<group>"; };
-		1DF56B2F1343BA9C006B5F9D /* SyncDataClass.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = SyncDataClass.tiff; sourceTree = "<group>"; };
+		1DF56B341343C053006B5F9D /* SyncServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SyncServices.framework; path = System/Library/Frameworks/SyncServices.framework; sourceTree = SDKROOT; };
+		1DF56B3D1343C216006B5F9D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1DF56B3F1343C216006B5F9D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		1DF56B6C1343C2E4006B5F9D /* DesktopShelfSync.syncschema */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesktopShelfSync.syncschema; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF56B701343C2E4006B5F9D /* DesktopShelfSync-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DesktopShelfSync-Info.plist"; sourceTree = "<group>"; };
+		1DF56B721343C2E4006B5F9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1DF56B741343C2E4006B5F9D /* DesktopShelfSync-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DesktopShelfSync-Prefix.pch"; sourceTree = "<group>"; };
+		1DF56B751343C2E4006B5F9D /* Schema-strings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Schema-strings.h"; path = "Sources/Schema-strings.h"; sourceTree = "<group>"; };
+		1DF56B761343C2E4006B5F9D /* Schema-strings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Schema-strings.m"; path = "Sources/Schema-strings.m"; sourceTree = "<group>"; };
+		1DF56B781343C2E4006B5F9D /* Schema.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Schema.plist; sourceTree = "<group>"; };
+		1DF56B7B1343C2E4006B5F9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Schema.strings; sourceTree = "<group>"; };
+		1DF56B7D1343C2E4006B5F9D /* SyncDataClass.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = SyncDataClass.tiff; sourceTree = "<group>"; };
+		1DF56B851343C6AA006B5F9D /* DesktopShelfSyncDescription.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DesktopShelfSyncDescription.plist; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -132,11 +149,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1DF56B1A1343BA9C006B5F9D /* Frameworks */ = {
+		1DF56B691343C2E4006B5F9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DF56B1F1343BA9C006B5F9D /* Foundation.framework in Frameworks */,
+				1DF56B6D1343C2E4006B5F9D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF56B351343C053006B5F9D /* SyncServices.framework in Frameworks */,
 				1D26A6F81339432D00EE0A31 /* ApplicationServices.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				1D8FEB88131C456C000E150F /* QuickLook.framework in Frameworks */,
@@ -191,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* DesktopShelf.app */,
+				1DF56B6C1343C2E4006B5F9D /* DesktopShelfSync.syncschema */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -287,25 +306,25 @@
 			path = ../Programming_examples/RSVerticallyCenteredTextFieldCell;
 			sourceTree = SOURCE_ROOT;
 		};
-		1DF56B201343BA9C006B5F9D /* DesktopShelfSync */ = {
+		1DF56B6E1343C2E4006B5F9D /* DesktopShelfSync */ = {
 			isa = PBXGroup;
 			children = (
-				1DF56B271343BA9C006B5F9D /* Schema-strings.h */,
-				1DF56B281343BA9C006B5F9D /* Schema-strings.m */,
-				1DF56B2A1343BA9C006B5F9D /* Schema.plist */,
-				1DF56B2C1343BA9C006B5F9D /* Schema.strings */,
-				1DF56B2F1343BA9C006B5F9D /* SyncDataClass.tiff */,
-				1DF56B211343BA9C006B5F9D /* Supporting Files */,
+				1DF56B751343C2E4006B5F9D /* Schema-strings.h */,
+				1DF56B761343C2E4006B5F9D /* Schema-strings.m */,
+				1DF56B781343C2E4006B5F9D /* Schema.plist */,
+				1DF56B7A1343C2E4006B5F9D /* Schema.strings */,
+				1DF56B7D1343C2E4006B5F9D /* SyncDataClass.tiff */,
+				1DF56B6F1343C2E4006B5F9D /* Supporting Files */,
 			);
 			path = DesktopShelfSync;
 			sourceTree = "<group>";
 		};
-		1DF56B211343BA9C006B5F9D /* Supporting Files */ = {
+		1DF56B6F1343C2E4006B5F9D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1DF56B221343BA9C006B5F9D /* DesktopShelfSync-Info.plist */,
-				1DF56B231343BA9C006B5F9D /* InfoPlist.strings */,
-				1DF56B261343BA9C006B5F9D /* DesktopShelfSync-Prefix.pch */,
+				1DF56B701343C2E4006B5F9D /* DesktopShelfSync-Info.plist */,
+				1DF56B711343C2E4006B5F9D /* InfoPlist.strings */,
+				1DF56B741343C2E4006B5F9D /* DesktopShelfSync-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -320,7 +339,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				1DF56B201343BA9C006B5F9D /* DesktopShelfSync */,
+				1DF56B6E1343C2E4006B5F9D /* DesktopShelfSync */,
 			);
 			name = DesktopShelf;
 			sourceTree = "<group>";
@@ -339,6 +358,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1DF56B851343C6AA006B5F9D /* DesktopShelfSyncDescription.plist */,
 				1D26A7001339919E00EE0A31 /* Localizable.strings */,
 				1DD4CC7C131DC4AA008BC62E /* NewShelfRuleWindow.xib */,
 				1D8B3DB81316A82500CCE51A /* TableWindow.xib */,
@@ -355,10 +375,13 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1DF56B341343C053006B5F9D /* SyncServices.framework */,
 				1D8FEB87131C456C000E150F /* QuickLook.framework */,
 				1D26A6F71339432D00EE0A31 /* ApplicationServices.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1DF56B1E1343BA9C006B5F9D /* Foundation.framework */,
+				1DF56B3D1343C216006B5F9D /* Cocoa.framework */,
+				1DF56B3F1343C216006B5F9D /* WebKit.framework */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -387,13 +410,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1DF56B1C1343BA9C006B5F9D /* DesktopShelfSync */ = {
+		1DF56B6B1343C2E4006B5F9D /* DesktopShelfSync */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DF56B331343BA9C006B5F9D /* Build configuration list for PBXNativeTarget "DesktopShelfSync" */;
+			buildConfigurationList = 1DF56B7F1343C2E4006B5F9D /* Build configuration list for PBXNativeTarget "DesktopShelfSync" */;
 			buildPhases = (
-				1DF56B191343BA9C006B5F9D /* Sources */,
-				1DF56B1A1343BA9C006B5F9D /* Frameworks */,
-				1DF56B1B1343BA9C006B5F9D /* Resources */,
+				1DF56B681343C2E4006B5F9D /* Sources */,
+				1DF56B691343C2E4006B5F9D /* Frameworks */,
+				1DF56B6A1343C2E4006B5F9D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -401,7 +424,7 @@
 			);
 			name = DesktopShelfSync;
 			productName = DesktopShelfSync;
-			productReference = 1DF56B1D1343BA9C006B5F9D /* DesktopShelfSync.syncschema */;
+			productReference = 1DF56B6C1343C2E4006B5F9D /* DesktopShelfSync.syncschema */;
 			productType = "com.apple.product-type.bundle";
 		};
 		8D1107260486CEB800E47090 /* DesktopShelf */ = {
@@ -416,6 +439,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1DF56B831343C339006B5F9D /* PBXTargetDependency */,
 			);
 			name = DesktopShelf;
 			productInstallPath = "$(HOME)/Applications";
@@ -444,20 +468,20 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* DesktopShelf */,
-				1DF56B1C1343BA9C006B5F9D /* DesktopShelfSync */,
+				1DF56B6B1343C2E4006B5F9D /* DesktopShelfSync */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1DF56B1B1343BA9C006B5F9D /* Resources */ = {
+		1DF56B6A1343C2E4006B5F9D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DF56B251343BA9C006B5F9D /* InfoPlist.strings in Resources */,
-				1DF56B2B1343BA9C006B5F9D /* Schema.plist in Resources */,
-				1DF56B2E1343BA9C006B5F9D /* Schema.strings in Resources */,
-				1DF56B301343BA9C006B5F9D /* SyncDataClass.tiff in Resources */,
+				1DF56B731343C2E4006B5F9D /* InfoPlist.strings in Resources */,
+				1DF56B791343C2E4006B5F9D /* Schema.plist in Resources */,
+				1DF56B7C1343C2E4006B5F9D /* Schema.strings in Resources */,
+				1DF56B7E1343C2E4006B5F9D /* SyncDataClass.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +489,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF56B841343C367006B5F9D /* DesktopShelfSync.syncschema in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */,
 				1D8B3DB91316A82500CCE51A /* TableWindow.xib in Resources */,
@@ -473,17 +498,18 @@
 				1DD4CBF0131DBC17008BC62E /* Credits.rtf in Resources */,
 				1DD4CC7D131DC4AA008BC62E /* NewShelfRuleWindow.xib in Resources */,
 				1D26A6FE1339919E00EE0A31 /* Localizable.strings in Resources */,
+				1DF56B861343C6AA006B5F9D /* DesktopShelfSyncDescription.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1DF56B191343BA9C006B5F9D /* Sources */ = {
+		1DF56B681343C2E4006B5F9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DF56B291343BA9C006B5F9D /* Schema-strings.m in Sources */,
+				1DF56B771343C2E4006B5F9D /* Schema-strings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +541,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1DF56B831343C339006B5F9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DF56B6B1343C2E4006B5F9D /* DesktopShelfSync */;
+			targetProxy = 1DF56B821343C339006B5F9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -532,18 +566,18 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		1DF56B231343BA9C006B5F9D /* InfoPlist.strings */ = {
+		1DF56B711343C2E4006B5F9D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1DF56B241343BA9C006B5F9D /* en */,
+				1DF56B721343C2E4006B5F9D /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		1DF56B2C1343BA9C006B5F9D /* Schema.strings */ = {
+		1DF56B7A1343C2E4006B5F9D /* Schema.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1DF56B2D1343BA9C006B5F9D /* en */,
+				1DF56B7B1343C2E4006B5F9D /* en */,
 			);
 			name = Schema.strings;
 			sourceTree = "<group>";
@@ -559,7 +593,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1DF56B311343BA9C006B5F9D /* Debug */ = {
+		1DF56B801343C2E4006B5F9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -581,7 +615,7 @@
 			};
 			name = Debug;
 		};
-		1DF56B321343BA9C006B5F9D /* Release */ = {
+		1DF56B811343C2E4006B5F9D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -663,11 +697,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DF56B331343BA9C006B5F9D /* Build configuration list for PBXNativeTarget "DesktopShelfSync" */ = {
+		1DF56B7F1343C2E4006B5F9D /* Build configuration list for PBXNativeTarget "DesktopShelfSync" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DF56B311343BA9C006B5F9D /* Debug */,
-				1DF56B321343BA9C006B5F9D /* Release */,
+				1DF56B801343C2E4006B5F9D /* Debug */,
+				1DF56B811343C2E4006B5F9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

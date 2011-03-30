@@ -4,25 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DesktopShelf Spotlight Importer.xcscheme</key>
+		<key>DesktopShelf.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>DesktopShelf.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 		<key>DesktopShelfSync.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1DF56B1C1343BA9C006B5F9D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1DF56B3B1343C216006B5F9D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1DF56B511343C22B006B5F9D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1DF56B6B1343C2E4006B5F9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

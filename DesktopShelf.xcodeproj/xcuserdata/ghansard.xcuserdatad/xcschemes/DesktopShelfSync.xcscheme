@@ -13,7 +13,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1DF56B1C1343BA9C006B5F9D"
+               BlueprintIdentifier = "1DF56B6B1343C2E4006B5F9D"
                BuildableName = "DesktopShelfSync.syncschema"
                BlueprintName = "DesktopShelfSync"
                ReferencedContainer = "container:DesktopShelf.xcodeproj">
