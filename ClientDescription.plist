@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DisplayName</key>
+	<string>DesktopShelf Sync</string>
+	<key>Type</key>
+	<string>app</string>
+	<key>Entities</key>
+	<dict>
+		<key>com.fcs.DesktopShelf.ShelfItemData</key>
+		<array>
+			<string>com.apple.syncservices.RecordEntityName</string>
+			<string>data</string>
+			<string>dateCreated</string>
+			<string>dateModified</string>
+			<string>desc</string>
+			<string>extraData</string>
+			<string>icon</string>
+			<string>path</string>
+			<string>type</string>
+		</array>
+	</dict>
+</dict>
+</plist>

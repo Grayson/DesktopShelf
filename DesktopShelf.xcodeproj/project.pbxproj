@@ -39,7 +39,8 @@
 		1DF56B7C1343C2E4006B5F9D /* Schema.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B7A1343C2E4006B5F9D /* Schema.strings */; };
 		1DF56B7E1343C2E4006B5F9D /* SyncDataClass.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B7D1343C2E4006B5F9D /* SyncDataClass.tiff */; };
 		1DF56B841343C367006B5F9D /* DesktopShelfSync.syncschema in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B6C1343C2E4006B5F9D /* DesktopShelfSync.syncschema */; };
-		1DF56B861343C6AA006B5F9D /* DesktopShelfSyncDescription.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B851343C6AA006B5F9D /* DesktopShelfSyncDescription.plist */; };
+		1DF56B861343C6AA006B5F9D /* ClientDescription.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DF56B851343C6AA006B5F9D /* ClientDescription.plist */; };
+		1DF56B891343C835006B5F9D /* SyncController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF56B881343C835006B5F9D /* SyncController.m */; };
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
 		770B37ED0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* DesktopShelf_DataModel.xcdatamodel */; };
 		77C8280E06725ACE000B614F /* DesktopShelf_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* DesktopShelf_AppDelegate.m */; };
@@ -127,7 +128,9 @@
 		1DF56B781343C2E4006B5F9D /* Schema.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Schema.plist; sourceTree = "<group>"; };
 		1DF56B7B1343C2E4006B5F9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Schema.strings; sourceTree = "<group>"; };
 		1DF56B7D1343C2E4006B5F9D /* SyncDataClass.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = SyncDataClass.tiff; sourceTree = "<group>"; };
-		1DF56B851343C6AA006B5F9D /* DesktopShelfSyncDescription.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DesktopShelfSyncDescription.plist; sourceTree = "<group>"; };
+		1DF56B851343C6AA006B5F9D /* ClientDescription.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ClientDescription.plist; sourceTree = "<group>"; };
+		1DF56B871343C835006B5F9D /* SyncController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncController.h; sourceTree = "<group>"; };
+		1DF56B881343C835006B5F9D /* SyncController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -258,6 +261,8 @@
 				1D728674131808410054939F /* PreferencesController.m */,
 				1D26A6F913394A0A00EE0A31 /* MenuItemController.h */,
 				1D26A6FA13394A0A00EE0A31 /* MenuItemController.m */,
+				1DF56B871343C835006B5F9D /* SyncController.h */,
+				1DF56B881343C835006B5F9D /* SyncController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -358,7 +363,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1DF56B851343C6AA006B5F9D /* DesktopShelfSyncDescription.plist */,
+				1DF56B851343C6AA006B5F9D /* ClientDescription.plist */,
 				1D26A7001339919E00EE0A31 /* Localizable.strings */,
 				1DD4CC7C131DC4AA008BC62E /* NewShelfRuleWindow.xib */,
 				1D8B3DB81316A82500CCE51A /* TableWindow.xib */,
@@ -498,7 +503,7 @@
 				1DD4CBF0131DBC17008BC62E /* Credits.rtf in Resources */,
 				1DD4CC7D131DC4AA008BC62E /* NewShelfRuleWindow.xib in Resources */,
 				1D26A6FE1339919E00EE0A31 /* Localizable.strings in Resources */,
-				1DF56B861343C6AA006B5F9D /* DesktopShelfSyncDescription.plist in Resources */,
+				1DF56B861343C6AA006B5F9D /* ClientDescription.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +541,7 @@
 				1DD4CBED131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m in Sources */,
 				1D134B3D132DA2E6006FAE3E /* NewShelfRuleController.m in Sources */,
 				1D26A6FB13394A0B00EE0A31 /* MenuItemController.m in Sources */,
+				1DF56B891343C835006B5F9D /* SyncController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
