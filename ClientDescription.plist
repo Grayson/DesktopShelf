@@ -3,12 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>DisplayName</key>
-	<string>DesktopShelf Sync</string>
-	<key>Type</key>
-	<string>app</string>
+	<string>DesktopShelf</string>
 	<key>Entities</key>
 	<dict>
-		<key>com.fcs.DesktopShelf.ShelfItemData</key>
+		<key>com.fcs.DesktopShelf.ShelfItem</key>
 		<array>
 			<string>com.apple.syncservices.RecordEntityName</string>
 			<string>data</string>
@@ -21,5 +19,7 @@
 			<string>type</string>
 		</array>
 	</dict>
+	<key>Type</key>
+	<string>app</string>
 </dict>
 </plist>

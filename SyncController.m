@@ -54,6 +54,10 @@
 	ISyncClient *client = [[ISyncManager sharedManager] clientWithIdentifier:identifier];
 	if (client) return client;
 	
+	NSString *syncSchemaName = [[[NSProcessInfo processInfo] processName] stringByAppendingString:@"Sync"];
+	if (![[ISyncManager sharedManager] registerSchemaWithBundlePath:[[NSBundle mainBundle] pathForResource:syncSchemaName ofType:@"syncschema"]])
+		return nil;
+	
 	NSString *clientDescriptionPath = [[NSBundle mainBundle] pathForResource:@"ClientDescription" ofType:@"plist"];
 	if (!clientDescriptionPath) {
 		[self _sendErrorToDelegateWithMessage: NSLocalizedString(@"Could not locate ClientDescription.plist in the Resources folder.", @"sync error message") code:CouldntFindClientDescriptionPath];
@@ -82,6 +86,8 @@
 	}
 	
 	ISyncClient *client = [self syncClient];
+	NSLog(@"%s %@", _cmd, client);
+	if (!client) return NO;
 	NSError *err = nil;
 	id syncDelegate = (self.delegate && [self.delegate conformsToProtocol:@protocol(NSPersistentStoreCoordinatorSyncing)]) ? self.delegate : self;
 	[[[NSApp delegate] performSelector:@selector(persistentStoreCoordinator)] syncWithClient:client inBackground:YES handler:syncDelegate error:&err];

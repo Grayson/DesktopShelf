@@ -15,6 +15,7 @@
 @synthesize tableWindowController = _tableWindowController;
 @synthesize preferencesController = _preferencesController;
 @synthesize menuItemController = _menuItemController;
+@synthesize syncController = _syncController;
 @synthesize periodicTimer = _periodicTimer;
 
 - (id)init
@@ -31,13 +32,17 @@
 		nil]];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationBecameActive:) name:NSApplicationDidBecomeActiveNotification object:NSApp];
-	self.periodicTimer = [NSTimer scheduledTimerWithTimeInterval:(60. * 5.) target:self selector:@selector(runRules) userInfo:nil repeats:YES];
+	self.periodicTimer = [NSTimer scheduledTimerWithTimeInterval:(60.) target:self selector:@selector(runRules) userInfo:nil repeats:YES];
 	
 	// Run once now to set up the menu item if necessary.
 	[self observeValueForKeyPath:UD_SHOW_MENU_BAR_ITEM_KEY ofObject:[NSUserDefaults standardUserDefaults] change:nil context:nil];
 	
 	[[NSUserDefaults standardUserDefaults] addObserver:self forKeyPath:UD_SHOW_MENU_BAR_ITEM_KEY options:0 context:nil];
 	if (![[NSApp delegate] dockItemIsDisabled]) [self showShelfWindow:nil];
+	
+	self.syncController = [[SyncController new] autorelease];
+	self.syncController.delegate = self;
+	[self.syncController sync];
 	
 	return self;
 }
@@ -51,6 +56,7 @@
 	self.preferencesController = nil;
 	self.periodicTimer = nil;
 	self.menuItemController = nil;
+	self.syncController = nil;
 	
 	[super dealloc];
 }
@@ -94,6 +100,13 @@
 		self.tableWindowController = twc;
 	}
 	[self.tableWindowController showWindow];
+}
+
+#pragma mark -
+#pragma mark Delegate methods
+
+- (void)syncController:(SyncController *)controller encounteredError:(NSError *)error {
+	NSLog(@"%s %@", _cmd, error);
 }
 
 @end

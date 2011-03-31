@@ -710,6 +710,7 @@
 				1DF56B811343C2E4006B5F9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26FC0A840875C7B200E6366F /* Build configuration list for PBXNativeTarget "DesktopShelf" */ = {
 			isa = XCConfigurationList;

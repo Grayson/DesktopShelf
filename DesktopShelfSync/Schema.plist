@@ -8,7 +8,7 @@
 			<key>ImagePath</key>
 			<string>SyncDataClass.tiff</string>
 			<key>Name</key>
-			<string>com.fcs.DesktopShelf.ShelfItemData</string>
+			<string>com.fcs.DesktopShelf</string>
 		</dict>
 	</array>
 	<key>ManagedObjectModels</key>
@@ -16,6 +16,8 @@
 		<string>../../../DesktopShelf_DataModel.mom</string>
 	</array>
 	<key>Name</key>
-	<string>com.fcs.DesktopShelf.SyncSchema</string>
+	<string>com.fcs.DesktopShelf</string>
+	<key>Comment</key>
+	<string>Schema for syncing DesktopShelf&apos;s ShelfItems CoreData store.</string>
 </dict>
 </plist>
