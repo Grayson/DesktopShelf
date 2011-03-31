@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Classes</key>
+	<dict>
+		<key>NSApplication</key>
+		<dict>
+			<key>Name</key>
+			<string>application</string>
+			<key>PluralName</key>
+			<string>applications</string>
+		</dict>
+		<key>ShelfItem</key>
+		<dict>
+			<key>Attributes</key>
+			<dict>
+				<key>dateCreated</key>
+				<dict>
+					<key>Name</key>
+					<string>date created</string>
+				</dict>
+				<key>myAttribute</key>
+				<dict>
+					<key>Name</key>
+					<string>dateModified</string>
+				</dict>
+				<key>myAttribute_1</key>
+				<dict>
+					<key>Name</key>
+					<string>description</string>
+				</dict>
+				<key>path</key>
+				<dict>
+					<key>Name</key>
+					<string>path</string>
+				</dict>
+				<key>type</key>
+				<dict>
+					<key>Name</key>
+					<string>type</string>
+				</dict>
+			</dict>
+			<key>Description</key>
+			<string>Items on the Shelf.</string>
+			<key>Name</key>
+			<string>shelf item</string>
+			<key>PluralName</key>
+			<string>shelf items</string>
+		</dict>
+	</dict>
+	<key>Description</key>
+	<string>Scripting suite for DesktopShelf</string>
+	<key>Name</key>
+	<string>desktop shelf</string>
+</dict>
+</plist>
