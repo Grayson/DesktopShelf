@@ -78,6 +78,7 @@
 - (void)applicationBecameActive:(NSNotification *)aNotification
 {
 	[self runRules];
+	[[ShelfItem everyItem] makeObjectsPerformSelector:@selector(fetchMetadata)];
 }
 
 - (void)runRules {

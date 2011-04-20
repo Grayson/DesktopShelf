@@ -115,7 +115,7 @@
 		ShelfItem *item = [ShelfItem item];
 		item.path = movePath;
 		item.desc = [[filePath lastPathComponent] stringByDeletingPathExtension];
-		[item fetchIcon];
+		[item fetchMetadata];
 		if (SHOULDLOG) NSLog(@"[ShelfRule %s] Adding item: %@", _cmd, item);
 		[fm removeItemAtPath:filePath error:nil];
 		[[NSNotificationCenter defaultCenter] postNotificationName:NC_REFRESH_SHELF_KEY object:nil];

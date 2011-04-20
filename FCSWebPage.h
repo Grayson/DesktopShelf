@@ -9,9 +9,12 @@
 #import <Foundation/Foundation.h>
 
 
-@interface FCSWebPage : FCSWebPage {
+@interface FCSWebPage : NSObject {
 @private
-    
+	NSURL *_url;
 }
+@property (retain) NSURL *url;
+
+- (NSString *)faviconPath;
 
 @end

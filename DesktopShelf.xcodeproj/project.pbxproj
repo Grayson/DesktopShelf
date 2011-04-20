@@ -22,6 +22,7 @@
 		1D728675131808410054939F /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D728674131808410054939F /* PreferencesController.m */; };
 		1D7286CA131847E00054939F /* ShelfRulesTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7286C9131847E00054939F /* ShelfRulesTransformer.m */; };
 		1D7286CF131848C80054939F /* ShelfRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7286CE131848C80054939F /* ShelfRule.m */; };
+		1D87C6D71354C8D800022A12 /* FCSWebPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D87C6D61354C8D800022A12 /* FCSWebPage.m */; };
 		1D8B3DB91316A82500CCE51A /* TableWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8B3DB81316A82500CCE51A /* TableWindow.xib */; };
 		1D8B3E5F1316C20500CCE51A /* URLFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B3E5C1316C20500CCE51A /* URLFile.m */; };
 		1D8B3E601316C20500CCE51A /* WeblocFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B3E5E1316C20500CCE51A /* WeblocFile.m */; };
@@ -104,6 +105,8 @@
 		1D7286C9131847E00054939F /* ShelfRulesTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShelfRulesTransformer.m; sourceTree = "<group>"; };
 		1D7286CD131848C80054939F /* ShelfRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShelfRule.h; sourceTree = "<group>"; };
 		1D7286CE131848C80054939F /* ShelfRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShelfRule.m; sourceTree = "<group>"; };
+		1D87C6D51354C8D800022A12 /* FCSWebPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCSWebPage.h; sourceTree = "<group>"; };
+		1D87C6D61354C8D800022A12 /* FCSWebPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCSWebPage.m; sourceTree = "<group>"; };
 		1D8B3DB81316A82500CCE51A /* TableWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableWindow.xib; sourceTree = "<group>"; };
 		1D8B3E5B1316C20500CCE51A /* URLFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLFile.h; sourceTree = "<group>"; };
 		1D8B3E5C1316C20500CCE51A /* URLFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLFile.m; sourceTree = "<group>"; };
@@ -150,11 +153,7 @@
 		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		77C8280B06725ACE000B614F /* DesktopShelf_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopShelf_AppDelegate.h; sourceTree = "<group>"; };
 		77C8280C06725ACE000B614F /* DesktopShelf_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopShelf_AppDelegate.m; sourceTree = "<group>"; };
-		797A783F0DDCFB3E0050D0C2 /* GetMetadataForFile.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = GetMetadataForFile.c; sourceTree = "<group>"; };
 		797A78410DDCFB3E0050D0C2 /* Importer-Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; fileEncoding = 4; name = "Importer-Info.plist"; path = "Importer/Importer-Info.plist"; sourceTree = "<group>"; };
-		797A78420DDCFB3E0050D0C2 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		797A78430DDCFB3E0050D0C2 /* MySpotlightImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySpotlightImporter.h; sourceTree = "<group>"; };
-		797A78440DDCFB3E0050D0C2 /* MySpotlightImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySpotlightImporter.m; sourceTree = "<group>"; };
 		797A7AE10DDCFCE80050D0C2 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = ../../../../../../../../../../../../System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<group>"; };
 		797A7AE30DDCFCF40050D0C2 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = ../../../../../../../../../../../../System/Library/Frameworks/CoreServices.framework; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* DesktopShelf-Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; fileEncoding = 4; path = "DesktopShelf-Info.plist"; sourceTree = "<group>"; };
@@ -190,7 +189,6 @@
 				1D8FEAB8131C2E93000E150F /* AppDelegate */,
 				1D8B3ED81316C2FC00CCE51A /* FileWatcher */,
 				1D8B3E621316C21800CCE51A /* Scrapers */,
-				797A783E0DDCFB3E0050D0C2 /* Importer */,
 				1D8B3EE91316C3CF00CCE51A /* Controllers */,
 				1D8FEAB9131C2E9C000E150F /* Transformers */,
 				1D8FEABA131C2EBD000E150F /* Other */,
@@ -247,6 +245,8 @@
 				1D8B3E5C1316C20500CCE51A /* URLFile.m */,
 				1D8B3E5D1316C20500CCE51A /* WeblocFile.h */,
 				1D8B3E5E1316C20500CCE51A /* WeblocFile.m */,
+				1D87C6D51354C8D800022A12 /* FCSWebPage.h */,
+				1D87C6D61354C8D800022A12 /* FCSWebPage.m */,
 			);
 			name = Scrapers;
 			sourceTree = "<group>";
@@ -417,17 +417,6 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		797A783E0DDCFB3E0050D0C2 /* Importer */ = {
-			isa = PBXGroup;
-			children = (
-				797A78420DDCFB3E0050D0C2 /* main.c */,
-				797A783F0DDCFB3E0050D0C2 /* GetMetadataForFile.c */,
-				797A78430DDCFB3E0050D0C2 /* MySpotlightImporter.h */,
-				797A78440DDCFB3E0050D0C2 /* MySpotlightImporter.m */,
-			);
-			path = Importer;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -562,6 +551,7 @@
 				1DF56B891343C835006B5F9D /* SyncController.m in Sources */,
 				1D4AFB3113453EE000D2485D /* ShelfItem+Applescript.m in Sources */,
 				1D4AFB341345408000D2485D /* NSApplication+Applescript.m in Sources */,
+				1D87C6D71354C8D800022A12 /* FCSWebPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

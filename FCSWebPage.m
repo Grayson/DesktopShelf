@@ -10,6 +10,7 @@
 
 
 @implementation FCSWebPage
+@synthesize url = _url;
 
 - (id)init
 {
@@ -23,7 +24,17 @@
 
 - (void)dealloc
 {
+	self.url = nil;
+	
     [super dealloc];
+}
+
+- (NSString *)faviconPath {
+	if (!self.url) return nil;
+	NSXMLDocument *doc = [[[NSXMLDocument alloc] initWithContentsOfURL:self.url options:NSXMLDocumentTidyHTML error:nil] autorelease];
+	NSArray *tmp = [doc objectsForXQuery:@".//link[@rel='shortcut icon']" constants:nil error:nil];
+	if (!tmp) return nil;
+	return [[tmp lastObject] attributeForName:@"href"];
 }
 
 @end

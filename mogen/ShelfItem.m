@@ -24,7 +24,7 @@
 }
 
 - (void)fetchIcon {
-	if (SHOULDLOG) NSLog(@"[ShelfItem %s] Fetching icon for type: %@", _cmd, self.type);
+	if (SHOULDLOG) NSLog(@"[ShelfItem %s] Fetching icon for file: %@", _cmd, self.path);
 	
 	dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 	void (^block)(void) = nil;
@@ -60,8 +60,12 @@
 }
 
 -(void)open {
-	NSURL *url = [NSURL fileURLWithPath:self.path];//URLWithString:self.url];
+	NSURL *url = [NSURL fileURLWithPath:self.path];
 	[[NSWorkspace sharedWorkspace] openURL:url];
+}
+
+-(void)fetchMetadata {
+	if (!self.icon) [self fetchIcon];
 }
 
 @end

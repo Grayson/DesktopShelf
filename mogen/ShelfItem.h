@@ -13,4 +13,6 @@
 
 -(void)open;
 
+-(void)fetchMetadata;
+
 @end
