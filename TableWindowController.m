@@ -30,12 +30,14 @@
 	// Set up open handler when table view is double-clicked
 	[self.tableView setTarget:self];
 	[self.tableView setDoubleAction:@selector(tableViewWasDoubleClicked:)];
+	[self.tableView registerForDraggedTypes:[NSArray arrayWithObjects:@"public.item", nil]];
 }
 
 - (void)dealloc
 {
 	self.window = nil;
 	self.tableView = nil;
+	self.arrayController = nil;
 	
 	[super dealloc];
 }

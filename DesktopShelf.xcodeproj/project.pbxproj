@@ -11,6 +11,8 @@
 		1D26A6F81339432D00EE0A31 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D26A6F71339432D00EE0A31 /* ApplicationServices.framework */; };
 		1D26A6FB13394A0B00EE0A31 /* MenuItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D26A6FA13394A0A00EE0A31 /* MenuItemController.m */; };
 		1D26A6FE1339919E00EE0A31 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D26A7001339919E00EE0A31 /* Localizable.strings */; };
+		1D3621C51365C3F90018B21C /* MIT-License.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1D3621C21365C3F90018B21C /* MIT-License.rtf */; };
+		1D3621C61365C3F90018B21C /* RSVerticallyCenteredTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3621C41365C3F90018B21C /* RSVerticallyCenteredTextFieldCell.m */; };
 		1D4AFB2D13453A5A00D2485D /* DesktopShelf.scriptSuite in Resources */ = {isa = PBXBuildFile; fileRef = 1D4AFB2B13453A5A00D2485D /* DesktopShelf.scriptSuite */; };
 		1D4AFB2E13453A5A00D2485D /* DesktopShelf.scriptTerminology in Resources */ = {isa = PBXBuildFile; fileRef = 1D4AFB2C13453A5A00D2485D /* DesktopShelf.scriptTerminology */; };
 		1D4AFB3113453EE000D2485D /* ShelfItem+Applescript.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4AFB3013453EE000D2485D /* ShelfItem+Applescript.m */; };
@@ -29,11 +31,11 @@
 		1D8B3ED71316C2F800CCE51A /* FileWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B3ED61316C2F800CCE51A /* FileWatcher.m */; };
 		1D8B3EE51316C3AC00CCE51A /* DesktopShelfController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B3EE41316C3AC00CCE51A /* DesktopShelfController.m */; };
 		1D8B3EE81316C3C800CCE51A /* TableWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B3EE71316C3C800CCE51A /* TableWindowController.m */; };
+		1D8D738013707D8600C340F9 /* DragAndDropTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8D737F13707D8600C340F9 /* DragAndDropTableView.m */; };
+		1D8D73831370814500C340F9 /* TableWindowController+DragAndDrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8D73821370814500C340F9 /* TableWindowController+DragAndDrop.m */; };
 		1D8FEA60131C22ED000E150F /* ShellScriptLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FEA5F131C22ED000E150F /* ShellScriptLauncher.m */; };
 		1D8FEA6D131C2648000E150F /* DesktopShelf_AppDelegate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FEA6C131C2648000E150F /* DesktopShelf_AppDelegate+Additions.m */; };
 		1D8FEB88131C456C000E150F /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8FEB87131C456C000E150F /* QuickLook.framework */; };
-		1DD4CBEC131DBBD2008BC62E /* MIT-License.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1DD4CBE9131DBBD2008BC62E /* MIT-License.rtf */; };
-		1DD4CBED131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4CBEB131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m */; };
 		1DD4CBF0131DBC17008BC62E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1DD4CBEF131DBC17008BC62E /* Credits.rtf */; };
 		1DD4CC7D131DC4AA008BC62E /* NewShelfRuleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DD4CC7C131DC4AA008BC62E /* NewShelfRuleWindow.xib */; };
 		1DF56B351343C053006B5F9D /* SyncServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF56B341343C053006B5F9D /* SyncServices.framework */; };
@@ -85,6 +87,9 @@
 		1D26A6F913394A0A00EE0A31 /* MenuItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemController.h; sourceTree = "<group>"; };
 		1D26A6FA13394A0A00EE0A31 /* MenuItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemController.m; sourceTree = "<group>"; };
 		1D26A6FF1339919E00EE0A31 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1D3621C21365C3F90018B21C /* MIT-License.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "MIT-License.rtf"; sourceTree = "<group>"; };
+		1D3621C31365C3F90018B21C /* RSVerticallyCenteredTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSVerticallyCenteredTextFieldCell.h; sourceTree = "<group>"; };
+		1D3621C41365C3F90018B21C /* RSVerticallyCenteredTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSVerticallyCenteredTextFieldCell.m; sourceTree = "<group>"; };
 		1D4AFB2B13453A5A00D2485D /* DesktopShelf.scriptSuite */ = {isa = PBXFileReference; lastKnownFileType = text.plist.scriptSuite; path = DesktopShelf.scriptSuite; sourceTree = "<group>"; };
 		1D4AFB2C13453A5A00D2485D /* DesktopShelf.scriptTerminology */ = {isa = PBXFileReference; lastKnownFileType = text.plist.scriptTerminology; path = DesktopShelf.scriptTerminology; sourceTree = "<group>"; };
 		1D4AFB2F13453EE000D2485D /* ShelfItem+Applescript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShelfItem+Applescript.h"; sourceTree = "<group>"; };
@@ -118,14 +123,15 @@
 		1D8B3EE41316C3AC00CCE51A /* DesktopShelfController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopShelfController.m; sourceTree = "<group>"; };
 		1D8B3EE61316C3C800CCE51A /* TableWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableWindowController.h; sourceTree = "<group>"; };
 		1D8B3EE71316C3C800CCE51A /* TableWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableWindowController.m; sourceTree = "<group>"; };
+		1D8D737E13707D8600C340F9 /* DragAndDropTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragAndDropTableView.h; sourceTree = "<group>"; };
+		1D8D737F13707D8600C340F9 /* DragAndDropTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragAndDropTableView.m; sourceTree = "<group>"; };
+		1D8D73811370814500C340F9 /* TableWindowController+DragAndDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TableWindowController+DragAndDrop.h"; sourceTree = "<group>"; };
+		1D8D73821370814500C340F9 /* TableWindowController+DragAndDrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TableWindowController+DragAndDrop.m"; sourceTree = "<group>"; };
 		1D8FEA5E131C22ED000E150F /* ShellScriptLauncher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellScriptLauncher.h; sourceTree = "<group>"; };
 		1D8FEA5F131C22ED000E150F /* ShellScriptLauncher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellScriptLauncher.m; sourceTree = "<group>"; };
 		1D8FEA6B131C2648000E150F /* DesktopShelf_AppDelegate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DesktopShelf_AppDelegate+Additions.h"; sourceTree = "<group>"; };
 		1D8FEA6C131C2648000E150F /* DesktopShelf_AppDelegate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DesktopShelf_AppDelegate+Additions.m"; sourceTree = "<group>"; };
 		1D8FEB87131C456C000E150F /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
-		1DD4CBE9131DBBD2008BC62E /* MIT-License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "MIT-License.rtf"; sourceTree = "<group>"; };
-		1DD4CBEA131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSVerticallyCenteredTextFieldCell.h; sourceTree = "<group>"; };
-		1DD4CBEB131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSVerticallyCenteredTextFieldCell.m; sourceTree = "<group>"; };
 		1DD4CBEF131DBC17008BC62E /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		1DD4CC7C131DC4AA008BC62E /* NewShelfRuleWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewShelfRuleWindow.xib; sourceTree = "<group>"; };
 		1DF56B1E1343BA9C006B5F9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -225,6 +231,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1D3621C11365C3F90018B21C /* RSVerticallyCenteredTextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				1D3621C21365C3F90018B21C /* MIT-License.rtf */,
+				1D3621C31365C3F90018B21C /* RSVerticallyCenteredTextFieldCell.h */,
+				1D3621C41365C3F90018B21C /* RSVerticallyCenteredTextFieldCell.m */,
+			);
+			path = RSVerticallyCenteredTextFieldCell;
+			sourceTree = "<group>";
+		};
 		1D7284271316D8510054939F /* mogen */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +285,8 @@
 				1D8B3EE41316C3AC00CCE51A /* DesktopShelfController.m */,
 				1D8B3EE61316C3C800CCE51A /* TableWindowController.h */,
 				1D8B3EE71316C3C800CCE51A /* TableWindowController.m */,
+				1D8D73811370814500C340F9 /* TableWindowController+DragAndDrop.h */,
+				1D8D73821370814500C340F9 /* TableWindowController+DragAndDrop.m */,
 				1D728673131808410054939F /* PreferencesController.h */,
 				1D728674131808410054939F /* PreferencesController.m */,
 				1D26A6F913394A0A00EE0A31 /* MenuItemController.h */,
@@ -310,20 +328,11 @@
 				1D7286CE131848C80054939F /* ShelfRule.m */,
 				1D8FEA5E131C22ED000E150F /* ShellScriptLauncher.h */,
 				1D8FEA5F131C22ED000E150F /* ShellScriptLauncher.m */,
+				1D8D737E13707D8600C340F9 /* DragAndDropTableView.h */,
+				1D8D737F13707D8600C340F9 /* DragAndDropTableView.m */,
 			);
 			name = Other;
 			sourceTree = "<group>";
-		};
-		1DD4CBE8131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell */ = {
-			isa = PBXGroup;
-			children = (
-				1DD4CBE9131DBBD2008BC62E /* MIT-License.rtf */,
-				1DD4CBEA131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.h */,
-				1DD4CBEB131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m */,
-			);
-			name = RSVerticallyCenteredTextFieldCell;
-			path = ../Programming_examples/RSVerticallyCenteredTextFieldCell;
-			sourceTree = SOURCE_ROOT;
 		};
 		1DF56B6E1343C2E4006B5F9D /* DesktopShelfSync */ = {
 			isa = PBXGroup;
@@ -367,7 +376,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				1DD4CBE8131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell */,
+				1D3621C11365C3F90018B21C /* RSVerticallyCenteredTextFieldCell */,
 				32CA4F630368D1EE00C91783 /* DesktopShelf_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -504,13 +513,13 @@
 				2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */,
 				1D8B3DB91316A82500CCE51A /* TableWindow.xib in Resources */,
 				1D728672131807FC0054939F /* Prefs.xib in Resources */,
-				1DD4CBEC131DBBD2008BC62E /* MIT-License.rtf in Resources */,
 				1DD4CBF0131DBC17008BC62E /* Credits.rtf in Resources */,
 				1DD4CC7D131DC4AA008BC62E /* NewShelfRuleWindow.xib in Resources */,
 				1D26A6FE1339919E00EE0A31 /* Localizable.strings in Resources */,
 				1DF56B861343C6AA006B5F9D /* ClientDescription.plist in Resources */,
 				1D4AFB2D13453A5A00D2485D /* DesktopShelf.scriptSuite in Resources */,
 				1D4AFB2E13453A5A00D2485D /* DesktopShelf.scriptTerminology in Resources */,
+				1D3621C51365C3F90018B21C /* MIT-License.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,13 +554,15 @@
 				1D7286CF131848C80054939F /* ShelfRule.m in Sources */,
 				1D8FEA60131C22ED000E150F /* ShellScriptLauncher.m in Sources */,
 				1D8FEA6D131C2648000E150F /* DesktopShelf_AppDelegate+Additions.m in Sources */,
-				1DD4CBED131DBBD2008BC62E /* RSVerticallyCenteredTextFieldCell.m in Sources */,
 				1D134B3D132DA2E6006FAE3E /* NewShelfRuleController.m in Sources */,
 				1D26A6FB13394A0B00EE0A31 /* MenuItemController.m in Sources */,
 				1DF56B891343C835006B5F9D /* SyncController.m in Sources */,
 				1D4AFB3113453EE000D2485D /* ShelfItem+Applescript.m in Sources */,
 				1D4AFB341345408000D2485D /* NSApplication+Applescript.m in Sources */,
 				1D87C6D71354C8D800022A12 /* FCSWebPage.m in Sources */,
+				1D3621C61365C3F90018B21C /* RSVerticallyCenteredTextFieldCell.m in Sources */,
+				1D8D738013707D8600C340F9 /* DragAndDropTableView.m in Sources */,
+				1D8D73831370814500C340F9 /* TableWindowController+DragAndDrop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,7 +34,7 @@
 	NSXMLDocument *doc = [[[NSXMLDocument alloc] initWithContentsOfURL:self.url options:NSXMLDocumentTidyHTML error:nil] autorelease];
 	NSArray *tmp = [doc objectsForXQuery:@".//link[@rel='shortcut icon']" constants:nil error:nil];
 	if (!tmp) return nil;
-	return [[tmp lastObject] attributeForName:@"href"];
+	return (NSString *)[[[tmp lastObject] attributeForName:@"href"] stringValue];
 }
 
 @end

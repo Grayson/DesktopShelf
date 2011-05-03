@@ -9,16 +9,17 @@
 #import <Cocoa/Cocoa.h>
 
 #import "ShelfItem.h"
+#import "DragAndDropTableView.h"
 
 #import "includes.h"
 
 @interface TableWindowController : NSObject {
 	IBOutlet NSWindow *_window;
-	IBOutlet NSTableView *_tableView;
+	IBOutlet DragAndDropTableView *_tableView;
 	IBOutlet NSArrayController *_arrayController;
 }
 @property (retain) NSWindow *window;
-@property (retain) NSTableView *tableView;
+@property (retain) DragAndDropTableView *tableView;
 @property (retain) NSArrayController *arrayController;
 
 - (void)showWindow;

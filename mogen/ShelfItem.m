@@ -24,7 +24,7 @@
 }
 
 - (void)fetchIcon {
-	if (SHOULDLOG) NSLog(@"[ShelfItem %s] Fetching icon for file: %@", _cmd, self.path);
+	if (SHOULDLOG) NSLog(@"[ShelfItem fetchIcon] Fetching icon for file: %@", self.path);
 	
 	dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 	void (^block)(void) = nil;
@@ -47,16 +47,16 @@
 			[self updateDateModified];
 		};
 	}
-	else if ([self.path.pathExtension isEqualToString:@"file"]) {
+	else {
 		block = ^{
 			NSURL *url = [NSURL fileURLWithPath:self.path];
 			NSImage *img = [[NSWorkspace sharedWorkspace] iconForFile:[url path]];
+			if (!img) return;
 			self.icon = [img TIFFRepresentation];
 			[self updateDateModified];
 		};
 	}
-	
-	dispatch_async(queue, block);
+	if (block) dispatch_async(queue, block);
 }
 
 -(void)open {

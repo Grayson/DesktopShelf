@@ -35,6 +35,7 @@
 
 - (id)init
 {
+	return nil;
     self = [super init];
     if (self) {
         // Initialization code here.
