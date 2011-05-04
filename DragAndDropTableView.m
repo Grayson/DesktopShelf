@@ -25,12 +25,19 @@
     [super dealloc];
 }
 
+- (NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)isLocal {
+	if ([self.delegate respondsToSelector:_cmd]) return [(NSTableView*)self.delegate draggingSourceOperationMaskForLocal:isLocal];
+	return NSDragOperationNone;
+}
+
 - (NSDragOperation)draggingEntered:(id < NSDraggingInfo >)sender {
+	if (sender.draggingSource == self || sender.draggingSource == self.delegate || sender.draggingSource == self.target) return NSDragOperationNone;
 	if (![self.delegate respondsToSelector:_cmd]) return NSDragOperationCopy;
 	return (int)[self.delegate performSelector:_cmd withObject:sender];
 }
 
 - (NSDragOperation)draggingUpdated:(id < NSDraggingInfo >)sender {
+	if (sender.draggingSource == self || sender.draggingSource == self.delegate || sender.draggingSource == self.target) return NSDragOperationNone;
 	if (![self.delegate respondsToSelector:_cmd]) return NSDragOperationCopy;
 	return (int)[self.delegate performSelector:_cmd withObject:sender];
 }
@@ -51,18 +58,25 @@
 }
 
 - (BOOL)performDragOperation:(id < NSDraggingInfo >)sender {
+	if (sender.draggingSource == self || sender.draggingSource == self.delegate || sender.draggingSource == self.target) return NO;
 	if (![self.delegate respondsToSelector:_cmd]) return NO;
-	return (BOOL)[self.delegate performSelector:_cmd withObject:sender];
+	return (BOOL)[(NSTableView*)self.delegate performDragOperation:sender];
 }
 
 - (BOOL)prepareForDragOperation:(id < NSDraggingInfo >)sender {
+	if (sender.draggingSource == self || sender.draggingSource == self.delegate || sender.draggingSource == self.target) return NO;
 	if (![self.delegate respondsToSelector:_cmd]) return NO;
-	return (BOOL)[self.delegate performSelector:_cmd withObject:sender];
+	return (BOOL)[(NSTableView*)self.delegate prepareForDragOperation:sender];
 }
 
 - (BOOL)wantsPeriodicDraggingUpdates {
 	if (![self.delegate respondsToSelector:_cmd]) return NO;
-	return (BOOL)[self.delegate performSelector:_cmd];	
+	return (BOOL)[(NSTableView*)self.delegate wantsPeriodicDraggingUpdates];
+}
+
+- (void)mouseDragged:(NSEvent *)theEvent {
+	if ([self.delegate respondsToSelector:@selector(dragStartedForTableView:)])
+		[self.delegate performSelector:@selector(dragStartedForTableView:) withObject:self];
 }
 
 @end
